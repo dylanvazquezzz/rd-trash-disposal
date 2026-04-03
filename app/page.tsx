@@ -1,0 +1,27 @@
+import Nav from '@/components/Nav'
+import Hero from '@/components/Hero'
+import Services from '@/components/Services'
+import HowItWorks from '@/components/HowItWorks'
+import WhatWeTake from '@/components/WhatWeTake'
+import EstimateForm from '@/components/EstimateForm'
+import SocialProof from '@/components/SocialProof'
+import ServiceAreas from '@/components/ServiceAreas'
+import Footer from '@/components/Footer'
+
+export default function Home() {
+  return (
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Services />
+        <HowItWorks />
+        <WhatWeTake />
+        <SocialProof />
+        <ServiceAreas />
+        <EstimateForm />
+      </main>
+      <Footer />
+    </>
+  )
+}
