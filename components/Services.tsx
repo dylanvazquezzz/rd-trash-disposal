@@ -65,7 +65,7 @@ export default function Services() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
           {services.map((service, idx) => (
             <div
               key={service.title}
@@ -77,12 +77,12 @@ export default function Services() {
             >
               {/* Card header */}
               <div
-                className={`px-8 py-6 ${
+                className={`px-4 py-4 md:px-8 md:py-6 ${
                   idx === 0 ? 'bg-[#F5A623]' : 'bg-[#0B1E3D]'
                 }`}
               >
                 <div
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center mb-4 ${
+                  className={`w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3 ${
                     idx === 0
                       ? 'bg-[#0B1E3D] text-[#F5A623]'
                       : 'bg-white/10 text-white'
@@ -91,14 +91,14 @@ export default function Services() {
                   {service.icon}
                 </div>
                 <h3
-                  className={`font-display text-4xl ${
+                  className={`font-display text-2xl md:text-4xl ${
                     idx === 0 ? 'text-[#0B1E3D]' : 'text-white'
                   }`}
                 >
                   {service.title.toUpperCase()}
                 </h3>
                 <p
-                  className={`text-sm font-semibold mt-1 ${
+                  className={`text-xs md:text-sm font-semibold mt-1 ${
                     idx === 0 ? 'text-[#0B1E3D]/70' : 'text-white/70'
                   }`}
                 >
@@ -107,17 +107,17 @@ export default function Services() {
               </div>
 
               {/* Card body */}
-              <div className="px-8 py-6 bg-white">
-                <p className="text-gray-600 leading-relaxed mb-6">
+              <div className="px-4 py-4 md:px-8 md:py-6 bg-white">
+                <p className="text-gray-600 leading-relaxed mb-4 text-xs md:text-base">
                   {idx === 0
                     ? 'We haul everything — furniture, appliances, mattresses, electronics, yard waste, construction debris, and more. You point, we load. No item too big, no load too heavy.'
                     : 'Need a kitchen gutted? Bathroom torn down? Old deck removed? We handle small interior and exterior demolition jobs — clean, fast, and fully hauled away when we\'re done.'}
                 </p>
 
                 {/* Item list */}
-                <ul className="grid grid-cols-2 gap-2 mb-8">
+                <ul className="grid grid-cols-1 gap-1.5 mb-5 md:grid-cols-2 md:gap-2 md:mb-8">
                   {service.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
+                    <li key={item} className="flex items-center gap-1.5 text-xs md:text-sm text-gray-700">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#F5A623] flex-shrink-0" />
                       {item}
                     </li>
@@ -126,7 +126,7 @@ export default function Services() {
 
                 <a
                   href="#estimate"
-                  className={`inline-flex items-center gap-2 font-semibold text-sm px-6 py-3 rounded transition-all hover:scale-105 active:scale-95 ${
+                  className={`inline-flex items-center gap-1.5 font-semibold text-xs md:text-sm px-3 py-2 md:px-6 md:py-3 rounded transition-all hover:scale-105 active:scale-95 ${
                     idx === 0
                       ? 'bg-[#F5A623] text-[#0B1E3D] hover:bg-[#d48e10]'
                       : 'bg-[#0B1E3D] text-white hover:bg-[#1a3560]'
