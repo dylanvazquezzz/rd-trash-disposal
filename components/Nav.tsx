@@ -42,7 +42,7 @@ export default function Nav() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {['Services', 'What We Take', 'How It Works', 'Contact'].map(
+            {['Services', 'How It Works', 'What We Take', 'Contact'].map(
               (item) => (
                 <a
                   key={item}
@@ -68,7 +68,7 @@ export default function Nav() {
               305-450-0649
             </a>
             <a
-              href="#estimate"
+              href="/estimate"
               className="bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
             >
               Free Estimate
@@ -107,7 +107,7 @@ export default function Nav() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="px-4 py-4 flex flex-col gap-4">
-            {['Services', 'What We Take', 'How It Works', 'Contact'].map(
+            {['Services', 'How It Works', 'What We Take', 'Contact'].map(
               (item) => (
                 <a
                   key={item}
@@ -133,7 +133,7 @@ export default function Nav() {
                 954-708-8090
               </a>
               <a
-                href="#estimate"
+                href="/estimate"
                 className="mt-1 bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-3 rounded text-center"
                 onClick={() => setMenuOpen(false)}
               >
