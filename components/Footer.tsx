@@ -91,11 +91,16 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-xs">
-            &copy; {currentYear} R&D Trash Disposal. All rights reserved.
+            &copy; {currentYear} R&D Trash Disposal. All rights reserved. Based in Miami, FL.
           </p>
-          <p className="text-white/40 text-xs">
-            Serving Miami-Dade &amp; Broward County
-          </p>
+          <div className="flex items-center gap-4">
+            <p className="text-white/40 text-xs">
+              Serving Miami-Dade &amp; Broward County
+            </p>
+            <a href="/privacy" className="text-white/30 text-xs hover:text-white/50 transition-colors">
+              Privacy Policy
+            </a>
+          </div>
         </div>
       </div>
     </footer>

@@ -28,8 +28,8 @@ export default function Hero() {
 
           {/* H1 */}
           <h1 className="font-display text-white leading-none animate-fade-up">
-            <span className="block text-7xl sm:text-8xl lg:text-9xl">SAME-DAY</span>
-            <span className="block text-7xl sm:text-8xl lg:text-9xl text-[#F5A623]">JUNK REMOVAL.</span>
+            <span className="block text-7xl sm:text-8xl lg:text-9xl">SAME-DAY </span>
+            <span className="block text-7xl sm:text-8xl lg:text-9xl text-[#F5A623]">JUNK REMOVAL. </span>
             <span className="block text-5xl sm:text-6xl lg:text-7xl mt-2">ANY TRASH. GONE TODAY.</span>
           </h1>
 
@@ -82,7 +82,7 @@ export default function Hero() {
             {[
               { label: 'Same-Day Service', icon: '⚡' },
               { label: 'Free Estimates', icon: '✓' },
-              { label: 'Fully Licensed', icon: '🛡' },
+              { label: 'Licensed & Insured', icon: '🛡' },
               { label: 'All Items Accepted', icon: '♻' },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-2 text-white/80 text-sm">

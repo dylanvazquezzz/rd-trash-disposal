@@ -24,7 +24,7 @@ export default function Services() {
       ),
     },
     {
-      title: 'Demo Services',
+      title: 'Demolition Services',
       subtitle: 'Small-scale demolition done right.',
       description:
         'Need a kitchen gutted? Bathroom torn down? Old deck removed? We handle small interior and exterior demolition jobs — clean, fast, and fully hauled away when we&apos;re done.',
@@ -38,7 +38,7 @@ export default function Services() {
         'Interior wall removal',
         'Full room gut-outs',
       ],
-      cta: 'Get Demo Quote',
+      cta: 'Get Demolition Quote',
       accent: '#0B1E3D',
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
