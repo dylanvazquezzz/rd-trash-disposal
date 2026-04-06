@@ -148,12 +148,9 @@ export default function EstimateForm() {
                       ),
                     },
                   ].map((opt) => (
-                    <button
+                    <a
                       key={opt.id}
-                      onClick={() => {
-                        setService(opt.id)
-                        setStep('size')
-                      }}
+                      href={opt.id === 'demo' ? '/estimate?service=demolition' : '/estimate'}
                       className="group border-2 border-gray-200 rounded-xl p-6 text-left hover:border-[#F5A623] hover:shadow-md transition-all"
                     >
                       <div className="text-[#0B1E3D] group-hover:text-[#F5A623] transition-colors mb-3">
@@ -161,7 +158,7 @@ export default function EstimateForm() {
                       </div>
                       <p className="font-display text-[#0B1E3D] text-xl">{opt.label.toUpperCase()}</p>
                       <p className="text-gray-500 text-sm mt-1">{opt.desc}</p>
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>
