@@ -10,6 +10,7 @@ export async function POST(req: NextRequest) {
     const city = formData.get('city') as string
     const contactPreference = formData.get('contactPreference') as string
     const contactValue = formData.get('contactValue') as string
+    const serviceType = formData.get('serviceType') as string
     const description = formData.get('description') as string
     const files = formData.getAll('photos') as File[]
 
@@ -61,6 +62,7 @@ export async function POST(req: NextRequest) {
       timestamp,
       name,
       city,
+      serviceType,
       contactPreference,
       contactValue,
       description || '',

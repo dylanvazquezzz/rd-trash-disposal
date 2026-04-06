@@ -5,12 +5,14 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 type ContactPref = 'text' | 'email'
+type ServiceType = 'junk-removal' | 'demolition'
 
 interface FormState {
   name: string
   city: string
   contactPreference: ContactPref
   contactValue: string
+  serviceType: ServiceType
   description: string
 }
 
@@ -23,6 +25,7 @@ export default function EstimatePage() {
     city: '',
     contactPreference: 'text',
     contactValue: '',
+    serviceType: 'junk-removal',
     description: '',
   })
   const [photos, setPhotos] = useState<File[]>([])
@@ -79,6 +82,7 @@ export default function EstimatePage() {
       fd.append('name', form.name)
       fd.append('city', form.city)
       fd.append('contactPreference', form.contactPreference)
+      fd.append('serviceType', form.serviceType)
       fd.append('contactValue', form.contactValue)
       fd.append('description', form.description)
       photos.forEach((p) => fd.append('photos', p))
@@ -219,6 +223,32 @@ export default function EstimatePage() {
                   className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               )}
+            </div>
+
+            {/* Service type */}
+            <div>
+              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+                What service do you need? <span className="text-[#F5A623]">*</span>
+              </label>
+              <div className="flex gap-3">
+                {([
+                  { value: 'junk-removal', label: 'Junk Removal' },
+                  { value: 'demolition', label: 'Demolition' },
+                ] as { value: ServiceType; label: string }[]).map(({ value, label }) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => setForm({ ...form, serviceType: value })}
+                    className={`flex-1 py-3 rounded font-semibold text-sm border-2 transition-all ${
+                      form.serviceType === value
+                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Description */}
