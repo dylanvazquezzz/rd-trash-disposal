@@ -42,7 +42,7 @@ export default function Hero() {
           {/* CTA row */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
             <a
-              href="#estimate"
+              href="/estimate"
               className="group inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold text-base px-8 py-4 rounded shadow-xl hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95"
             >
               Get Your Free Estimate
