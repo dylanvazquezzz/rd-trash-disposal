@@ -24,13 +24,11 @@ export default function Nav() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div
-              className={`w-9 h-9 rounded flex items-center justify-center font-display text-lg font-bold transition-colors ${
-                scrolled ? 'bg-[#0B1E3D] text-white' : 'bg-white text-[#0B1E3D]'
-              }`}
-            >
-              R&D
-            </div>
+            <img
+              src="/favicon.svg"
+              alt="R&D Trash Disposal logo"
+              className="w-10 h-10"
+            />
             <span
               className={`font-display text-2xl tracking-wide transition-colors ${
                 scrolled ? 'text-[#0B1E3D]' : 'text-white'
