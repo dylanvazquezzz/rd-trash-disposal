@@ -71,7 +71,7 @@ export default function HowItWorks() {
         {/* Bottom CTA */}
         <div className="text-center mt-14">
           <a
-            href="#estimate"
+            href="/estimate"
             className="inline-flex items-center gap-2 bg-[#0B1E3D] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#1a3560] transition-all hover:scale-105 active:scale-95"
           >
             Book Same-Day Pickup

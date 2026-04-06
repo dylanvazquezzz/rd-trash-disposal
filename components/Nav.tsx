@@ -1,39 +1,22 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white shadow-md border-b border-gray-100'
-          : 'bg-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center gap-2 group">
             <img
               src="/favicon.svg"
               alt="R&D Trash Disposal logo"
               className="w-10 h-10"
             />
-            <span
-              className={`font-display text-2xl tracking-wide transition-colors ${
-                scrolled ? 'text-[#0B1E3D]' : 'text-white'
-              }`}
-            >
+            <span className="font-display text-2xl tracking-wide text-[#0B1E3D]">
               TRASH DISPOSAL
             </span>
           </a>
@@ -45,9 +28,7 @@ export default function Nav() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/ /g, '-')}`}
-                  className={`text-sm font-medium transition-colors hover:text-[#F5A623] ${
-                    scrolled ? 'text-[#0B1E3D]' : 'text-white/90'
-                  }`}
+                  className="text-sm font-medium text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
                 >
                   {item}
                 </a>
@@ -59,9 +40,7 @@ export default function Nav() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:3054500649"
-              className={`text-sm font-semibold transition-colors hover:text-[#F5A623] ${
-                scrolled ? 'text-[#0B1E3D]' : 'text-white'
-              }`}
+              className="text-sm font-semibold text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
             >
               305-450-0649
             </a>
@@ -83,9 +62,7 @@ export default function Nav() {
               {[0, 1, 2].map((i) => (
                 <span
                   key={i}
-                  className={`block h-0.5 w-6 transition-all ${
-                    scrolled ? 'bg-[#0B1E3D]' : 'bg-white'
-                  } ${
+                  className={`block h-0.5 w-6 bg-[#0B1E3D] transition-all ${
                     menuOpen && i === 0
                       ? 'rotate-45 translate-y-2'
                       : menuOpen && i === 1

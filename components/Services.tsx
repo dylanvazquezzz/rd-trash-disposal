@@ -125,7 +125,7 @@ export default function Services() {
                 </ul>
 
                 <a
-                  href="#estimate"
+                  href={idx === 0 ? '/estimate' : '/estimate?service=demolition'}
                   className={`inline-flex items-center gap-1.5 font-semibold text-xs md:text-sm px-3 py-2 md:px-6 md:py-3 rounded transition-all hover:scale-105 active:scale-95 ${
                     idx === 0
                       ? 'bg-[#F5A623] text-[#0B1E3D] hover:bg-[#d48e10]'

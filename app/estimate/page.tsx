@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { supabase } from '@/lib/supabase'
@@ -15,6 +16,8 @@ interface FormState {
   contactValue: string
   serviceType: ServiceType
   description: string
+  preferredDate: string
+  preferredTime: string
 }
 
 const MAX_PHOTOS = 5
@@ -27,14 +30,20 @@ function sanitizeFileName(name: string): string {
     .replace(/-+/g, '-')
 }
 
-export default function EstimatePage() {
+function EstimateForm() {
+  const searchParams = useSearchParams()
+  const initialService: ServiceType =
+    searchParams.get('service') === 'demolition' ? 'demolition' : 'junk-removal'
+
   const [form, setForm] = useState<FormState>({
     name: '',
     city: '',
     contactPreference: 'text',
     contactValue: '',
-    serviceType: 'junk-removal',
+    serviceType: initialService,
     description: '',
+    preferredDate: '',
+    preferredTime: '',
   })
   const [photos, setPhotos] = useState<File[]>([])
   const [previews, setPreviews] = useState<string[]>([])
@@ -120,6 +129,8 @@ export default function EstimatePage() {
           contactValue: form.contactValue,
           serviceType: form.serviceType,
           description: form.description,
+          preferredDate: form.preferredDate || null,
+          preferredTime: form.preferredTime || null,
           photoUrls,
         }),
       })
@@ -300,6 +311,37 @@ export default function EstimatePage() {
               />
             </div>
 
+            {/* Preferred date & time */}
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+                  Preferred Date <span className="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <input
+                  type="date"
+                  value={form.preferredDate}
+                  min={new Date().toISOString().split('T')[0]}
+                  onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+                  Preferred Time <span className="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <select
+                  value={form.preferredTime}
+                  onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                >
+                  <option value="">Any time</option>
+                  <option value="morning">Morning (7am – 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm – 5pm)</option>
+                  <option value="evening">Evening (5pm – 8pm)</option>
+                </select>
+              </div>
+            </div>
+
             {/* Photo upload */}
             <div>
               <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
@@ -378,5 +420,13 @@ export default function EstimatePage() {
       </main>
       <Footer />
     </>
+  )
+}
+
+export default function EstimatePage() {
+  return (
+    <Suspense fallback={null}>
+      <EstimateForm />
+    </Suspense>
   )
 }
