@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
+import About from '@/components/About'
 import HowItWorks from '@/components/HowItWorks'
 import WhatWeTake from '@/components/WhatWeTake'
 import EstimateForm from '@/components/EstimateForm'
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
+        <About />
         <HowItWorks />
         <WhatWeTake />
         <SocialProof />
