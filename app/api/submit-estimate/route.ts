@@ -4,7 +4,7 @@ import { google } from 'googleapis'
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, city, contactPreference, contactValue, serviceType, description, photoUrls } = body
+    const { name, city, contactPreference, contactValue, serviceType, description, preferredDate, preferredTime, photoUrls } = body
 
     if (!name || !city || !contactPreference || !contactValue) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
@@ -30,12 +30,14 @@ export async function POST(req: NextRequest) {
       contactPreference,
       contactValue,
       description || '',
+      preferredDate || '',
+      preferredTime || '',
       ...photoFormulas,
     ]
 
     await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEETS_ID,
-      range: 'Sheet1!A:J',
+      range: 'Sheet1!A:L',
       valueInputOption: 'USER_ENTERED',
       requestBody: { values: [row] },
     })
