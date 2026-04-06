@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from 'react'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import { supabase } from '@/lib/supabase'
 
 type ContactPref = 'text' | 'email'
 type ServiceType = 'junk-removal' | 'demolition'
@@ -18,6 +19,13 @@ interface FormState {
 
 const MAX_PHOTOS = 5
 const MAX_FILE_SIZE_MB = 40
+
+function sanitizeFileName(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9.]/g, '-')
+    .replace(/-+/g, '-')
+}
 
 export default function EstimatePage() {
   const [form, setForm] = useState<FormState>({
@@ -78,18 +86,45 @@ export default function EstimatePage() {
     setSubmitting(true)
 
     try {
-      const fd = new FormData()
-      fd.append('name', form.name)
-      fd.append('city', form.city)
-      fd.append('contactPreference', form.contactPreference)
-      fd.append('serviceType', form.serviceType)
-      fd.append('contactValue', form.contactValue)
-      fd.append('description', form.description)
-      photos.forEach((p) => fd.append('photos', p))
+      // Upload photos directly from browser to Supabase Storage
+      const photoUrls: string[] = []
 
-      const res = await fetch('/api/submit-estimate', { method: 'POST', body: fd })
+      for (const file of photos) {
+        const safeName = sanitizeFileName(file.name)
+        const fileName = `${Date.now()}-${Math.random().toString(36).slice(2)}-${safeName}`
+
+        const { error: uploadError } = await supabase.storage
+          .from('quote-images')
+          .upload(fileName, file, { contentType: file.type })
+
+        if (uploadError) {
+          console.error('Upload error:', uploadError)
+          throw new Error('Photo upload failed. Please try again.')
+        }
+
+        const { data: urlData } = supabase.storage
+          .from('quote-images')
+          .getPublicUrl(fileName)
+
+        photoUrls.push(urlData.publicUrl)
+      }
+
+      // Send form data + URLs to API (no files — just text + URLs)
+      const res = await fetch('/api/submit-estimate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          city: form.city,
+          contactPreference: form.contactPreference,
+          contactValue: form.contactValue,
+          serviceType: form.serviceType,
+          description: form.description,
+          photoUrls,
+        }),
+      })
+
       const data = await res.json()
-
       if (!res.ok) throw new Error(data.error || 'Submission failed')
 
       setSubmitted(true)
@@ -272,7 +307,6 @@ export default function EstimatePage() {
                 <span className="text-gray-400 font-normal ml-1">(up to {MAX_PHOTOS}, 40MB each)</span>
               </label>
 
-              {/* Drop zone */}
               <div
                 onDragOver={(e) => { e.preventDefault(); setDragging(true) }}
                 onDragLeave={() => setDragging(false)}
@@ -303,7 +337,6 @@ export default function EstimatePage() {
                 />
               </div>
 
-              {/* Previews */}
               {previews.length > 0 && (
                 <div className="mt-4 grid grid-cols-3 sm:grid-cols-5 gap-3">
                   {previews.map((src, i) => (
@@ -323,20 +356,18 @@ export default function EstimatePage() {
               )}
             </div>
 
-            {/* Error */}
             {error && (
               <div className="bg-red-50 border border-red-200 rounded px-4 py-3 text-red-700 text-sm">
                 {error}
               </div>
             )}
 
-            {/* Submit */}
             <button
               type="submit"
               disabled={submitting}
               className="w-full bg-[#F5A623] text-[#0B1E3D] font-bold text-lg py-4 rounded hover:bg-[#d48e10] transition-all hover:scale-[1.01] active:scale-[0.99] shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
-              {submitting ? 'Sending...' : 'Send for Quote'}
+              {submitting ? 'Uploading...' : 'Send for Quote'}
             </button>
 
             <p className="text-center text-gray-400 text-sm">
