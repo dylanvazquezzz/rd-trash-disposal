@@ -5,6 +5,7 @@ import HowItWorks from '@/components/HowItWorks'
 import WhatWeTake from '@/components/WhatWeTake'
 import EstimateForm from '@/components/EstimateForm'
 import SocialProof from '@/components/SocialProof'
+import FAQ from '@/components/FAQ'
 import ServiceAreas from '@/components/ServiceAreas'
 import Footer from '@/components/Footer'
 
@@ -18,6 +19,7 @@ export default function Home() {
         <HowItWorks />
         <WhatWeTake />
         <SocialProof />
+        <FAQ />
         <ServiceAreas />
         <EstimateForm />
       </main>
