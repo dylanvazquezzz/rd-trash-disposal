@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'R&D Trash Disposal',
     locale: 'en_US',
-    images: [{ url: '/og-image.svg', width: 1200, height: 630, alt: 'R&D Trash Disposal — Same-Day Junk Removal South Florida' }],
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'R&D Trash Disposal — Same-Day Junk Removal South Florida' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'R&D Trash Disposal | Same-Day Junk Removal',
     description: 'Same-day junk removal and demolition across South Florida. Free estimates.',
-    images: ['/og-image.svg'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,
