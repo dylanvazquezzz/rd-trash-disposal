@@ -74,8 +74,16 @@ export default function EstimateForm() {
     (e) => e === 'concrete' || e === 'hottub'
   )
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const fireEvent = (name: string, params?: Record<string, string>) => {
+    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+      ;(window as any).gtag('event', name, params)
+    }
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    fireEvent('generate_lead', { method: 'estimate_form' })
     setSubmitted(true)
     setStep('result')
   }
@@ -370,12 +378,14 @@ export default function EstimateForm() {
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href="tel:3054500649"
+                    onClick={() => fireEvent('phone_call', { phone: '305-450-0649' })}
                     className="inline-flex items-center justify-center gap-2 bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3560] transition-all"
                   >
                     Call Us Now — 305-450-0649
                   </a>
                   <a
                     href="tel:9547088090"
+                    onClick={() => fireEvent('phone_call', { phone: '954-708-8090' })}
                     className="inline-flex items-center justify-center border-2 border-[#0B1E3D] text-[#0B1E3D] font-semibold px-6 py-3 rounded-lg hover:bg-gray-50 transition-all"
                   >
                     954-708-8090

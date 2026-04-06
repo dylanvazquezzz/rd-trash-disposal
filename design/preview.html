@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>R&D Trash Disposal — Logo Options</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; padding: 40px 40px 120px; background: #f1f3f5; }
+  h1 { font-size: 26px; font-weight: 800; margin-bottom: 4px; }
+  .sub { color: #6b7280; margin-bottom: 36px; font-size: 14px; }
+  .section { margin-bottom: 48px; }
+  .section h2 { font-size: 12px; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 16px; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .card { background: white; border-radius: 14px; padding: 16px; border: 2px solid transparent;
+    cursor: pointer; transition: border-color 0.15s, box-shadow 0.15s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+  .card.pinned { border-color: #F97316; }
+  .card h3 { font-size: 13px; font-weight: 700; margin-bottom: 4px; color: #111; }
+  .card p { font-size: 11px; color: #9ca3af; margin-bottom: 14px; line-height: 1.5; min-height: 2.5em; }
+  .sizes { display: flex; align-items: flex-end; gap: 20px;
+    background: #f9fafb; border-radius: 8px; padding: 12px; }
+  .size-label { font-size: 10px; color: #9ca3af; text-align: center; }
+  .size-label img { display: block; margin: 0 auto 4px; }
+  .dark-row { background: #111827; padding: 12px; border-radius: 8px; margin-top: 8px;
+    display: flex; align-items: flex-end; gap: 20px; }
+  .dark-row .size-label { color: #6b7280; }
+  .nav-preview { display: flex; align-items: center; gap: 10px; margin-top: 10px;
+    padding: 8px 14px; border: 1px solid #e5e7eb; border-radius: 8px; background: #fafafa; }
+  .nav-preview img { width: 28px; height: 28px; }
+  .nav-preview span { font-size: 15px; font-weight: 800; letter-spacing: -0.5px; color: #111; }
+  .nav-dark { background: #111827; border-color: #374151; }
+  .nav-dark span { color: #f9fafb; }
+  .favicon-strip { display: flex; align-items: center; margin-top: 8px;
+    background: #d1d5db; border-radius: 8px 8px 0 0; padding: 6px 10px; }
+  .tab { display: flex; align-items: center; gap: 6px; background: white;
+    border-radius: 6px 6px 0 0; padding: 5px 12px; font-size: 11px; color: #374151; }
+  .tab img { width: 16px; height: 16px; }
+
+  #compare-bar { position: fixed; bottom: 0; left: 0; right: 0; background: white;
+    border-top: 2px solid #e5e7eb; padding: 12px 40px; display: flex; gap: 28px;
+    align-items: center; z-index: 10; min-height: 80px;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.06); }
+  .compare-label { font-size: 12px; color: #9ca3af; white-space: nowrap; }
+</style>
+</head>
+<body>
+<h1>R&D Trash Disposal — Logo Options</h1>
+<p class="sub">Click any card to pin it to the comparison bar below</p>
+
+<div class="section">
+  <h2>Concept A — Trash Bin (Icon Mark)</h2>
+  <div class="grid">
+    <div class="card" id="card-bin">
+      <h3>01 — Trash Bin</h3>
+      <p>Bold industrial bin with orange stripe detail. Clean, instantly recognizable at favicon size.</p>
+      <div class="sizes">
+        <div class="size-label"><img src="logo-bin.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-bin.svg" width="32" height="32">32</div>
+        <div class="size-label"><img src="logo-bin.svg" width="64" height="64">64</div>
+      </div>
+      <div class="dark-row">
+        <div class="size-label"><img src="logo-bin-dark.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-bin-dark.svg" width="32" height="32">32</div>
+        <div class="size-label"><img src="logo-bin-dark.svg" width="64" height="64">64</div>
+      </div>
+      <div class="favicon-strip">
+        <div class="tab"><img src="logo-bin.svg">R&D Trash</div>
+      </div>
+      <div class="nav-preview">
+        <img src="logo-bin.svg"><span>R&D Trash Disposal</span>
+      </div>
+      <div class="nav-preview nav-dark">
+        <img src="logo-bin-dark.svg"><span>R&D Trash Disposal</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Concept B — Dump Truck (Illustrative)</h2>
+  <div class="grid">
+    <div class="card" id="card-truck">
+      <h3>02 — Dump Truck</h3>
+      <p>Illustrative dump truck silhouette. Tells the story at a glance. Best for horizontal layouts.</p>
+      <div class="sizes">
+        <div class="size-label"><img src="logo-truck.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-truck.svg" width="64" height="38">64</div>
+        <div class="size-label"><img src="logo-truck.svg" width="128" height="77">128</div>
+      </div>
+      <div class="dark-row">
+        <div class="size-label"><img src="logo-truck-dark.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-truck-dark.svg" width="64" height="38">64</div>
+        <div class="size-label"><img src="logo-truck-dark.svg" width="128" height="77">128</div>
+      </div>
+      <div class="favicon-strip">
+        <div class="tab"><img src="logo-truck.svg">R&D Trash</div>
+      </div>
+      <div class="nav-preview">
+        <img src="logo-truck.svg" style="width:48px;height:auto;"><span>R&D Trash Disposal</span>
+      </div>
+      <div class="nav-preview nav-dark">
+        <img src="logo-truck-dark.svg" style="width:48px;height:auto;"><span>R&D Trash Disposal</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Concept C — Shield Mark</h2>
+  <div class="grid">
+    <div class="card" id="card-shield">
+      <h3>03 — Shield Lettermark</h3>
+      <p>R&D inside a bold shield. Conveys trust, strength, protection. Works as an app icon.</p>
+      <div class="sizes">
+        <div class="size-label"><img src="logo-shield.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-shield.svg" width="32" height="32">32</div>
+        <div class="size-label"><img src="logo-shield.svg" width="64" height="64">64</div>
+      </div>
+      <div class="dark-row">
+        <div class="size-label"><img src="logo-shield.svg" style="filter:brightness(1.2)" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-shield.svg" style="filter:brightness(1.2)" width="32" height="32">32</div>
+        <div class="size-label"><img src="logo-shield.svg" style="filter:brightness(1.2)" width="64" height="64">64</div>
+      </div>
+      <div class="favicon-strip">
+        <div class="tab"><img src="logo-shield.svg">R&D Trash</div>
+      </div>
+      <div class="nav-preview">
+        <img src="logo-shield.svg"><span>R&D Trash Disposal</span>
+      </div>
+      <div class="nav-preview nav-dark">
+        <img src="logo-shield.svg" style="filter:brightness(1.1)"><span>R&D Trash Disposal</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Concept D — Hexagon Mark</h2>
+  <div class="grid">
+    <div class="card" id="card-mark">
+      <h3>04 — Hex Mark</h3>
+      <p>Abstract hexagon with inner depth and R letterform. Industrial feel, works standalone as an app icon.</p>
+      <div class="sizes">
+        <div class="size-label"><img src="logo-mark.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-mark.svg" width="32" height="32">32</div>
+        <div class="size-label"><img src="logo-mark.svg" width="64" height="64">64</div>
+      </div>
+      <div class="dark-row">
+        <div class="size-label"><img src="logo-mark.svg" width="16" height="16">16</div>
+        <div class="size-label"><img src="logo-mark.svg" width="32" height="32">32</div>
+        <div class="size-label"><img src="logo-mark.svg" width="64" height="64">64</div>
+      </div>
+      <div class="favicon-strip">
+        <div class="tab"><img src="logo-mark.svg">R&D Trash</div>
+      </div>
+      <div class="nav-preview">
+        <img src="logo-mark.svg"><span>R&D Trash Disposal</span>
+      </div>
+      <div class="nav-preview nav-dark">
+        <img src="logo-mark.svg"><span>R&D Trash Disposal</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="compare-bar">
+  <span class="compare-label">Click cards to compare →</span>
+</div>
+
+<script>
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    const bar = document.getElementById('compare-bar');
+    const id = card.id;
+    const name = card.querySelector('h3').textContent;
+    const imgSrc = card.querySelector('.sizes img').src;
+    const existing = bar.querySelector(`[data-id="${id}"]`);
+    if (existing) {
+      existing.remove();
+      card.classList.remove('pinned');
+      return;
+    }
+    if (bar.querySelectorAll('.compare-item').length >= 4) return;
+    const item = document.createElement('div');
+    item.className = 'compare-item';
+    item.dataset.id = id;
+    item.style.cssText = 'text-align:center;cursor:pointer;';
+    item.onclick = () => { item.remove(); card.classList.remove('pinned'); };
+    const thumb = document.createElement('img');
+    thumb.src = imgSrc; thumb.width = 48; thumb.height = 48;
+    thumb.style.cssText = 'display:block;margin:0 auto 4px;';
+    const label = document.createElement('div');
+    label.style.cssText = 'font-size:11px;color:#374151;max-width:80px;';
+    label.textContent = name;
+    item.append(thumb, label);
+    bar.appendChild(item);
+    card.classList.add('pinned');
+  });
+});
+setInterval(() => {
+  const t = Date.now();
+  document.querySelectorAll('img[src*=".svg"]').forEach(img => {
+    const base = img.src.split('?')[0];
+    img.src = base + '?t=' + t;
+  });
+}, 3000);
+</script>
+</body>
+</html>
