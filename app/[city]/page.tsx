@@ -121,8 +121,15 @@ const cities: Record<string, CityData> = {
   },
 }
 
+const PREFIX = 'junk-removal-'
+
 export function generateStaticParams() {
-  return Object.keys(cities).map((city) => ({ city }))
+  return Object.keys(cities).map((city) => ({ city: `${PREFIX}${city}` }))
+}
+
+function getCityKey(slug: string): string | null {
+  if (!slug.startsWith(PREFIX)) return null
+  return slug.slice(PREFIX.length)
 }
 
 export async function generateMetadata({
@@ -130,20 +137,21 @@ export async function generateMetadata({
 }: {
   params: { city: string }
 }): Promise<Metadata> {
-  const { city } = params
-  const data = cities[city]
+  const cityKey = getCityKey(params.city)
+  if (!cityKey) return {}
+  const data = cities[cityKey]
   if (!data) return {}
 
   return {
     title: `Junk Removal ${data.name} FL | Same-Day Service | R&D Trash Disposal`,
     description: `Same-day junk removal and demolition in ${data.name}, FL. Licensed & insured. Furniture, appliances, construction debris, full cleanouts. Free estimates — call ${data.phoneFormatted}.`,
     alternates: {
-      canonical: `${siteUrl}/junk-removal-${city}`,
+      canonical: `${siteUrl}/junk-removal-${cityKey}`,
     },
     openGraph: {
       title: `Junk Removal ${data.name} FL | R&D Trash Disposal`,
       description: `Same-day junk removal in ${data.name}. Licensed & insured. Free estimates. Call ${data.phoneFormatted}.`,
-      url: `${siteUrl}/junk-removal-${city}`,
+      url: `${siteUrl}/junk-removal-${cityKey}`,
     },
   }
 }
@@ -166,8 +174,10 @@ export default function CityPage({
 }: {
   params: { city: string }
 }) {
-  const { city } = params
-  const data = cities[city]
+  const cityKey = getCityKey(params.city)
+  if (!cityKey) notFound()
+
+  const data = cities[cityKey]
   if (!data) notFound()
 
   const schema = {
@@ -181,7 +191,7 @@ export default function CityPage({
       addressRegion: 'FL',
       addressCountry: 'US',
     },
-    url: `${siteUrl}/junk-removal-${city}`,
+    url: `${siteUrl}/junk-removal-${cityKey}`,
     telephone: `+1${data.phone}`,
     areaServed: {
       '@type': 'City',
