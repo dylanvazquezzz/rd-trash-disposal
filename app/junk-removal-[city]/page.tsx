@@ -121,16 +121,14 @@ const cities: Record<string, CityData> = {
   },
 }
 
-export function generateStaticParams() {
-  return Object.keys(cities).map((city) => ({ city }))
-}
+export const dynamic = 'force-dynamic'
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ city: string }>
+  params: { city: string }
 }): Promise<Metadata> {
-  const { city } = await params
+  const { city } = params
   const data = cities[city]
   if (!data) return {}
 
@@ -161,12 +159,12 @@ const services = [
   'Estate cleanouts',
 ]
 
-export default async function CityPage({
+export default function CityPage({
   params,
 }: {
-  params: Promise<{ city: string }>
+  params: { city: string }
 }) {
-  const { city } = await params
+  const { city } = params
   const data = cities[city]
   if (!data) notFound()
 
