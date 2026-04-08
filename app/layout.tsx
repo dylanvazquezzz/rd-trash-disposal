@@ -30,9 +30,12 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: [
+      { url: '/favicon-1024.png', sizes: '1024x1024', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon-1024.png',
+    apple: '/favicon-1024.png',
   },
   openGraph: {
     title: 'R&D Trash Disposal | Same-Day Junk Removal — South Florida',
