@@ -121,7 +121,9 @@ const cities: Record<string, CityData> = {
   },
 }
 
-export const dynamic = 'force-dynamic'
+export function generateStaticParams() {
+  return Object.keys(cities).map((city) => ({ city }))
+}
 
 export async function generateMetadata({
   params,
