@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useCallback, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import { supabase } from '@/lib/supabase'
@@ -31,6 +31,7 @@ function sanitizeFileName(name: string): string {
 }
 
 function EstimateForm() {
+  const router = useRouter()
   const searchParams = useSearchParams()
   const initialService: ServiceType =
     searchParams.get('service') === 'demolition' ? 'demolition' : 'junk-removal'
@@ -49,7 +50,6 @@ function EstimateForm() {
   const [previews, setPreviews] = useState<string[]>([])
   const [dragging, setDragging] = useState(false)
   const [submitting, setSubmitting] = useState(false)
-  const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
   const fileInputRef = useRef<HTMLInputElement>(null)
 
@@ -86,11 +86,6 @@ function EstimateForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError('')
-
-    if (photos.length === 0) {
-      setError('Please add at least one photo of the items.')
-      return
-    }
 
     setSubmitting(true)
 
@@ -145,45 +140,12 @@ function EstimateForm() {
         gtag('event', 'close_convert_lead', { service_type: form.serviceType })
       }
 
-      setSubmitted(true)
+      router.push('/estimate/thank-you')
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
     } finally {
       setSubmitting(false)
     }
-  }
-
-  if (submitted) {
-    return (
-      <>
-        <Nav />
-        <main className="min-h-screen bg-[#F8F6F1] flex items-center justify-center px-4 pt-20">
-          <div className="max-w-md w-full text-center">
-            <div className="w-20 h-20 bg-[#0B1E3D] rounded-full flex items-center justify-center mx-auto mb-6">
-              <svg className="w-10 h-10 text-[#F5A623]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <h1 className="font-display text-3xl font-bold text-[#0B1E3D] mb-3">
-              Request Received
-            </h1>
-            <p className="text-gray-600 text-lg mb-2">
-              We got your photos and will review them shortly.
-            </p>
-            <p className="text-gray-500 mb-8">
-              Expect a quote via {form.contactPreference === 'text' ? 'text message' : 'email'} within 24 hours.
-            </p>
-            <a
-              href="/"
-              className="inline-block bg-[#F5A623] text-[#0B1E3D] font-semibold px-8 py-3 rounded hover:bg-[#d48e10] transition-all hover:scale-105"
-            >
-              Back to Home
-            </a>
-          </div>
-        </main>
-        <Footer />
-      </>
-    )
   }
 
   return (
@@ -352,8 +314,7 @@ function EstimateForm() {
             {/* Photo upload */}
             <div>
               <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
-                Photos <span className="text-[#F5A623]">*</span>
-                <span className="text-gray-400 font-normal ml-1">(up to {MAX_PHOTOS}, 40MB each)</span>
+                Photos <span className="text-gray-400 font-normal">(optional, up to {MAX_PHOTOS}, 40MB each)</span>
               </label>
 
               <div

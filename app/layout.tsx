@@ -31,10 +31,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-1024.png', sizes: '1024x1024', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
-    shortcut: '/favicon-1024.png',
+    shortcut: '/favicon.ico',
     apple: '/favicon-1024.png',
   },
   openGraph: {
@@ -147,15 +148,16 @@ export default function RootLayout({
     <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
       <body className="font-body antialiased">
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-6DSMYLXMSW"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18068988816"
           strategy="afterInteractive"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-6DSMYLXMSW');
+            gtag('config', 'AW-18068988816');
           `}
         </Script>
         <script
