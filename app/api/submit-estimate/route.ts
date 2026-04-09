@@ -47,22 +47,44 @@ export async function POST(req: NextRequest) {
     if (slackWebhookUrl) {
       const serviceLabel = serviceType === 'demolition' ? 'Demolition' : 'Junk Removal'
       const contactLabel = contactPreference === 'text' ? 'Phone' : 'Email'
-      const lines = [
-        `*New estimate request*`,
+
+      const detailLines = [
         `*Name:* ${name}`,
         `*City:* ${city}`,
         `*Service:* ${serviceLabel}`,
         `*${contactLabel}:* ${contactValue}`,
       ]
-      if (description) lines.push(`*Description:* ${description}`)
-      if (preferredDate) lines.push(`*Preferred date:* ${preferredDate}${preferredTime ? ` (${preferredTime})` : ''}`)
-      lines.push(`*Photos:* ${(photoUrls as string[]).length}`)
-      lines.push(`_${timestamp}_`)
+      if (description) detailLines.push(`*Description:* ${description}`)
+      if (preferredDate) detailLines.push(`*Preferred date:* ${preferredDate}${preferredTime ? ` (${preferredTime})` : ''}`)
+      detailLines.push(`_${timestamp}_`)
+
+      const blocks: object[] = [
+        {
+          type: 'header',
+          text: { type: 'plain_text', text: 'New Estimate Request', emoji: false },
+        },
+        {
+          type: 'section',
+          text: { type: 'mrkdwn', text: detailLines.join('\n') },
+        },
+      ]
+
+      const urls = photoUrls as string[]
+      if (urls.length > 0) {
+        blocks.push({ type: 'divider' })
+        for (const url of urls) {
+          blocks.push({
+            type: 'image',
+            image_url: url,
+            alt_text: 'Estimate photo',
+          })
+        }
+      }
 
       await fetch(slackWebhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: lines.join('\n') }),
+        body: JSON.stringify({ blocks }),
       })
     }
 
