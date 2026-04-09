@@ -146,20 +146,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
-      <body className="font-body antialiased">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18068988816"
-          strategy="afterInteractive"
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-6DSMYLXMSW');
+              gtag('config', 'AW-18068988816');
+            `,
+          }}
         />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-6DSMYLXMSW');
-            gtag('config', 'AW-18068988816');
-          `}
-        </Script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18068988816" />
+      </head>
+      <body className="font-body antialiased">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
