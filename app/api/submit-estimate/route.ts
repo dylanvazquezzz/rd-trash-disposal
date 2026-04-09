@@ -42,6 +42,30 @@ export async function POST(req: NextRequest) {
       requestBody: { values: [row] },
     })
 
+    // Slack notification
+    const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL
+    if (slackWebhookUrl) {
+      const serviceLabel = serviceType === 'demolition' ? 'Demolition' : 'Junk Removal'
+      const contactLabel = contactPreference === 'text' ? 'Phone' : 'Email'
+      const lines = [
+        `*New estimate request*`,
+        `*Name:* ${name}`,
+        `*City:* ${city}`,
+        `*Service:* ${serviceLabel}`,
+        `*${contactLabel}:* ${contactValue}`,
+      ]
+      if (description) lines.push(`*Description:* ${description}`)
+      if (preferredDate) lines.push(`*Preferred date:* ${preferredDate}${preferredTime ? ` (${preferredTime})` : ''}`)
+      lines.push(`*Photos:* ${(photoUrls as string[]).length}`)
+      lines.push(`_${timestamp}_`)
+
+      await fetch(slackWebhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: lines.join('\n') }),
+      })
+    }
+
     return NextResponse.json({ success: true })
   } catch (error) {
     console.error('Submit estimate error:', error)
