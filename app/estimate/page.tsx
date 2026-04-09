@@ -138,6 +138,13 @@ function EstimateForm() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error || 'Submission failed')
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const gtag = (window as any).gtag
+      if (typeof gtag === 'function') {
+        gtag('event', 'generate_lead', { service_type: form.serviceType })
+        gtag('event', 'close_convert_lead', { service_type: form.serviceType })
+      }
+
       setSubmitted(true)
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
