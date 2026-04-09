@@ -147,6 +147,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18068988816" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -158,7 +159,6 @@ export default function RootLayout({
             `,
           }}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18068988816" />
       </head>
       <body className="font-body antialiased">
         <script
