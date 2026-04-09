@@ -24,6 +24,11 @@ const nextConfig = {
         destination: 'https://rdtrash.org/:path*',
         permanent: true,
       },
+      {
+        source: '/estimates',
+        destination: '/estimate',
+        permanent: true,
+      },
     ]
   },
 }

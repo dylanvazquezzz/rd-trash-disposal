@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const trackCall = (phone: string) => {
@@ -11,6 +12,9 @@ const trackCall = (phone: string) => {
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+  const navHref = (anchor: string) => isHome ? anchor : `/${anchor}`
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-gray-100">
@@ -34,7 +38,7 @@ export default function Nav() {
               (item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                  href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
                   className="text-sm font-medium text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
                 >
                   {item}
@@ -94,7 +98,7 @@ export default function Nav() {
               (item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase().replace(/ /g, '-')}`}
+                  href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
                   className="text-[#0B1E3D] font-medium text-base py-1 border-b border-gray-100"
                   onClick={() => setMenuOpen(false)}
                 >
