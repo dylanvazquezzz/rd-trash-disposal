@@ -1,21 +1,21 @@
 import Image from 'next/image'
 
 const areas = [
-  'Miami',
-  'Miami Beach',
-  'Hialeah',
-  'Doral',
-  'Kendall',
-  'Homestead',
-  'Fort Lauderdale',
-  'Hollywood',
-  'Pembroke Pines',
-  'Miramar',
-  'Coral Springs',
-  'Pompano Beach',
-  'Boca Raton',
-  'Aventura',
-  'North Miami',
+  { name: 'Miami', slug: 'miami' },
+  { name: 'Miami Beach', slug: 'miami-beach' },
+  { name: 'Hialeah', slug: 'hialeah' },
+  { name: 'Doral', slug: 'doral' },
+  { name: 'Kendall', slug: 'kendall' },
+  { name: 'Homestead', slug: 'homestead' },
+  { name: 'Fort Lauderdale', slug: 'fort-lauderdale' },
+  { name: 'Hollywood', slug: 'hollywood' },
+  { name: 'Pembroke Pines', slug: 'pembroke-pines' },
+  { name: 'Miramar', slug: 'miramar' },
+  { name: 'Coral Springs', slug: 'coral-springs' },
+  { name: 'Pompano Beach', slug: 'pompano-beach' },
+  { name: 'Boca Raton', slug: 'boca-raton' },
+  { name: 'Aventura', slug: 'aventura' },
+  { name: 'North Miami', slug: 'north-miami' },
 ]
 
 export default function ServiceAreas() {
@@ -39,12 +39,13 @@ export default function ServiceAreas() {
 
             <div className="flex flex-wrap gap-2 mb-8">
               {areas.map((area) => (
-                <span
-                  key={area}
-                  className="bg-white border border-gray-200 text-[#0B1E3D] text-sm font-medium px-3 py-1.5 rounded-full shadow-sm"
+                <a
+                  key={area.slug}
+                  href={`/junk-removal-${area.slug}`}
+                  className="bg-white border border-gray-200 text-[#0B1E3D] text-sm font-medium px-3 py-1.5 rounded-full shadow-sm hover:border-[#F5A623] hover:text-[#F5A623] transition-colors"
                 >
-                  {area}
-                </span>
+                  {area.name}
+                </a>
               ))}
               <span className="bg-[#F5A623] text-[#0B1E3D] text-sm font-bold px-3 py-1.5 rounded-full">
                 + More

@@ -67,19 +67,21 @@ export default function Footer() {
             <h4 className="font-display text-lg text-white mb-4 tracking-wide">SERVICE AREAS</h4>
             <ul className="space-y-2 text-white/60 text-sm">
               {[
-                'Miami',
-                'Miami Beach',
-                'Hialeah',
-                'Doral',
-                'Kendall',
-                'Fort Lauderdale',
-                'Hollywood',
-                'Pembroke Pines',
-                'Coral Springs',
+                { name: 'Miami', slug: 'miami' },
+                { name: 'Miami Beach', slug: 'miami-beach' },
+                { name: 'Hialeah', slug: 'hialeah' },
+                { name: 'Doral', slug: 'doral' },
+                { name: 'Kendall', slug: 'kendall' },
+                { name: 'Fort Lauderdale', slug: 'fort-lauderdale' },
+                { name: 'Hollywood', slug: 'hollywood' },
+                { name: 'Pembroke Pines', slug: 'pembroke-pines' },
+                { name: 'Coral Springs', slug: 'coral-springs' },
               ].map((area) => (
-                <li key={area} className="flex items-center gap-1.5">
+                <li key={area.slug} className="flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-[#F5A623]" />
-                  {area}
+                  <a href={`/junk-removal-${area.slug}`} className="hover:text-[#F5A623] transition-colors">
+                    {area.name}
+                  </a>
                 </li>
               ))}
             </ul>

@@ -39,7 +39,7 @@ export default function Hero() {
           <h1 className="font-display text-white leading-none animate-fade-up">
             <span className="block text-7xl sm:text-8xl lg:text-9xl">SAME-DAY </span>
             <span className="block text-7xl sm:text-8xl lg:text-9xl text-[#F5A623]">JUNK REMOVAL. </span>
-            <span className="block text-5xl sm:text-6xl lg:text-7xl mt-2">ANY TRASH. GONE TODAY.</span>
+            <span className="hidden sm:block text-5xl sm:text-6xl lg:text-7xl mt-2">ANY TRASH. GONE TODAY.</span>
           </h1>
 
           {/* Sub */}

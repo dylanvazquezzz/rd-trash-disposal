@@ -28,6 +28,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  const demolitionPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${siteUrl}/demolition/${city}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
   return [
     {
       url: siteUrl,
@@ -39,8 +46,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/estimate`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     ...cityPages,
+    ...demolitionPages,
   ]
 }
