@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
@@ -49,6 +50,9 @@ export default function ThankYouPage() {
         </div>
       </main>
       <Footer />
+      <Script id="gtag-conversion" strategy="afterInteractive">
+        {`gtag('event', 'conversion_event_submit_lead_form', {});`}
+      </Script>
     </>
   )
 }
