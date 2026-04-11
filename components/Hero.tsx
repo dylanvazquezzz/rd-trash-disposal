@@ -54,7 +54,7 @@ export default function Hero() {
               href="/estimate"
               className="group inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold text-base px-8 py-4 rounded shadow-xl hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95"
             >
-              Get Your Free Estimate
+              Get Your Instant Estimate
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap gap-6 animate-fade-up delay-400">
             {[
               { label: 'Same-Day Service', icon: '⚡' },
-              { label: 'Free Estimates', icon: '✓' },
+              { label: 'Instant Estimates', icon: '✓' },
               { label: 'Licensed & Insured', icon: '🛡' },
               { label: 'All Items Accepted', icon: '♻' },
             ].map((item) => (

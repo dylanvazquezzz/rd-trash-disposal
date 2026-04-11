@@ -266,7 +266,7 @@ export default function CityPage({
                 href="/estimate"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-[#0B1E3D] transition-all"
               >
-                Get Free Estimate
+                Get Instant Estimate
               </a>
             </div>
           </div>
@@ -341,7 +341,7 @@ export default function CityPage({
               {[
                 { label: 'Licensed & Insured', sub: 'State of Florida' },
                 { label: 'Same-Day Service', sub: '7 days a week' },
-                { label: 'Free Estimates', sub: 'No hidden fees' },
+                { label: 'Instant Estimates', sub: 'No hidden fees' },
               ].map((item) => (
                 <div key={item.label} className="text-center">
                   <p className="font-display text-[#0B1E3D] text-2xl">{item.label.toUpperCase()}</p>

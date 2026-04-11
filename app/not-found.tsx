@@ -31,7 +31,7 @@ export default function NotFound() {
               href="/estimate"
               className="inline-flex items-center justify-center bg-[#F5A623] text-[#0B1E3D] font-bold px-8 py-3 rounded hover:bg-amber-400 transition-all hover:scale-105"
             >
-              Get Free Estimate
+              Get Instant Estimate
             </a>
           </div>
         </div>

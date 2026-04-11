@@ -64,7 +64,7 @@ export default function OGImage() {
             textAlign: 'center',
           }}
         >
-          Miami-Dade &amp; Broward County · Licensed &amp; Insured · Free Estimates
+          Miami-Dade &amp; Broward County · Licensed &amp; Insured · Instant Estimates
         </div>
       </div>
     ),

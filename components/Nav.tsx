@@ -60,7 +60,7 @@ export default function Nav() {
               href="/estimate"
               className="bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
             >
-              Free Estimate
+              Instant Estimate
             </a>
           </div>
 
@@ -126,7 +126,7 @@ export default function Nav() {
                 className="mt-1 bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-3 rounded text-center"
                 onClick={() => setMenuOpen(false)}
               >
-                Get Free Estimate
+                Get Instant Estimate
               </a>
             </div>
           </div>
