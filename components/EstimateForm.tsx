@@ -320,15 +320,14 @@ export default function EstimateForm() {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1.5">ZIP Code *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-1.5">City or ZIP Code *</label>
                     <input
                       type="text"
                       required
                       value={form.zip}
                       onChange={(e) => setForm({ ...form, zip: e.target.value })}
                       className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#0B1E3D] focus:ring-1 focus:ring-[#0B1E3D]"
-                      placeholder="33101"
-                      maxLength={5}
+                      placeholder="Miami or 33101"
                     />
                   </div>
                   <div>

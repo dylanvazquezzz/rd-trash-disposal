@@ -182,17 +182,17 @@ function EstimateForm() {
               />
             </div>
 
-            {/* City */}
+            {/* City or ZIP Code */}
             <div>
               <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
-                City <span className="text-[#F5A623]">*</span>
+                City or ZIP Code <span className="text-[#F5A623]">*</span>
               </label>
               <input
                 type="text"
                 required
                 value={form.city}
                 onChange={(e) => setForm({ ...form, city: e.target.value })}
-                placeholder="e.g. Miami, Fort Lauderdale"
+                placeholder="e.g. Miami or 33101"
                 className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
               />
             </div>
