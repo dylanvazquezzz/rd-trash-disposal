@@ -6,6 +6,171 @@
 
 ---
 
+## Session 3 — April 13, 2026 — Impression Share Improvement Plan
+
+**Context:** Campaign live 6 days. $64 spent, 2 real leads ($32 CPL). Search Lost IS (rank): 83.65% Junk Removal, >90% Demolition. One broad match keyword carrying 65% of spend. City-specific keywords getting impressions but 0 clicks.
+
+### Track 1 — Bid Adjustments (Do in Google Ads Console Today)
+
+These are immediate changes in the Ads UI — no code needed.
+
+- [ ] **Raise bids on city-specific exact/phrase match keywords +50–75%**
+  - Priority: `[junk removal near me]`, `"junk removal miami"`, `"junk removal hialeah"`, `"junk removal fort lauderdale"`, `"junk removal homestead"` (lead came from there)
+  - These keywords are getting impressions but losing the auction. Bids are too low.
+- [ ] **Add age bid modifier: 25–34 → +20%**
+  - Only converting age group. Both real leads confirmed 25–34.
+- [ ] **Add age bid modifier: 65+ → -20%**
+  - Paying $4.20/click, 0 conversions across campaign so far.
+- [ ] **Raise demolition keyword bids significantly (+100%)**
+  - Losing >90% to rank. Currently nearly invisible. Demo pages are live — need bids to match.
+- [ ] **Pause `[junk removal this weekend]`** — flagged "rarely served," wasting budget eligibility
+- [ ] **Check Sunday budget cap** — Apr 12 showed 37 impressions but $0.00 spend. Either daily budget hit a wall early or ad scheduling is cutting off on Sundays.
+
+### Track 2 — Ad Copy Rewrite (Google Ads Console)
+
+**Competitor intelligence summary (researched April 13):**
+- "Free estimate" + "same-day" = table stakes. Every competitor says this. Not a differentiator.
+- Review count is used aggressively: "300+ reviews," "5,170+ reviews," "4.9 stars"
+- Local competitors use discount hooks nationals won't: "$50 off book today" (XS Trash), "$25 off first job" (Battle's)
+- Specific time urgency beats generic: "Call by noon — guaranteed today" (1866 Junk Be Gone) outperforms "same-day"
+- **Gap nobody owns:** Demolition + junk removal combined as a single offer. Every competitor is junk-only.
+
+**Recommended headline rotation (Junk Removal ad group):**
+
+| Slot | Headline (30 char max) | Why |
+|------|------------------------|-----|
+| 1 | Same-Day Junk Removal | Primary keyword + urgency (table stakes) |
+| 2 | Call by Noon — Out Today | Specific time urgency, outperforms vague "same-day" |
+| 3 | Licensed & Insured · Free Quote | Trust signal + no-risk CTA |
+| 4 | $50 Off — Book Today | Discount hook. Locals convert better with this vs. nationals |
+| 5 | Junk + Demo — One Call | Unique angle. No competitor owns this combination |
+| 6 | Miami-Dade & Broward | Geographic qualifier, filters out-of-area clicks |
+
+**Recommended descriptions:**
+
+Description 1:
+> Same-day junk removal and interior demolition in South Florida. Furniture, appliances, construction debris — we haul it all. Call for a free estimate.
+
+Description 2:
+> Licensed & insured. Serving Miami-Dade and Broward County. $50 off when you book today. Family-owned crew, not a franchise. Call by noon for same-day pickup.
+
+**Demolition ad group — add these headlines:**
+- "Junk Removal + Demo Combo" (unique angle)
+- "Kitchen & Bath Teardowns"
+- "Interior Demo Miami FL"
+- "We Haul the Debris Too"
+
+**Sitelinks to add (Junk Removal):**
+- "Junk Removal Miami" → `/junk-removal-miami`
+- "Junk Removal Homestead" → `/junk-removal-homestead` (leads coming from 33034/33170)
+- "Same-Day Estimate" → `/estimate`
+- "Furniture Removal" (high CTR keyword)
+- "Appliance Pickup"
+
+### Track 3 — Code Changes for Quality Score (`/websites/trash`)
+
+City pages are already solid (unique localContent + neighborhoods per city). These are targeted additions for QS improvement. All changes are in two template files.
+
+**Agent to use: `typescript-pro` or `javascript-pro` for implementation. `seo-content` for FAQ copy.**
+
+#### 3.1 Add phone number to body text
+- **File:** `app/[city]/page.tsx` ~line 287 (local content section)
+- **File:** `app/demolition/[city]/page.tsx` ~line 278
+- **Change:** After the `localContent` paragraph, add one line: `"Call us at {phoneFormatted} — we're in {name} regularly."`
+- **Why:** Google scores landing page experience partly on phone number visibility in body, not just CTA buttons.
+
+#### 3.2 Add FAQ schema to city pages
+- **File:** `app/[city]/page.tsx` — schema JSON-LD block (~line 215)
+- **File:** `app/demolition/[city]/page.tsx` — schema block (~line 206)
+- **Change:** Add `FAQPage` JSON-LD with 3 questions per page:
+  ```json
+  {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you offer same-day junk removal in {CITY}?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Call by noon for same-day service in {CITY} and surrounding areas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas of {CITY} do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve all of {CITY} including {NEIGHBORHOODS_JOINED}."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does junk removal cost in {CITY}?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most jobs in {CITY} range from $100 to $600 depending on volume. We offer free estimates — call {PHONE} or request online."
+        }
+      }
+    ]
+  }
+  ```
+
+#### 3.3 Add BreadcrumbList schema
+- **File:** Both city templates — schema block
+- **Change:** Add breadcrumb JSON-LD:
+  ```json
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://rdtrash.org"},
+      {"@type": "ListItem", "position": 2, "name": "Junk Removal {CITY}", "item": "https://rdtrash.org/junk-removal-{city}"}
+    ]
+  }
+  ```
+
+#### 3.4 Pre-populate city/zip on estimate form
+- **File:** `app/estimate/page.tsx` line 194 (city field)
+- **Change 1:** Relabel the field from "City" to "City or ZIP Code" — real leads have entered zip codes (33034, 33170), not city names. Accept either format.
+- **Change 2:** Read `?city=` from URL search params and pre-fill. City pages link to `/estimate?service=junk-removal` — add `&city={cityKey}` to pass the city slug, OR pass the zip code if it's available from geolocation.
+- **Why:** Current form requires manual entry, adding friction for paid traffic. Zip code flexibility confirmed by real lead behavior.
+
+#### 3.5 Expand areaServed in schema to include neighborhoods
+- **File:** Both city templates — schema block (line 228-232 junk, 219-223 demo)
+- **Change:** Replace single `areaServed` city string with array of city + neighborhood `City` objects
+- **Why:** Tells Google exactly which neighborhoods are served — helps for "junk removal [neighborhood]" queries
+
+#### 3.6 Add H3 heading for neighborhoods section
+- **File:** `app/[city]/page.tsx` ~line 292
+- **Change:** Add `<h3>Neighborhoods We Serve in {data.name}</h3>` above the neighborhood badge chips
+- **Why:** H3 with location keyword adds crawlable heading hierarchy Google uses for content relevance scoring
+
+### Track 4 — Keyword Additions (Google Ads Console)
+
+Based on where the 2 real leads came from (33034 Homestead, 33170 Naranja):
+
+- [ ] Add `[junk removal homestead fl]` exact match — leads already coming from there
+- [ ] Add `[junk removal naranja fl]` — 33170 zip code, real lead
+- [ ] Add `[furniture removal miami]` as phrase match — 50% CTR on exact match, worth expanding
+- [ ] Add `[same day junk removal miami]` exact match
+- [ ] Consider `[garage cleanout miami]` — high intent, low competition vs. generic "junk removal"
+- [ ] **Negatives to add immediately** (pull Search Terms report first to confirm):
+  - "free junk removal"
+  - "junk removal jobs" / "junk removal driver"
+  - "diy junk removal"
+  - "junk removal dumpster" (different service model)
+
+### Execution Order
+
+```
+April 13 (today):   Track 1 — Bid adjustments in Google Ads console
+April 13-14:        Track 2 — Ad copy rewrite in Google Ads console
+April 14-15:        Track 3 — Code changes (typescript-pro agent)
+April 15:           Track 4 — New keywords + negatives (after pulling Search Terms report)
+Week of April 20:   Check IS metrics — target <60% lost IS (rank) on JR, <70% on Demo
+```
+
+---
+
 ## Session 2 Status — April 9, 2026
 
 ### Completed

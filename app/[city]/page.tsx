@@ -225,11 +225,49 @@ export default function CityPage({
     },
     url: `${siteUrl}/junk-removal-${cityKey}`,
     telephone: `+1${data.phone}`,
-    areaServed: {
-      '@type': 'City',
-      name: data.name,
-      containedInPlace: { '@type': 'State', name: 'Florida' },
-    },
+    areaServed: [data.name, ...data.neighborhoods],
+  }
+
+  const richSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: `Junk Removal ${data.name}`, item: `${siteUrl}/junk-removal-${cityKey}` },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: `Do you offer same-day junk removal in ${data.name}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Yes. Call by noon for same-day junk removal in ${data.name} and surrounding areas. Call ${data.phoneFormatted}.`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: `What areas of ${data.name} do you serve?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `We serve all of ${data.name} including ${data.neighborhoods.join(', ')}.`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: `How much does junk removal cost in ${data.name}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Most junk removal jobs in ${data.name} range from $100 to $600 depending on volume. We offer free estimates — call ${data.phoneFormatted} or request online.`,
+            },
+          },
+        ],
+      },
+    ],
   }
 
   return (
@@ -237,6 +275,10 @@ export default function CityPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(richSchema) }}
       />
       <Nav />
       <main>
@@ -286,11 +328,14 @@ export default function CityPage({
                 <p className="text-gray-600 text-lg leading-relaxed">
                   {data.localContent}
                 </p>
+                <p className="mt-3 text-sm text-zinc-400">
+                  Call us at <a href={`tel:${data.phone}`} className="text-amber-400 font-medium">{data.phoneFormatted}</a> — we cover {data.name} and surrounding areas.
+                </p>
               </div>
               <div>
-                <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
-                  Neighborhoods We Cover
-                </p>
+                <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-widest mb-3">
+                  Neighborhoods We Serve in {data.name}
+                </h3>
                 <div className="flex flex-wrap gap-2">
                   {data.neighborhoods.map((n) => (
                     <span

@@ -216,11 +216,49 @@ export default function DemoPage({
     },
     url: `${siteUrl}/demolition/${params.city}`,
     telephone: `+1${data.phone}`,
-    areaServed: {
-      '@type': 'City',
-      name: data.name,
-      containedInPlace: { '@type': 'State', name: 'Florida' },
-    },
+    areaServed: [data.name, ...data.neighborhoods],
+  }
+
+  const richSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: `Demolition ${data.name}`, item: `${siteUrl}/demolition/${params.city}` },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: `Do you offer same-day demolition in ${data.name}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Yes. Call by noon for same-day interior demolition in ${data.name} and surrounding areas. Call ${data.phoneFormatted}.`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: `What demolition services do you offer in ${data.name}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `We offer full interior demolition in ${data.name} including kitchen gut-outs, bathroom teardowns, tile and flooring removal, drywall demo, cabinet removal, shed and deck demolition, and full debris haul-away.`,
+            },
+          },
+          {
+            '@type': 'Question',
+            name: `How much does interior demolition cost in ${data.name}?`,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: `Interior demolition in ${data.name} typically ranges from $300 to $2,000 depending on the scope. Kitchen gut-outs and bathroom teardowns are our most common jobs. Call ${data.phoneFormatted} for a free estimate.`,
+            },
+          },
+        ],
+      },
+    ],
   }
 
   return (
@@ -228,6 +266,10 @@ export default function DemoPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(richSchema) }}
       />
       <Nav />
       <main>
@@ -276,6 +318,9 @@ export default function DemoPage({
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">
                   {data.localContent}
+                </p>
+                <p className="mt-3 text-sm text-zinc-400">
+                  Call us at <a href={`tel:${data.phone}`} className="text-amber-400 font-medium">{data.phoneFormatted}</a> — we cover {data.name} and surrounding areas.
                 </p>
               </div>
               <div>
@@ -353,6 +398,9 @@ export default function DemoPage({
             <h2 className="font-display text-[#0B1E3D] text-4xl mb-8">
               NEIGHBORHOODS WE COVER
             </h2>
+            <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-widest mb-3">
+              Neighborhoods We Serve in {data.name}
+            </h3>
             <div className="flex flex-wrap gap-2 justify-center">
               {data.neighborhoods.map((n) => (
                 <span

@@ -36,9 +36,11 @@ function EstimateForm() {
   const initialService: ServiceType =
     searchParams.get('service') === 'demolition' ? 'demolition' : 'junk-removal'
 
+  const cityParam = searchParams.get('city') ?? ''
+
   const [form, setForm] = useState<FormState>({
     name: '',
-    city: '',
+    city: cityParam,
     contactPreference: 'text',
     contactValue: '',
     serviceType: initialService,
