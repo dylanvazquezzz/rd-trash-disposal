@@ -32,7 +32,7 @@ export default function ServiceAreas() {
               WE COVER ALL OF SOUTH FLORIDA.
             </h2>
             <p className="text-gray-500 text-lg leading-relaxed mb-8">
-              Based locally. We serve Miami-Dade and Broward counties.
+              Based locally. We serve Miami-Dade, Broward, and Palm Beach counties.
               Same-day service available 7 days a week. Call us to confirm
               availability in your area.
             </p>
@@ -54,22 +54,13 @@ export default function ServiceAreas() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:3054500649"
+                href="tel:7864083738"
                 className="inline-flex items-center justify-center gap-2 bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3560] transition-all hover:scale-105"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Miami-Dade: 305-450-0649
-              </a>
-              <a
-                href="tel:9547088090"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#0B1E3D] text-[#0B1E3D] font-semibold px-6 py-3 rounded-lg hover:bg-white transition-all hover:scale-105"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Broward: 954-708-8090
+                Call 786-408-3738
               </a>
             </div>
           </div>

@@ -93,16 +93,10 @@ export default function WhatWeTake() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:3054500649"
+              href="tel:7864083738"
               className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-6 py-3 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105"
             >
-              Call 305-450-0649
-            </a>
-            <a
-              href="tel:9547088090"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white font-semibold px-6 py-3 rounded-lg hover:border-white transition-all"
-            >
-              Call 954-708-8090
+              Call 786-408-3738
             </a>
           </div>
         </div>

@@ -29,16 +29,10 @@ export default function ThankYouPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
             <a
-              href="tel:3054500649"
+              href="tel:7864083738"
               className="inline-block bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded hover:bg-[#1a3560] transition-all"
             >
-              305-450-0649
-            </a>
-            <a
-              href="tel:9547088090"
-              className="inline-block border-2 border-[#0B1E3D] text-[#0B1E3D] font-semibold px-6 py-3 rounded hover:bg-gray-50 transition-all"
-            >
-              954-708-8090
+              786-408-3738
             </a>
           </div>
           <a

@@ -11,7 +11,7 @@ const faqs = [
   {
     question: 'Do you offer same-day junk removal?',
     answer:
-      'Yes. Same-day service is available 7 days a week across Miami-Dade and Broward County. Call us in the morning and we can often be there the same day. Availability varies by schedule — call 305-450-0649 to confirm.',
+      'Yes. Same-day service is available 7 days a week across Miami-Dade, Broward, and Palm Beach County. Call us in the morning and we can often be there the same day. Availability varies by schedule — call 786-408-3738 to confirm.',
   },
   {
     question: 'What areas do you serve?',
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: 'How do I get a free estimate?',
     answer:
-      'You can request a free estimate online at rdtrash.org/estimate or call us directly at 305-450-0649 (Miami-Dade) or 954-708-8090 (Broward). We respond same day.',
+      'You can request a free estimate online at rdtrash.org/estimate or call us directly at 786-408-3738. We respond same day.',
   },
 ]
 

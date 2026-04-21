@@ -52,8 +52,8 @@ export default function PrivacyPage() {
               <h2 className="font-display text-2xl text-[#0B1E3D] mb-3">Contact</h2>
               <p>
                 If you have questions about your data or would like it removed, contact us at{' '}
-                <a href="tel:3054500649" className="text-[#F5A623] hover:underline">
-                  305-450-0649
+                <a href="tel:7864083738" className="text-[#F5A623] hover:underline">
+                  786-408-3738
                 </a>
                 .
               </p>

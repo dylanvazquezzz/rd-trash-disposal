@@ -50,11 +50,11 @@ export default function Nav() {
           {/* Phone + CTA */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:3054500649"
-              onClick={() => trackCall('305-450-0649')}
+              href="tel:7864083738"
+              onClick={() => trackCall('786-408-3738')}
               className="text-sm font-semibold text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
             >
-              305-450-0649
+              786-408-3738
             </a>
             <a
               href="/estimate"
@@ -108,18 +108,11 @@ export default function Nav() {
             )}
             <div className="flex flex-col gap-2 pt-2">
               <a
-                href="tel:3054500649"
-                onClick={() => trackCall('305-450-0649')}
+                href="tel:7864083738"
+                onClick={() => trackCall('786-408-3738')}
                 className="text-[#0B1E3D] font-semibold text-base"
               >
-                305-450-0649
-              </a>
-              <a
-                href="tel:9547088090"
-                onClick={() => trackCall('954-708-8090')}
-                className="text-[#0B1E3D] font-semibold text-base"
-              >
-                954-708-8090
+                786-408-3738
               </a>
               <a
                 href="/estimate"

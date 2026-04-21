@@ -376,18 +376,11 @@ export default function EstimateForm() {
                 )}
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
-                    href="tel:3054500649"
-                    onClick={() => fireEvent('phone_call', { phone: '305-450-0649' })}
+                    href="tel:7864083738"
+                    onClick={() => fireEvent('phone_call', { phone: '786-408-3738' })}
                     className="inline-flex items-center justify-center gap-2 bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3560] transition-all"
                   >
-                    Call Us Now — 305-450-0649
-                  </a>
-                  <a
-                    href="tel:9547088090"
-                    onClick={() => fireEvent('phone_call', { phone: '954-708-8090' })}
-                    className="inline-flex items-center justify-center border-2 border-[#0B1E3D] text-[#0B1E3D] font-semibold px-6 py-3 rounded-lg hover:bg-gray-50 transition-all"
-                  >
-                    954-708-8090
+                    Call Us Now — 786-408-3738
                   </a>
                 </div>
               </div>
