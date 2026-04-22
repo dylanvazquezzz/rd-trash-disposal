@@ -22,7 +22,6 @@ export async function PATCH(
   const { id } = await params
   const body = await req.json()
 
-  // Whitelist — only allow mutable fields, never id/created_at
   const update: Record<string, unknown> = {}
   for (const key of Object.keys(body)) {
     if (ALLOWED_FIELDS.has(key)) update[key] = body[key]
@@ -38,6 +37,11 @@ export async function PATCH(
 
   if (update.job_type && !VALID_JOB_TYPES.includes(update.job_type as JobType)) {
     return NextResponse.json({ error: 'Invalid job_type' }, { status: 400 })
+  }
+
+  // If the schedule changes, reset the reminder so it fires again at the new time
+  if (update.job_date || update.job_time) {
+    update.reminder_sent = false
   }
 
   const { data, error } = await supabaseAdmin

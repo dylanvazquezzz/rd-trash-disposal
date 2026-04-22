@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { isAdminAuthenticated, unauthorizedResponse } from '@/lib/admin-auth'
+import { buildBookingBlocks, postToSlack } from '@/lib/slack'
 
 type Job = {
   id: string
@@ -45,7 +46,11 @@ export async function POST(req: NextRequest) {
 
   const { data, error } = await supabaseAdmin
     .from('jobs')
-    .insert({ job_date, job_time, job_type, address, zip_code, contact_name, contact_phone: contact_phone ?? null, description: description ?? null })
+    .insert({
+      job_date, job_time, job_type, address, zip_code, contact_name,
+      contact_phone: contact_phone ?? null,
+      description: description ?? null,
+    })
     .select()
     .single()
 
@@ -54,29 +59,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Failed to create job' }, { status: 500 })
   }
 
-  const slackWebhookUrl = process.env.SLACK_WEBHOOK_URL
-  if (slackWebhookUrl) {
-    const jobTypeLabel = job_type === 'demolition' ? 'Demolition' : 'Junk Removal'
-    const detailLines = [
-      `*Job Type:* ${jobTypeLabel}`,
-      `*Date:* ${job_date}`,
-      `*Time:* ${job_time}`,
-      `*Address:* ${address}, ${zip_code}`,
-      `*Contact:* ${contact_name}`,
-    ]
-    if (contact_phone) detailLines.push(`*Phone:* ${contact_phone}`)
-    if (description) detailLines.push(`*Description:* ${description}`)
-
-    const blocks: object[] = [
-      { type: 'header', text: { type: 'plain_text', text: 'New Job Booked', emoji: false } },
-      { type: 'section', text: { type: 'mrkdwn', text: detailLines.join('\n') } },
-    ]
-
-    await fetch(slackWebhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ blocks }),
-    })
+  const webhookUrl = process.env.SLACK_WEBHOOK_URL
+  if (webhookUrl) {
+    await postToSlack(webhookUrl, buildBookingBlocks({ job_date, job_time, job_type, address, zip_code, contact_name, contact_phone, description }))
   }
 
   return NextResponse.json(data as Job, { status: 201 })
