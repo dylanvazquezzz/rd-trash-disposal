@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Failed to create job' }, { status: 500 })
   }
 
-  const webhookUrl = process.env.SLACK_WEBHOOK_URL
+  const webhookUrl = process.env.SLACK_UPCOMING_WEBHOOK_URL
   if (webhookUrl) {
     await postToSlack(webhookUrl, buildBookingBlocks({ job_date, job_time, job_type, address, zip_code, contact_name, contact_phone, description }))
   }
