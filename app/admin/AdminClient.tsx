@@ -59,7 +59,7 @@ export default function AdminClient() {
   const [addDefaultDate, setAddDefaultDate] = useState<string | undefined>()
   const [selectedJob, setSelectedJob] = useState<Job | null>(null)
   const [jobFilter, setJobFilter] = useState<JobFilter>('active')
-  const [upcomingOpen, setUpcomingOpen] = useState(false)
+  const [upcomingOpen, setUpcomingOpen] = useState(true)
   const [mobileTab, setMobileTab] = useState<MobileTab>('calendar')
 
   const weekDays = getWeekDays(currentDate)
