@@ -8,9 +8,10 @@ type Props = {
   currentDate: Date
   today: Date
   onDayClick: (date: Date) => void
+  compact?: boolean
 }
 
-export default function MiniCalendar({ currentDate, today, onDayClick }: Props) {
+export default function MiniCalendar({ currentDate, today, onDayClick, compact = false }: Props) {
   const [year, setYear] = useState(currentDate.getFullYear())
   const [month, setMonth] = useState(currentDate.getMonth())
 
@@ -39,27 +40,32 @@ export default function MiniCalendar({ currentDate, today, onDayClick }: Props) 
     else setMonth(m => m + 1)
   }
 
+  const px = compact ? 'px-2 pt-2 pb-1' : 'px-4 pt-2 pb-3'
+  const titleSize = compact ? 'text-[11px]' : 'text-sm'
+  const cellSize = compact ? 'w-5 h-5' : 'w-7 h-7'
+  const cellText = compact ? 'text-[10px]' : 'text-[11px]'
+
   return (
-    <div className="px-4 pt-2 pb-3">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-sm font-semibold text-gray-800">{MONTH_NAMES[month]} {year}</span>
-        <div className="flex gap-0.5">
-          <button onClick={prevMonth} className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+    <div className={px}>
+      <div className="flex items-center justify-between mb-1.5">
+        <span className={`${titleSize} font-semibold text-gray-800 leading-none`}>{MONTH_NAMES[month]} {year}</span>
+        <div className="flex gap-0">
+          <button onClick={prevMonth} className="p-1 rounded hover:bg-gray-100 text-gray-400 transition-colors">
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
           </button>
-          <button onClick={nextMonth} className="p-1.5 rounded-lg hover:bg-gray-100 text-gray-400 transition-colors">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+          <button onClick={nextMonth} className="p-1 rounded hover:bg-gray-100 text-gray-400 transition-colors">
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
           </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-7 mb-1">
+      <div className="grid grid-cols-7 mb-0.5">
         {DAY_LABELS.map((l, i) => (
-          <div key={i} className="text-[10px] text-center text-gray-400 font-medium py-0.5">{l}</div>
+          <div key={i} className="text-[9px] text-center text-gray-400 font-medium">{l}</div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-y-0.5">
+      <div className="grid grid-cols-7">
         {cells.map((day, i) => {
           if (day === null) return <div key={i} />
           const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`
@@ -70,7 +76,7 @@ export default function MiniCalendar({ currentDate, today, onDayClick }: Props) 
               key={i}
               onClick={() => onDayClick(new Date(year, month, day))}
               className={[
-                'text-[11px] w-7 h-7 mx-auto rounded-full flex items-center justify-center font-medium transition-colors',
+                `${cellText} ${cellSize} mx-auto rounded-full flex items-center justify-center font-medium transition-colors`,
                 isToday
                   ? 'bg-blue-600 text-white'
                   : isSelected
