@@ -54,9 +54,9 @@ export default function WeekView({ weekDays, jobs, today, currentTimeMinutes, on
 
   return (
     <div className="overflow-auto flex-1">
-      <div className="min-w-[700px]">
+      <div className="min-w-0">
         {/* Day headers */}
-        <div className="grid grid-cols-[56px_repeat(7,1fr)] border-b border-gray-100 sticky top-0 bg-white z-10">
+        <div className="grid grid-cols-[36px_repeat(7,1fr)] sm:grid-cols-[56px_repeat(7,1fr)] border-b border-gray-100 sticky top-0 bg-white z-10">
           <div className="h-12" />
           {weekDays.map((day) => {
             const iso = day.toISOString().split('T')[0]
@@ -99,10 +99,10 @@ export default function WeekView({ weekDays, jobs, today, currentTimeMinutes, on
           {HOURS.map((hour) => (
             <div
               key={hour}
-              className="grid grid-cols-[56px_repeat(7,1fr)]"
+              className="grid grid-cols-[36px_repeat(7,1fr)] sm:grid-cols-[56px_repeat(7,1fr)]"
               style={{ height: '56px' }}
             >
-              <div className="flex items-start justify-end pr-2 pt-1 text-[10px] text-gray-400 font-body">
+              <div className="flex items-start justify-end pr-1 sm:pr-2 pt-1 text-[9px] sm:text-[10px] text-gray-400 font-body">
                 {formatHour(hour)}
               </div>
               {weekDays.map((day) => {
@@ -165,7 +165,7 @@ export default function WeekView({ weekDays, jobs, today, currentTimeMinutes, on
           {/* Current time line */}
           {currentTimeRow >= 0 && currentTimeRow <= HOURS.length * 56 && (
             <div
-              className="absolute left-14 right-0 flex items-center pointer-events-none z-20"
+              className="absolute left-9 sm:left-14 right-0 flex items-center pointer-events-none z-20"
               style={{ top: `${currentTimeRow}px` }}
             >
               <div className="w-2 h-2 rounded-full bg-blue-500 -ml-1" />
