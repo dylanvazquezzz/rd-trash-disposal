@@ -15,27 +15,71 @@ function formatTime(time: string): string {
   return `${display}:${mStr} ${suffix}`
 }
 
-function formatDate(dateStr: string): string {
+function formatDate(dateStr: string, compact: boolean): string {
   const [year, month, day] = dateStr.split('-').map(Number)
   const d = new Date(year, month - 1, day)
   const today = new Date()
   const tomorrow = new Date(today); tomorrow.setDate(today.getDate() + 1)
   if (d.toDateString() === today.toDateString()) return 'Today'
-  if (d.toDateString() === tomorrow.toDateString()) return 'Tomorrow'
+  if (d.toDateString() === tomorrow.toDateString()) return compact ? 'Tmrw' : 'Tomorrow'
   return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })
 }
 
 type Props = {
   jobs: Job[]
   onJobClick: (job: Job) => void
+  compact?: boolean
 }
 
-export default function UpcomingPanel({ jobs, onJobClick }: Props) {
+export default function UpcomingPanel({ jobs, onJobClick, compact = false }: Props) {
   const today = isoToday()
 
   const upcoming = jobs
     .filter(j => ['scheduled', 'in_progress'].includes(j.status) && j.job_date >= today)
     .sort((a, b) => a.job_date.localeCompare(b.job_date) || a.job_time.localeCompare(b.job_time))
+
+  if (compact) {
+    return (
+      <div className="flex flex-col h-full bg-white">
+        <div className="px-2 py-1.5 border-b border-gray-100 shrink-0">
+          <p className="text-[10px] font-semibold text-gray-600">Upcoming</p>
+          <p className="text-[9px] text-gray-400">{upcoming.length} jobs</p>
+        </div>
+        <div className="flex-1 overflow-y-auto">
+          {upcoming.length === 0 ? (
+            <div className="flex items-center justify-center h-16">
+              <p className="text-[9px] text-gray-300">None</p>
+            </div>
+          ) : (
+            <div className="divide-y divide-gray-50">
+              {upcoming.map((job) => {
+                const isDemo = job.job_type === 'demolition'
+                return (
+                  <button
+                    key={job.id}
+                    onClick={() => onJobClick(job)}
+                    className="w-full text-left px-2 py-1.5 hover:bg-gray-50 transition-colors"
+                  >
+                    <div className="flex items-center gap-1 mb-0.5">
+                      <span className={[
+                        'text-[8px] font-bold px-1 py-0.5 rounded shrink-0',
+                        isDemo ? 'bg-yellow-300 text-gray-800' : 'bg-blue-500 text-white',
+                      ].join(' ')}>
+                        {isDemo ? 'D' : 'JR'}
+                      </span>
+                      <span className="text-[9px] text-gray-400 truncate">{formatDate(job.job_date, true)}</span>
+                    </div>
+                    <p className="text-[10px] font-medium text-gray-800 truncate">{job.contact_name}</p>
+                    <p className="text-[9px] text-gray-400 truncate">{formatTime(job.job_time)}</p>
+                  </button>
+                )
+              })}
+            </div>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col h-full bg-white">
@@ -61,7 +105,7 @@ export default function UpcomingPanel({ jobs, onJobClick }: Props) {
                 >
                   <div className="flex items-center justify-between gap-2 mb-1">
                     <span className="text-xs font-medium text-gray-500 font-body">
-                      {formatDate(job.job_date)} · {formatTime(job.job_time)}
+                      {formatDate(job.job_date, false)} · {formatTime(job.job_time)}
                     </span>
                     <span className={[
                       'text-[10px] font-bold px-1.5 py-0.5 rounded shrink-0',

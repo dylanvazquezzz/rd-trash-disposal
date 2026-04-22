@@ -40,24 +40,39 @@ export default function MiniCalendar({ currentDate, today, onDayClick, compact =
     else setMonth(m => m + 1)
   }
 
-  const px = compact ? 'px-2 pt-2 pb-1' : 'px-4 pt-2 pb-3'
-  const titleSize = compact ? 'text-[11px]' : 'text-sm'
-  const cellSize = compact ? 'w-5 h-5' : 'w-7 h-7'
-  const cellText = compact ? 'text-[10px]' : 'text-[11px]'
+  const px = compact ? 'px-1.5 pt-1.5 pb-1' : 'px-4 pt-2 pb-3'
+  const titleSize = compact ? 'text-[10px]' : 'text-sm'
+  const cellSize = compact ? 'w-[14px] h-[14px]' : 'w-7 h-7'
+  const cellText = compact ? 'text-[9px]' : 'text-[11px]'
 
   return (
     <div className={px}>
-      <div className="flex items-center justify-between mb-1.5">
-        <span className={`${titleSize} font-semibold text-gray-800 leading-none`}>{MONTH_NAMES[month]} {year}</span>
-        <div className="flex gap-0">
-          <button onClick={prevMonth} className="p-1 rounded hover:bg-gray-100 text-gray-400 transition-colors">
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-          </button>
-          <button onClick={nextMonth} className="p-1 rounded hover:bg-gray-100 text-gray-400 transition-colors">
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          </button>
+      {/* Month label + arrows — stack vertically in compact to save width */}
+      {compact ? (
+        <div className="flex items-center justify-between mb-1">
+          <span className={`${titleSize} font-semibold text-gray-700 leading-none truncate`}>{MONTH_NAMES[month].slice(0,3)} {year}</span>
+          <div className="flex">
+            <button onClick={prevMonth} className="p-0.5 rounded hover:bg-gray-100 text-gray-400 transition-colors">
+              <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button onClick={nextMonth} className="p-0.5 rounded hover:bg-gray-100 text-gray-400 transition-colors">
+              <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="flex items-center justify-between mb-1.5">
+          <span className={`${titleSize} font-semibold text-gray-800 leading-none`}>{MONTH_NAMES[month]} {year}</span>
+          <div className="flex gap-0">
+            <button onClick={prevMonth} className="p-1 rounded hover:bg-gray-100 text-gray-400 transition-colors">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button onClick={nextMonth} className="p-1 rounded hover:bg-gray-100 text-gray-400 transition-colors">
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-7 mb-0.5">
         {DAY_LABELS.map((l, i) => (

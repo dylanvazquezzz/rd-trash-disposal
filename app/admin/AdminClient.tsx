@@ -261,7 +261,7 @@ export default function AdminClient() {
           <div className="sm:hidden flex flex-1 overflow-hidden">
 
             {/* Left panel: filter + mini calendar + upcoming */}
-            <div className="w-40 border-r border-gray-100 flex flex-col shrink-0 overflow-hidden bg-white">
+            <div className="w-[120px] border-r border-gray-100 flex flex-col shrink-0 overflow-hidden bg-white">
               {/* Active / Cancelled filter */}
               <div className="px-2 py-2 border-b border-gray-100 shrink-0">
                 <div className="flex rounded-lg overflow-hidden border border-gray-200 text-[10px]">
@@ -284,7 +284,7 @@ export default function AdminClient() {
 
               {/* Upcoming jobs */}
               <div className="flex-1 overflow-hidden">
-                <UpcomingPanel jobs={jobs} onJobClick={setSelectedJob} />
+                <UpcomingPanel jobs={jobs} onJobClick={setSelectedJob} compact />
               </div>
 
               {/* Logout */}
