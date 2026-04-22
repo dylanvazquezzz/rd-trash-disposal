@@ -70,7 +70,7 @@ export default function LoginScreen() {
             disabled={loading}
             autoFocus
             className={[
-              'w-full text-center text-2xl tracking-[0.5em] py-3 px-4 rounded-lg border-2',
+              'w-full text-center text-2xl tracking-[0.3em] py-3 px-4 rounded-lg border-2',
               'font-body outline-none transition-all duration-150',
               'focus:ring-2 focus:ring-blue-500 focus:border-blue-500',
               error
@@ -80,7 +80,7 @@ export default function LoginScreen() {
             ]
               .filter(Boolean)
               .join(' ')}
-            placeholder="----"
+            placeholder="--------"
           />
 
           {error && (
