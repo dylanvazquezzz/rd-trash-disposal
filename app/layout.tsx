@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | R&D Trash Disposal',
   },
   description:
-    'Same-day junk removal and demolition in Miami-Dade, Broward, and Palm Beach County. Furniture, appliances, construction debris, kitchen & bathroom teardowns — we haul it all. Free estimates. Call 786-408-3738.',
+    'Same-day junk removal and demolition in Miami-Dade, Broward, and Palm Beach County. Furniture, appliances, construction debris, kitchen & bathroom teardowns — we haul it all. Free estimates. Call 786-408-3783.',
   alternates: {
     canonical: siteUrl,
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'R&D Trash Disposal | Same-Day Junk Removal — South Florida',
-    description: 'Same-day junk removal and demolition across Miami-Dade, Broward, and Palm Beach. Any trash, any size. Free estimates. Call 786-408-3738.',
+    description: 'Same-day junk removal and demolition across Miami-Dade, Broward, and Palm Beach. Any trash, any size. Free estimates. Call 786-408-3783.',
     type: 'website',
     url: siteUrl,
     siteName: 'R&D Trash Disposal',
@@ -77,7 +77,7 @@ const localBusinessSchema = {
     longitude: -80.19366,
   },
   url: siteUrl,
-  telephone: '+17864083738',
+  telephone: '+17864083783',
   priceRange: '$$',
   currenciesAccepted: 'USD',
   paymentAccepted: 'Cash, Credit Card',
@@ -124,7 +124,7 @@ const localBusinessSchema = {
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '+17864083738',
+      telephone: '+17864083783',
       contactType: 'customer service',
       areaServed: ['Miami-Dade County', 'Broward County', 'Palm Beach County'],
       availableLanguage: ['English', 'Spanish'],
