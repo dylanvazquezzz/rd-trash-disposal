@@ -1,3 +1,5 @@
+import PhoneLink from '@/components/PhoneLink'
+
 const categories = [
   {
     category: 'Furniture',
@@ -92,12 +94,9 @@ export default function WhatWeTake() {
             Just ask. If it&apos;s not hazardous waste, we can almost certainly haul it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:7864083783"
-              className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-6 py-3 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105"
-            >
+            <PhoneLink source="what_we_take" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-6 py-3 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105">
               Call 786-408-3783
-            </a>
+            </PhoneLink>
           </div>
         </div>
       </div>

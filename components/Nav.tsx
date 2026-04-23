@@ -2,12 +2,10 @@
 
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
+import { fireEvent } from '@/lib/analytics'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const trackCall = (phone: string) => {
-  if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-    ;(window as any).gtag('event', 'phone_call', { phone })
-  }
+const trackCall = () => {
+  fireEvent('phone_call_click', { source: 'nav', page_path: window.location.pathname })
 }
 
 export default function Nav() {
@@ -51,7 +49,7 @@ export default function Nav() {
           <div className="hidden md:flex items-center gap-4">
             <a
               href="tel:7864083783"
-              onClick={() => trackCall('786-408-3783')}
+              onClick={trackCall}
               className="text-sm font-semibold text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
             >
               786-408-3783
@@ -109,7 +107,7 @@ export default function Nav() {
             <div className="flex flex-col gap-2 pt-2">
               <a
                 href="tel:7864083783"
-                onClick={() => trackCall('786-408-3783')}
+                onClick={trackCall}
                 className="text-[#0B1E3D] font-semibold text-base"
               >
                 786-408-3783

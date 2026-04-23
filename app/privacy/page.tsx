@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import PhoneLink from '@/components/PhoneLink'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -52,9 +53,7 @@ export default function PrivacyPage() {
               <h2 className="font-display text-2xl text-[#0B1E3D] mb-3">Contact</h2>
               <p>
                 If you have questions about your data or would like it removed, contact us at{' '}
-                <a href="tel:7864083783" className="text-[#F5A623] hover:underline">
-                  786-408-3783
-                </a>
+                <PhoneLink source="privacy" className="text-[#F5A623] hover:underline" />
                 .
               </p>
             </section>

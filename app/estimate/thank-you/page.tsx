@@ -1,6 +1,7 @@
 import Script from 'next/script'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import PhoneLink from '@/components/PhoneLink'
 
 export const metadata = {
   title: 'Request Received | R&D Trash Disposal',
@@ -28,12 +29,7 @@ export default function ThankYouPage() {
             Expect a quote within 24 hours. For urgent jobs, call or text us directly.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-            <a
-              href="tel:7864083783"
-              className="inline-block bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded hover:bg-[#1a3560] transition-all"
-            >
-              786-408-3783
-            </a>
+            <PhoneLink source="thank_you" className="inline-block bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded hover:bg-[#1a3560] transition-all" />
           </div>
           <a
             href="/"

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { fireEvent } from '@/lib/analytics'
 
 type LoadSize = 'small' | 'medium' | 'large' | 'full' | null
 type ServiceType = 'junk' | 'demo' | null
@@ -73,13 +74,6 @@ export default function EstimateForm() {
   const hasCallForQuote = extras.some(
     (e) => e === 'concrete' || e === 'hottub'
   )
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const fireEvent = (name: string, params?: Record<string, string>) => {
-    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-      ;(window as any).gtag('event', name, params)
-    }
-  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -377,7 +371,7 @@ export default function EstimateForm() {
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href="tel:7864083783"
-                    onClick={() => fireEvent('phone_call', { phone: '786-408-3783' })}
+                    onClick={() => fireEvent('phone_call_click', { source: 'estimate_form', page_path: window.location.pathname })}
                     className="inline-flex items-center justify-center gap-2 bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3560] transition-all"
                   >
                     Call Us Now — 786-408-3783

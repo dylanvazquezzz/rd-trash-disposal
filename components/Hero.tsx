@@ -1,12 +1,10 @@
 'use client'
 
 import Image from 'next/image'
+import { fireEvent } from '@/lib/analytics'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const trackCall = (phone: string) => {
-  if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-    ;(window as any).gtag('event', 'phone_call', { phone })
-  }
+const trackCall = () => {
+  fireEvent('phone_call_click', { source: 'hero', page_path: window.location.pathname })
 }
 
 export default function Hero() {
@@ -67,7 +65,7 @@ export default function Hero() {
             </a>
             <a
               href="tel:7864083783"
-              onClick={() => trackCall('786-408-3783')}
+              onClick={trackCall}
               className="inline-flex items-center justify-center gap-2 border-2 border-white/50 text-white font-semibold text-base px-8 py-4 rounded hover:border-white hover:bg-white/10 transition-all"
             >
               <svg
