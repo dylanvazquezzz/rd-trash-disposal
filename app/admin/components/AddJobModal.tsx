@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { CreateJobPayload, JobType } from '../types'
+import { CreateJobPayload, Job, JobType } from '../types'
 
 const TIME_OPTIONS: string[] = []
 for (let h = 7; h <= 20; h++) {
@@ -21,19 +21,21 @@ type Props = {
   onClose: () => void
   onCreated: () => void
   defaultDate?: string
+  editJob?: Job
 }
 
-export default function AddJobModal({ onClose, onCreated, defaultDate }: Props) {
+export default function AddJobModal({ onClose, onCreated, defaultDate, editJob }: Props) {
   const today = new Date().toISOString().split('T')[0]
+  const isEdit = !!editJob
 
-  const [jobType, setJobType] = useState<JobType>('junk_removal')
-  const [date, setDate] = useState(defaultDate ?? today)
-  const [time, setTime] = useState('09:00')
-  const [contactName, setContactName] = useState('')
-  const [contactPhone, setContactPhone] = useState('')
-  const [address, setAddress] = useState('')
-  const [zipCode, setZipCode] = useState('')
-  const [description, setDescription] = useState('')
+  const [jobType, setJobType] = useState<JobType>(editJob?.job_type ?? 'junk_removal')
+  const [date, setDate] = useState(editJob?.job_date ?? defaultDate ?? today)
+  const [time, setTime] = useState(editJob?.job_time ?? '09:00')
+  const [contactName, setContactName] = useState(editJob?.contact_name ?? '')
+  const [contactPhone, setContactPhone] = useState(editJob?.contact_phone ?? '')
+  const [address, setAddress] = useState(editJob?.address ?? '')
+  const [zipCode, setZipCode] = useState(editJob?.zip_code ?? '')
+  const [description, setDescription] = useState(editJob?.description ?? '')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -42,28 +44,47 @@ export default function AddJobModal({ onClose, onCreated, defaultDate }: Props) 
     setLoading(true)
     setError(null)
 
-    const payload: CreateJobPayload = {
-      job_date: date,
-      job_time: time,
-      job_type: jobType,
-      address,
-      zip_code: zipCode,
-      contact_name: contactName,
-      contact_phone: contactPhone.trim() || null,
-      description: description.trim() || null,
-      status: 'scheduled',
-    }
-
     try {
-      const res = await fetch('/api/jobs', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error((data as { error?: string }).error ?? 'Failed to create job')
+      if (isEdit) {
+        const res = await fetch(`/api/jobs/${editJob.id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            job_date: date,
+            job_time: time,
+            job_type: jobType,
+            address,
+            zip_code: zipCode,
+            contact_name: contactName,
+            contact_phone: contactPhone.trim() || null,
+            description: description.trim() || null,
+          }),
+        })
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}))
+          throw new Error((data as { error?: string }).error ?? 'Failed to update job')
+        }
+      } else {
+        const payload: CreateJobPayload = {
+          job_date: date,
+          job_time: time,
+          job_type: jobType,
+          address,
+          zip_code: zipCode,
+          contact_name: contactName,
+          contact_phone: contactPhone.trim() || null,
+          description: description.trim() || null,
+          status: 'scheduled',
+        }
+        const res = await fetch('/api/jobs', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        })
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({}))
+          throw new Error((data as { error?: string }).error ?? 'Failed to create job')
+        }
       }
 
       onCreated()
@@ -85,7 +106,7 @@ export default function AddJobModal({ onClose, onCreated, defaultDate }: Props) 
       />
       <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-          <h2 className="text-base font-semibold text-gray-900 font-body">Book a Job</h2>
+          <h2 className="text-base font-semibold text-gray-900 font-body">{isEdit ? 'Edit Job' : 'Book a Job'}</h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 transition-colors text-xl leading-none"
@@ -251,7 +272,7 @@ export default function AddJobModal({ onClose, onCreated, defaultDate }: Props) 
               disabled={loading}
               className="flex-1 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-semibold font-body hover:bg-blue-700 transition-all duration-150 shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Booking...' : 'Book Job'}
+              {loading ? (isEdit ? 'Saving...' : 'Booking...') : (isEdit ? 'Save Changes' : 'Book Job')}
             </button>
           </div>
         </form>

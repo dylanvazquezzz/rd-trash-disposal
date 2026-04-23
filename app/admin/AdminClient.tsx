@@ -62,6 +62,7 @@ export default function AdminClient() {
   const [addModalOpen, setAddModalOpen] = useState(false)
   const [addDefaultDate, setAddDefaultDate] = useState<string | undefined>()
   const [selectedJob, setSelectedJob] = useState<Job | null>(null)
+  const [editingJob, setEditingJob] = useState<Job | null>(null)
   const [jobFilter, setJobFilter] = useState<JobFilter>('active')
   const [upcomingOpen, setUpcomingOpen] = useState(true)
 
@@ -303,10 +304,20 @@ export default function AdminClient() {
       )}
 
       {addModalOpen && (
-        <AddJobModal defaultDate={addDefaultDate} onClose={() => setAddModalOpen(false)} onCreated={fetchJobs} />
+        <AddJobModal
+          defaultDate={addDefaultDate}
+          editJob={editingJob ?? undefined}
+          onClose={() => { setAddModalOpen(false); setEditingJob(null) }}
+          onCreated={fetchJobs}
+        />
       )}
       {selectedJob && (
-        <JobDetailModal job={selectedJob} onClose={() => setSelectedJob(null)} onUpdated={fetchJobs} />
+        <JobDetailModal
+          job={selectedJob}
+          onClose={() => setSelectedJob(null)}
+          onUpdated={fetchJobs}
+          onEdit={() => { setEditingJob(selectedJob); setSelectedJob(null); setAddModalOpen(true) }}
+        />
       )}
     </div>
   )

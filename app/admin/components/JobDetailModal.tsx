@@ -46,9 +46,10 @@ type Props = {
   job: Job
   onClose: () => void
   onUpdated: () => void
+  onEdit: () => void
 }
 
-export default function JobDetailModal({ job, onClose, onUpdated }: Props) {
+export default function JobDetailModal({ job, onClose, onUpdated, onEdit }: Props) {
   const [currentStatus, setCurrentStatus] = useState<JobStatus>(job.status)
   const [updating, setUpdating] = useState(false)
 
@@ -186,12 +187,20 @@ export default function JobDetailModal({ job, onClose, onUpdated }: Props) {
           >
             {currentStatus === 'cancelled' ? 'Job cancelled' : 'Cancel this job'}
           </button>
-          <button
-            onClick={onClose}
-            className="text-xs text-gray-400 hover:text-gray-600 font-body transition-colors"
-          >
-            Close
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onEdit}
+              className="text-xs font-medium text-blue-600 hover:text-blue-800 font-body transition-colors"
+            >
+              Edit
+            </button>
+            <button
+              onClick={onClose}
+              className="text-xs text-gray-400 hover:text-gray-600 font-body transition-colors"
+            >
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
