@@ -12,19 +12,18 @@
 
 ### Track 1 — Bid Adjustments (Do in Google Ads Console Today)
 
-These are immediate changes in the Ads UI — no code needed.
+**Note:** Campaign is on Maximize Conversions — Google controls all keyword-level bids automatically. Cannot set manual CPCs. Levers are: daily budget, demographic adjustments, conversion tracking quality, and Quality Score.
 
-- [ ] **Raise bids on city-specific exact/phrase match keywords +50–75%**
-  - Priority: `[junk removal near me]`, `"junk removal miami"`, `"junk removal hialeah"`, `"junk removal fort lauderdale"`, `"junk removal homestead"` (lead came from there)
-  - These keywords are getting impressions but losing the auction. Bids are too low.
+- [ ] **Raise daily budget to $20–22/day** (~$600–650/month)
+  - Google needs headroom to bid competitively in auctions. Avg spend is $10–12/day, but the cap may be pulling bids back on high-traffic days.
+- [ ] **Fix conversion counting: change "Every" to "One"** (highest priority)
+  - Maximize Conversions optimizes toward whatever it thinks is a conversion. 3 reported vs 2 real leads = algorithm is learning from a bad signal.
 - [ ] **Add age bid modifier: 25–34 → +20%**
-  - Only converting age group. Both real leads confirmed 25–34.
+  - Only converting age group. Works as a multiplier on top of Google's automated bids.
 - [ ] **Add age bid modifier: 65+ → -20%**
-  - Paying $4.20/click, 0 conversions across campaign so far.
-- [ ] **Raise demolition keyword bids significantly (+100%)**
-  - Losing >90% to rank. Currently nearly invisible. Demo pages are live — need bids to match.
-- [ ] **Pause `[junk removal this weekend]`** — flagged "rarely served," wasting budget eligibility
-- [ ] **Check Sunday budget cap** — Apr 12 showed 37 impressions but $0.00 spend. Either daily budget hit a wall early or ad scheduling is cutting off on Sundays.
+  - Paying $4.20/click, zero conversions. Directional signal to Google.
+- [ ] **Pause `[junk removal this weekend]`** — flagged "rarely served," wasting keyword eligibility
+- [ ] **Check Sunday budget cap** — Apr 12 showed 37 impressions but $0.00 spend. Check ad scheduling and daily pacing.
 
 ### Track 2 — Ad Copy Rewrite (Google Ads Console)
 

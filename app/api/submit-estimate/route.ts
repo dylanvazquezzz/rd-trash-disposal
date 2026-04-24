@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { google } from 'googleapis'
+import { formatPhone } from '@/lib/slack'
 
 export async function POST(req: NextRequest) {
   try {
@@ -47,12 +48,13 @@ export async function POST(req: NextRequest) {
     if (slackWebhookUrl) {
       const serviceLabel = serviceType === 'demolition' ? 'Demolition' : 'Junk Removal'
       const contactLabel = contactPreference === 'text' ? 'Phone' : 'Email'
+      const formattedContact = contactPreference === 'text' ? formatPhone(contactValue) : contactValue
 
       const detailLines = [
         `*Name:* ${name}`,
         `*City:* ${city}`,
         `*Service:* ${serviceLabel}`,
-        `*${contactLabel}:* ${contactValue}`,
+        `*${contactLabel}:* ${formattedContact}`,
       ]
       if (description) detailLines.push(`*Description:* ${description}`)
       if (preferredDate) detailLines.push(`*Preferred date:* ${preferredDate}${preferredTime ? ` (${preferredTime})` : ''}`)

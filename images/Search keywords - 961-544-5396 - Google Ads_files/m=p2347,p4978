@@ -1,0 +1,2129 @@
+((a,b)=>{a[b]=a[b]||{}})(self,"$__dart_deferred_initializers__")
+$__dart_deferred_initializers__.current=function(a,b,c,$){var A
+A=c[0]
+var z=a.updateTypes([]);(function lazyInitializers(){var y=a.lazyFinal
+y($,"HqU","cNd",()=>A.b(3307,"981443746"))})()};
+(a=>{a["qcbp7vCEMu/Hwg2te+hzy1gWJtA="]=a.current})($__dart_deferred_initializers__);
+
+window.$_intl_pending_msg = window.$_intl_pending_msg || new Map();
+window.$_intl_pending_msg["981443746"] = window.$_intl_pending_msg["981443746"] || [];window.$_intl_pending_msg["981443746"].push('{"3307":"Information"}');
+;(function() { let load = window['__mss_moduleLoaded']; load && load('p2347', {"mssAppName":"awn-essentials-mss","moduleSetId":"essentials_sharded_localization","isMainPayload":false}); })();
+((a,b)=>{a[b]=a[b]||{}})(self,"$__dart_deferred_initializers__")
+$__dart_deferred_initializers__.current=function(a,b,c,$){var J,A,C,A5,A6,A7,A8,T,I,K,U,G,E,L,A0,A1,Q,A2,S,O,V,N,H,F,W,X,A3,Y,B={er_:function er_(d,e){this.a=d
+this.b=e},
+wGh(d,e){var w=d.a
+if(w.i(48).a.az(0))return null
+else if(w.R(1))return w.N(1)
+else return null},
+d8d:function d8d(d,e){this.b=d
+this.a=e},
+Lz:function Lz(d,e,f,g,h,i,j,k,l,m,n){var _=this
+_.b=_.a=null
+_.c=d
+_.d=e
+_.e=f
+_.f=g
+_.r=h
+_.w=i
+_.x=j
+_.y=k
+_.z=l
+_.Q=m
+_.ax=_.at=_.as=!1
+_.ay=""
+_.CW=_.ch=null
+_.cx=!1
+_.dx=_.db=_.cy=null
+_.dy=n
+_.fx=_.fr=null},
+jfF:function jfF(d){this.a=d},
+jfE:function jfE(d){this.a=d},
+jfD:function jfD(d){this.a=d},
+BWP(d,e){return new B.ffv(A.v(),A.k(d,e,x.S))},
+BWQ(d,e){return new B.ffw(A.k(d,e,x.S))},
+BWR(d,e){return new B.bXg(A.k(d,e,x.S))},
+BWS(d,e){return new B.ffx(A.k(d,e,x.S))},
+BWT(d,e){return new B.ffy(A.k(d,e,x.S))},
+BWU(d,e){return new B.ffz(A.k(d,e,x.S))},
+BWV(d,e){return new B.bXh(A.k(d,e,x.S))},
+BWW(d,e){return new B.ffA(A.k(d,e,x.S))},
+wOt(){return new B.cAy(new A.aG())},
+dGh:function dGh(d){var _=this
+_.f=_.e=!0
+_.c=_.b=_.a=_.at=_.as=_.Q=_.z=_.y=_.x=_.w=_.r=$
+_.d=d},
+jfB:function jfB(){},
+jfC:function jfC(){},
+ffv:function ffv(d,e){this.b=d
+this.a=e},
+ffw:function ffw(d){var _=this
+_.f=_.e=_.d=_.c=_.b=$
+_.a=d},
+bXg:function bXg(d){var _=this
+_.c=_.b=$
+_.f=_.e=_.d=null
+_.a=d},
+ffx:function ffx(d){var _=this
+_.c=_.b=$
+_.r=_.f=_.e=_.d=null
+_.a=d},
+ffy:function ffy(d){var _=this
+_.c=_.b=$
+_.d=null
+_.a=d},
+ffz:function ffz(d){var _=this
+_.c=_.b=$
+_.f=_.e=_.d=null
+_.a=d},
+bXh:function bXh(d){var _=this
+_.c=_.b=$
+_.f=_.e=_.d=null
+_.a=d},
+ffA:function ffA(d){var _=this
+_.f=_.e=_.d=_.c=_.b=$
+_.w=_.r=null
+_.a=d},
+cAy:function cAy(d){var _=this
+_.c=_.b=_.a=_.r=_.f=_.e=$
+_.d=d},
+dFd:function dFd(d,e){var _=this
+_.a=null
+_.b=d
+_.c=e
+_.r=_.f=_.e=_.d=$},
+dFe:function dFe(d,e){var _=this
+_.f=_.e=$
+_.r=d
+_.ax=_.at=_.as=_.Q=_.z=_.y=_.x=_.w=$
+_.db=_.cy=_.cx=_.CW=_.ch=_.ay=null
+_.c=_.b=_.a=_.dx=$
+_.d=e},
+jca:function jca(d){this.a=d},
+jcb:function jcb(d){this.a=d},
+y8S(d,e,f,g,h,i){var w,v,u,t
+if(!g){w=e.gDk()
+w.toString
+v=i.aiv(w,e.gbD())}else v=!1
+if(!h)u=(e.gDk()==="stats.conversions#change_ratio"||e.gDk()==="stats.biddable_app_install_conversions#change_ratio"||e.gDk()==="stats.biddable_app_post_install_conversions#change_ratio"||e.gDk()==="stats.conversion_value#change_ratio")&&v
+else u=!1
+t=(e.gDk()==="stats.conversions"||e.gDk()==="stats.biddable_app_install_conversions"||e.gDk()==="stats.biddable_app_post_install_conversions"||e.gDk()==="stats.conversion_value")&&v
+if(h){if(t)return D.bbO
+return d?D.bbN:D.bbM}if(u)return D.bbP
+if(d&&t)return D.bbL
+if(d&&!f)return D.bbJ
+if(t)return D.bbK
+return D.axt},
+akG:function akG(d,e){this.a=d
+this.b=e},
+bPK:function bPK(d){var _=this
+_.a=null
+_.b=d
+_.f=_.e=_.d=_.c=$},
+eqB:function eqB(d,e){var _=this
+_.f=_.e=$
+_.r=d
+_.ax=_.at=_.as=_.Q=_.z=_.y=_.x=_.w=$
+_.cy=_.cx=_.CW=_.ch=_.ay=null
+_.c=_.b=_.a=$
+_.d=e},
+lDe:function lDe(){this.c=this.b=this.a=null},
+etf:function etf(d,e){var _=this
+_.e=d
+_.y=_.x=_.w=_.r=_.f=$
+_.Q=_.z=null
+_.c=_.b=_.a=$
+_.d=e},
+lDf:function lDf(){this.a=$},
+etg:function etg(d,e){var _=this
+_.e=d
+_.c=_.b=_.a=_.r=_.f=$
+_.d=e},
+bRS:function bRS(d){var _=this
+_.a=null
+_.b=d
+_.f=_.e=_.d=_.c=$},
+eti:function eti(d,e){var _=this
+_.f=_.e=$
+_.r=d
+_.ch=_.ay=_.ax=_.at=_.as=_.Q=_.z=_.y=_.x=_.w=$
+_.dx=_.db=_.cy=_.cx=_.CW=null
+_.c=_.b=_.a=$
+_.d=e},
+a54:function a54(){this.a=!1
+this.b=$},
+BX_(d,e){return new B.ffQ(A.k(d,e,x.W))},
+BX0(d,e){return new B.ffR(A.v(),A.k(d,e,x.W))},
+BX1(d,e){return new B.ffS(A.k(d,e,x.W))},
+BX2(d,e){return new B.ffT(A.k(d,e,x.W))},
+BX3(d,e){return new B.ffU(A.v(),A.k(d,e,x.W))},
+wOx(){return new B.cAC(new A.aG())},
+dGt:function dGt(d,e){var _=this
+_.e=d
+_.c=_.b=_.a=_.z=_.y=_.x=_.w=_.r=_.f=$
+_.d=e},
+ffQ:function ffQ(d){var _=this
+_.e=_.d=_.c=_.b=$
+_.r=_.f=null
+_.a=d},
+ffR:function ffR(d,e){var _=this
+_.b=d
+_.d=_.c=$
+_.a=e},
+ffS:function ffS(d){var _=this
+_.b=$
+_.c=null
+_.d=$
+_.a=d},
+ffT:function ffT(d){this.b=null
+this.c=$
+this.a=d},
+ffU:function ffU(d,e){var _=this
+_.b=d
+_.d=_.c=$
+_.a=e},
+cAC:function cAC(d){var _=this
+_.c=_.b=_.a=_.e=$
+_.d=d},
+dGu:function dGu(d,e,f,g){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g},
+ce6:function ce6(d,e){this.a=d
+this.b=e},
+aLJ:function aLJ(d,e,f){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.e=_.d=$
+_.f=!1
+_.y=_.x=null},
+oYW(d,e){var w,v=new B.dGA(A.Y(d,e,0)),u=$.oYX
+v.b=u==null?$.oYX=A.a2($.Aom,null):u
+w=document.createElement("conversion-delay-hovercard")
+v.c=w
+return v},
+BX7(d,e){return new B.ffY(A.k(d,e,x.P))},
+BX8(d,e){return new B.ffZ(A.v(),A.k(d,e,x.P))},
+BX9(d,e){return new B.fg_(A.k(d,e,x.P))},
+BXa(d,e){return new B.fg0(A.k(d,e,x.P))},
+dGA:function dGA(d){var _=this
+_.c=_.b=_.a=_.f=_.e=$
+_.d=d},
+ffY:function ffY(d){this.c=this.b=$
+this.a=d},
+ffZ:function ffZ(d,e){var _=this
+_.b=d
+_.w=_.r=_.f=_.e=_.d=_.c=$
+_.y=_.x=null
+_.z=$
+_.a=e},
+fg_:function fg_(d){var _=this
+_.c=_.b=null
+_.d=$
+_.a=d},
+fg0:function fg0(d){var _=this
+_.d=_.c=_.b=$
+_.f=_.e=null
+_.a=d},
+chy:function chy(d,e,f,g,h,i,j,k){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g
+_.e=h
+_.f=i
+_.r=j
+_.w=""
+_.x=k
+_.z=_.y=null},
+CeT(d,e){return new B.fF5(A.k(d,e,x.B))},
+dSb:function dSb(d){var _=this
+_.e=$
+_.f=null
+_.c=_.b=_.a=$
+_.d=d},
+fF5:function fF5(d){var _=this
+_.as=_.Q=_.z=_.y=_.x=_.w=_.r=_.f=_.e=_.d=_.c=_.b=$
+_.cy=_.cx=_.CW=_.ch=_.ay=_.ax=_.at=null
+_.a=d},
+chz:function chz(d,e,f,g,h,i,j,k,l){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g
+_.e=h
+_.f=i
+_.r=j
+_.w=k
+_.z=_.y=_.x=""
+_.Q=l
+_.at=_.as=null},
+CeU(d,e){return new B.fF6(A.v(),A.k(d,e,x.r))},
+dSc:function dSc(d){var _=this
+_.e=$
+_.f=null
+_.c=_.b=_.a=$
+_.d=d},
+fF6:function fF6(d,e){var _=this
+_.c=_.b=$
+_.d=d
+_.as=_.Q=_.z=_.y=_.x=_.w=_.r=_.f=_.e=$
+_.db=_.cy=_.cx=_.CW=_.ch=_.ay=_.ax=_.at=null
+_.a=e},
+w7d(d,e,f,g,h,i,j,k){var w=new B.chC(d,e,f,g,h,i,j,k,new A.E(null,null,x.O))
+w.dbm(d,e,f,g,h,i,j,k)
+return w},
+chC:function chC(d,e,f,g,h,i,j,k,l){var _=this
+_.a=d
+_.b=e
+_.c=f
+_.d=g
+_.e=h
+_.f=i
+_.r=j
+_.w=k
+_.x=l
+_.Q=_.z=_.y=""
+_.as=!1},
+jOL:function jOL(d){this.a=d},
+Cfc(d,e){return new B.fFr(A.v(),A.k(d,e,x.t))},
+dSl:function dSl(d){var _=this
+_.e=$
+_.r=_.f=null
+_.c=_.b=_.a=$
+_.d=d},
+fFr:function fFr(d,e){var _=this
+_.c=_.b=$
+_.d=d
+_.Q=_.z=_.y=_.x=_.w=_.r=_.f=_.e=$
+_.ax=_.at=_.as=null
+_.ay=$
+_.a=e}},D,M,Z,P,A4,A_,R
+J=c[1]
+A=c[0]
+C=c[2]
+A5=c[2015]
+A6=c[2596]
+A7=c[2193]
+A8=c[2038]
+T=c[2592]
+I=c[1934]
+K=c[2023]
+U=c[1900]
+G=c[1936]
+E=c[683]
+L=c[2593]
+A0=c[2274]
+A1=c[2275]
+Q=c[732]
+A2=c[2112]
+S=c[2111]
+O=c[767]
+V=c[2292]
+N=c[716]
+H=c[2290]
+F=c[1940]
+W=c[1249]
+X=c[1311]
+A3=c[1129]
+Y=c[1920]
+B=a.updateHolder(c[257],B)
+D=c[2591]
+M=c[690]
+Z=c[2595]
+P=c[652]
+A4=c[2594]
+A_=c[2195]
+R=c[1914]
+B.er_.prototype={
+aX(){return"StrategyTwoStageRequestIdentifier."+this.b}}
+B.d8d.prototype={
+aj(d,e){var w,v,u,t
+if(e==null)return!1
+if(e instanceof B.d8d){w=this.b
+v=A.e8(X.qM.prototype.gav.call(this,0),w,C.k,C.k,C.k,C.k,C.k,C.k,C.k,C.k)
+u=X.qM.prototype.gav.call(e,0)
+t=e.b
+w=v===A.e8(u,t,C.k,C.k,C.k,C.k,C.k,C.k,C.k,C.k)&&w===t}else w=!1
+return w},
+gav(d){return A.e8(X.qM.prototype.gav.call(this,0),this.b,C.k,C.k,C.k,C.k,C.k,C.k,C.k,C.k)}}
+B.Lz.prototype={
+ab9(d){if(d.c==="footer-summary-scope")this.c3Y()},
+ab(){this.w.dO(0,new B.jfF(this),x.A)},
+P(){this.cx=!0},
+gbD(){return this.w.gbD()},
+fMQ(){var w,v,u=this
+u.aR3()
+w=u.a
+if(w!=null)w.UK()
+w=u.b
+if(w!=null)w.UK()
+w=u.a
+if(w!=null){v=u.bYR()
+w=w.a
+if(w!=null)w.cFM(v)}w=u.b
+if(w!=null){v=u.bYR()
+w=w.a
+if(w!=null)w.cFM(v)}},
+caC(){var w=this,v=x.q.a(w.w),u=v.gbD(),t=w.as
+w.dy=B.y8S(w.at,v,w.gbX5(),u instanceof A.fz,t,w.z)},
+euj(){var w,v=this
+if(v.d==null)return
+w=v.w
+if(w.gbD() instanceof A.aU){w=x.I.a(w.gbD()).a
+if(w.R(1)&&D.aRd.a6(0,w.i(22).a.i(0)))v.c3Y()}else if(w.gbD() instanceof A.fz){w=x.u.a(w.gbD()).a
+if(w.R(1)&&D.aRd.a6(0,w.i(3)))v.eui()}},
+eui(){var w=B.wGh(this.w.gbD(),!1)
+w=w==null?null:w.ap(0)
+this.d.gre().x9(new B.d8d(D.it_,w),new B.jfE(this))},
+c3Y(){var w=W.agG(this.w.gbD(),!0)
+w=w==null?null:w.ap(0)
+this.d.gre().x9(new W.P7(w),new B.jfD(this))},
+aR3(){var w,v,u,t,s,r,q,p,o,n,m,l,k=this
+if(k.CW==null){w=k.w
+v=w.geh()
+k.CW=A.yM(v.gaV(v))
+w=w.geh()
+u=k.dq5(A.yM(w.gaV(w)))
+k.ch=$.aWL().v(0,u)}w=k.w
+v=w.gbD()
+t=k.CW
+t.toString
+s=w.gkl()
+r=A.nQ(v,t)
+k.ay=A.B0(v,s,r)
+if(k.ch==null){k.caC()
+k.x.al()
+return}if(w.gbD() instanceof A.fz){q=w.gbD()
+if(!q.gl1().gvy()&&q.kd()){k.db=D.bcu
+v=J.aN(q)
+k.dx=v.gbt(q)
+k.b2R(q,v.gcq(q))}}else if(w.gbD() instanceof A.aU){p=w.gbD()
+if(!p.gl1().gvy())if(p.dU()){if(p.fmi()||p.fn6()){k.db=D.ab9
+v=p.gkj()
+v=v==null?null:J.cNE(v)
+k.dx=v
+if(D.aRd.a6(0,v))k.b2R(p,p.gbB())}}else if(p.fmo()){k.db=D.bcv
+k.dx=null
+o=A.ta()
+v=p.gckw()
+t=o.a
+t.O(31,v)
+t.H(1,p.gcv())
+t.O(200,p.gd8())
+k.b2R(o,null)}}v=w.geh()
+v=v.gaV(v)
+t=k.r.b
+k.as=t.gan(t).b!=null&&!C.c.a6(v,"#")
+k.fr=k.fx=null
+v=k.at
+if(v&&!k.ax){w=k.a
+if(w!=null)w.UK()
+w=k.b
+if(w!=null)w.UK()}else if(v&&k.ax){v=k.c
+t=v.Pq(k.ch)
+t.toString
+s=k.Q
+n=P.jg7(t,s.gbh()===C.z)
+m=P.jg6(t,v.bkJ(t),!1,s.gbh()===C.z)
+t=k.ch
+l=t.b
+l.toString
+l=v.SA(l)
+w=w.gbD()
+k.fx=new B.dGu(m,n,P.jg0(t,l,v.z,!1,w instanceof A.fz,s.gbh()===C.z,!0),s.gbh()===C.z)
+k.fr=$.rNW()}w=k.x
+w.al()
+k.caC()
+w.al()},
+b2R(d,e){var w,v,u,t,s,r,q=this
+if(!J.ah(e,q.cy)){q.c.iT(0)
+q.cy=e}w=q.c
+w.fRm(d,q.ch.b,A.hP(q.y))
+w.fRj(d.gd8(),A.a([q.ch.b],x.k))
+q.at=w.aJO(q.ch)
+if(q.db===D.ab9){w=q.CW
+w.toString
+w=q.z.aiv(w,d)}else w=!1
+q.ax=w
+if(q.at&&q.e!=null&&e!=null){v=q.dx
+u=q.db===D.ab9?x.R.a(q.w.gbD().geB()):C.a0
+t=A.ha([v,u])
+if(v==null)w=null
+else{w=$.wm().v(0,v)
+w.toString}s=$.iZ().v(0,u)
+s.toString
+r=x.N
+q.e.fvm(D.e7Q,t,"DisplayConversionDelayEntryPoint",A.H(["BidStrategyType",A.L(w),"AdvertisingChannelType",s],r,r))}},
+bYR(){var w,v,u,t,s,r,q,p=this,o="IsPortfolioStrategy",n="CampaignId",m=p.r.b
+m=m.gan(m).a.vM()
+w=A.L(m.a)
+m=A.L(m.b)
+v=J.bZ(p.CW)
+u=p.dx
+if(u==null)u=null
+else{u=$.wm().v(0,u)
+u.toString}t=x.N
+s=A.H(["DateRange",w+" - "+m,"Source",v,"BidStrategyType",A.L(u)],t,t)
+r=p.c.Pq(p.ch)
+if(r!=null){s.I(0,"p90Days",C.j.aa(r.b))
+s.I(0,"p90Date",r.a.aa(0))}switch(p.db){case D.bcu:s.I(0,o,String(!0))
+s.I(0,"BidStrategyId",J.bZ(p.cy))
+break
+case D.ab9:s.I(0,o,String(!1))
+s.I(0,n,J.bZ(p.cy))
+m=x.R.a(p.w.gbD().geB())
+m=$.iZ().v(0,m)
+m.toString
+s.I(0,"AdvertisingChannelType",m)
+break
+case D.bcv:s.I(0,n,"0")
+break
+default:break}q=A.dN("HoverTableConversionDelay","INTERACTIVE",null)
+q.d.W(0,s)
+p.f.dc(q,x.A)
+return q},
+dq5(d){if(this.gbX5())return C.c.c4(d,0,C.c.dg(d,"#"))
+return d},
+gbX5(){var w=this.w,v=w.geh()
+if(C.c.a6(v.gaV(v),"#")){w=w.geh()
+w=C.c.hn(w.gaV(w),"#change_ratio")}else w=!1
+return w},
+$iaTX:1}
+B.dGh.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w=this,v=w.ai()
+w.r=A.p(w,0,v,B.y9k())
+w.w=A.p(w,1,v,B.y9l())
+w.x=A.p(w,2,v,B.y9m())
+w.y=A.p(w,3,v,B.y9n())
+w.z=A.p(w,4,v,B.y9o())
+w.Q=A.p(w,5,v,B.y9p())
+w.as=A.p(w,6,v,B.y9q())
+w.at=A.p(w,7,v,B.y9r())},
+t(){var w,v,u,t,s,r,q,p=this,o=p.a,n=p.r
+n.c.sM(o.dy===D.axt)
+w=p.w
+w.c.sM(o.dy===D.bbK)
+v=p.x
+v.c.sM(o.dy===D.bbJ)
+u=p.y
+u.c.sM(o.dy===D.bbL)
+t=p.z
+t.c.sM(o.dy===D.bbM)
+s=p.Q
+s.c.sM(o.dy===D.bbO)
+r=p.as
+r.c.sM(o.dy===D.bbN)
+q=p.at
+q.c.sM(o.dy===D.bbP)
+n.a.A()
+w.a.A()
+v.a.A()
+u.a.A()
+t.a.A()
+s.a.A()
+r.a.A()
+q.a.A()
+if(p.e){n=v.a.b7(new B.jfB(),x.T,x.J)
+o.a=n.length!==0?C.a.gac(n):null
+p.e=!1}if(p.f){n=r.a.b7(new B.jfC(),x.F,x.p)
+o.b=n.length!==0?C.a.gac(n):null
+p.f=!1}},
+F(){var w=this
+w.r.a.B()
+w.w.a.B()
+w.x.a.B()
+w.y.a.B()
+w.z.a.B()
+w.Q.a.B()
+w.as.a.B()
+w.at.a.B()}}
+B.ffv.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w=document.createElement("div")
+this.m(w,"ess-cell-ellipsis")
+w.appendChild(this.b.b)
+this.K(w)},
+t(){this.b.U(this.a.a.ay)}}
+B.ffw.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u,t,s=this,r=new B.dSl(A.Y(s,0,0)),q=$.p9l
+r.b=q==null?$.p9l=A.a2($.Atc,null):q
+w=document.createElement("explanations-time-compare-off")
+r.c=w
+s.b=r
+s.gD().E(w)
+v=s.a.c
+u=new O.a_a(v.gh().n(C.x,v.gk()),A.G(x.d,x.M))
+s.c=u
+u=s.d=new E.aOd(u,v.gh().n(C.ee,v.gk()),v.gh().n(C.p,v.gk()),v.gh().j(T.qQ,v.gk()))
+t=new E.b4i(v.gh().n(C.h,v.gk()),v.gh().n(A.n(H.wR,N.aGS()),v.gk()),u)
+s.e=t
+v=B.w7d(v.gh().n(C.aH,v.gk()),v.gh().n(C.ee,v.gk()),t,r,v.gh().n(S.hA,v.gk()),v.gh().n(A.n(H.wR,N.aGS()),v.gk()),u,v.gh().n(C.ar,v.gk()))
+s.f=v
+r.X(0,v)
+s.K(w)},
+a0(d,e,f){if(0===e){if(d===A.n(V.Dc,O.bgi()))return this.c
+if(d===L.a54)return this.d
+if(d===L.wZ)return this.e}return f},
+t(){var w,v=(this.a.Q&1)!==0
+if(v)this.f.ab()
+w=this.b
+w.a9(v)
+w.C()},
+F(){this.b.G()
+this.f.P()}}
+B.bXg.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u,t,s,r=this,q=new B.eqB(A.v(),A.Y(r,0,0)),p=$.pAy
+q.b=p==null?$.pAy=A.a2($.AEP,null):p
+w=document.createElement("standalone-conversion-delay-field")
+q.c=w
+r.b=q
+r.gD().E(w)
+v=x.H
+u=new A.E(null,null,v)
+t=new B.bPK(u)
+r.c=t
+q.X(0,t)
+s=new A.j(u,v.l("j<1>")).S(0,r.a8(r.a.a.gmv(),x.n))
+r.ah(A.a([w],x.f),A.a([s],x.x))},
+t(){var w,v,u,t,s=this,r=s.a,q=r.a,p=(r.Q&1)!==0
+if(p)s.c.c=q.c
+r=q.ch
+r.toString
+if(s.d!==r){s.d=s.c.d=r
+w=!0
+v=!0}else{v=p
+w=v}u=q.w.gbD() instanceof A.fz
+if(s.e!==u){s.e=s.c.e=u
+w=!0
+v=!0}t=q.ay
+if(s.f!==t){s.f=s.c.f=t
+w=!0
+v=!0}if(w)s.b.d.f|=32
+s.b.C()
+$.o().L(v)},
+bj(){this.a.c.e=!0},
+F(){this.b.G()}}
+B.ffx.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u,t,s,r=this,q=r.a,p=new B.dFe(A.v(),A.Y(r,0,0)),o=$.oXJ
+p.b=o==null?$.oXJ=A.a2($.AnO,null):o
+w=document.createElement("combined-explanations-conversion-delay-field")
+p.c=w
+r.b=p
+r.gD().E(w)
+v=q.c
+v=v.gh().n(C.aH,v.gk())
+u=x.H
+t=new A.E(null,null,u)
+v=new B.dFd(t,v)
+r.c=v
+p.X(0,v)
+s=new A.j(t,u.l("j<1>")).S(0,r.a8(q.a.gmv(),x.n))
+r.ah(A.a([w],x.f),A.a([s],x.x))},
+t(){var w,v,u=this,t=u.a.a,s=t.ay,r=u.d!==s
+if(r)u.d=u.c.d=s
+w=t.CW
+w.toString
+if(u.e!==w){u.e=u.c.e=w
+r=!0
+v=!0}else v=r
+w=t.fx
+w.toString
+if(u.f!==w){u.f=u.c.f=w
+r=!0
+v=!0}w=t.fr
+w.toString
+if(u.r!==w){u.r=u.c.r=w
+r=!0
+v=!0}if(r)u.b.d.f|=32
+u.b.C()
+$.o().L(v)},
+F(){this.b.G()}}
+B.ffy.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u=this,t=new B.etg(A.v(),A.Y(u,0,0)),s=$.pDz
+t.b=s==null?$.pDz=A.a2($.AFT,null):s
+w=document.createElement("time-comparison-collapsed-field")
+t.c=w
+u.b=t
+u.gD().E(w)
+v=new B.lDf()
+u.c=v
+t.X(0,v)
+u.K(w)},
+t(){var w=this,v=w.a.a.ay,u=w.d!==v
+if(u)w.d=w.c.a=v
+if(u)w.b.d.f|=32
+w.b.C()
+$.o().L(u)},
+F(){this.b.G()}}
+B.ffz.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u=this,t=new B.etf(A.v(),A.Y(u,0,0)),s=$.pDy
+t.b=s==null?$.pDy=A.a2($.AFS,null):s
+w=document.createElement("time-comparison-collapsed-explanations-field")
+t.c=w
+u.b=t
+u.gD().E(w)
+v=new B.lDe()
+u.c=v
+t.X(0,v)
+u.K(w)},
+t(){var w,v,u,t=this,s=t.a.a,r=s.ay,q=t.d!==r
+if(q)t.d=t.c.a=r
+w=s.fx
+if(t.e!=w){t.e=t.c.b=w
+q=!0
+v=!0}else v=q
+u=s.fr
+if(t.f!=u){t.f=t.c.c=u
+q=!0
+v=!0}if(q)t.b.d.f|=32
+t.b.C()
+$.o().L(v)},
+F(){this.b.G()}}
+B.bXh.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u,t,s,r=this,q=new B.eti(A.v(),A.Y(r,0,0)),p=$.pDB
+q.b=p==null?$.pDB=A.a2($.AFV,null):p
+w=document.createElement("time-comparison-standalone-conversion-delay-field")
+q.c=w
+r.b=q
+r.gD().E(w)
+v=x.H
+u=new A.E(null,null,v)
+t=new B.bRS(u)
+r.c=t
+q.X(0,t)
+s=new A.j(u,v.l("j<1>")).S(0,r.a8(r.a.a.gmv(),x.n))
+r.ah(A.a([w],x.f),A.a([s],x.x))},
+t(){var w,v,u,t,s=this,r=s.a,q=r.a,p=(r.Q&1)!==0
+if(p)s.c.c=q.c
+r=q.ch
+r.toString
+if(s.d!==r){s.d=s.c.d=r
+w=!0
+v=!0}else{v=p
+w=v}u=q.w.gbD() instanceof A.fz
+if(s.e!==u){s.e=s.c.e=u
+w=!0
+v=!0}t=q.ay
+if(s.f!==t){s.f=s.c.f=t
+w=!0
+v=!0}if(w)s.b.d.f|=32
+s.b.C()
+$.o().L(v)},
+bj(){this.a.c.f=!0},
+F(){this.b.G()}}
+B.ffA.prototype={
+gq(){return"ConversionAnalysisStatsFieldComponent"},
+p(){var w,v,u,t,s,r,q,p=this,o=new B.dSc(A.Y(p,0,0)),n=$.p9c
+o.b=n==null?$.p9c=A.a2($.At4,null):n
+w=document.createElement("explanations-expanded-change-ratio")
+o.c=w
+p.b=o
+p.gD().E(w)
+v=p.a.c
+u=new O.a_a(v.gh().n(C.x,v.gk()),A.G(x.d,x.M))
+p.c=u
+u=p.d=new E.aOd(u,v.gh().n(C.ee,v.gk()),v.gh().n(C.p,v.gk()),v.gh().j(T.qQ,v.gk()))
+t=new E.b4i(v.gh().n(C.h,v.gk()),v.gh().n(A.n(H.wR,N.aGS()),v.gk()),u)
+p.e=t
+s=v.gh().n(C.aH,v.gk())
+r=v.gh().n(C.ee,v.gk())
+q=v.gh().n(A.n(H.wR,N.aGS()),v.gk())
+v=v.gh().n(C.ar,v.gk())
+v=new B.chz(s,r,t,o,w,u,q,v,new A.E(null,null,x.O))
+p.f=v
+o.X(0,v)
+p.K(w)},
+a0(d,e,f){if(0===e){if(d===A.n(V.Dc,O.bgi()))return this.c
+if(d===L.a54)return this.d
+if(d===L.wZ)return this.e}return f},
+t(){var w,v,u=this,t=u.a,s=t.a,r=(t.Q&1)!==0,q=s.fr,p=u.r!=q
+if(p)u.r=u.f.as=q
+w=s.fx
+if(u.w!=w){u.w=u.f.at=w
+p=!0
+v=!0}else v=p
+if(p)u.b.d.f|=32
+if(r)u.f.ab()
+t=u.b
+t.a9(r)
+t.C()
+$.o().L(v)},
+F(){this.b.G()
+this.f.P()}}
+B.cAy.prototype={
+p(){var w,v,u,t,s,r,q,p,o=this,n=null,m=new B.dGh(A.Y(o,0,0)),l=$.oYK
+m.b=l==null?$.oYK=A.a2($.Aof,n):l
+w=document.createElement("conversion-analysis-stats-field")
+m.c=w
+o.b=m
+v=new O.a_a(o.n(C.x,n),A.G(x.d,x.M))
+o.f=v
+v=new E.aOd(v,o.n(C.ee,n),o.n(C.p,n),o.j(T.qQ,n))
+o.r=v
+u=o.n(A.n(A4.anR,P.mGV()),n)
+t=o.n(C.h,n)
+s=o.n(C.qJ,n)
+r=o.n(C.aH,n)
+q=o.n(C.cI,n)
+p=o.n(C.x,n)
+p=new B.Lz(u,o.j(S.hA,n),o.j(A.n(H.wR,N.aGS()),n),t,s,r,m,q,v,p,D.axt)
+p.euj()
+o.a=p
+o.K(w)},
+a0(d,e,f){var w,v=this
+if(0===e){if(d===A.n(V.Dc,O.bgi()))return v.f
+if(d===L.a54)return v.r
+if(d===L.wZ){w=v.e
+return w===$?v.e=new E.b4i(v.n(C.h,null),v.n(A.n(H.wR,N.aGS()),null),v.r):w}}return f},
+t(){var w=this.d.d
+if((w&1)!==0)this.a.ab()
+this.b.C()},
+F(){this.a.P()}}
+B.dFd.prototype={
+gbD(){return this.c.gbD()},
+apM(d){if(!d)return
+this.b.T(0,null)},
+FR(){this.a.FR()}}
+B.dFe.prototype={
+gq(){return"CombinedExplanationsConversionDelayFieldComponent"},
+p(){var w,v,u,t,s,r,q,p,o,n,m,l,k,j=this,i=j.a,h=j.ai(),g=document,f=A.r(g,h)
+j.m(f,"ess-cell-ellipsis")
+w=j.dx=A.a8(g,f)
+A.l(w,"buttonDecorator","")
+j.m(w,"tooltip-target explanations-hoverable")
+A.l(w,"clickableTooltipTarget","")
+v=new A.N(1,j,w)
+j.w=v
+u=A.cQ(w,null,!1,!0)
+j.x=new Y.cL(u)
+t=j.d
+s=t.a
+t=t.b
+v=j.y=R.hW(s.n(A.n(F.E,G.aV()),t),v,w,j,null)
+w.appendChild(j.r.b)
+r=j.z=I.di(j,3)
+q=r.c
+f.appendChild(q)
+A.l(q,"tooltipClass","combined-explanations-conversion-delay")
+j.gD().E(q)
+p=G.bU(s.j(F.A,t),s.j(C.S,t))
+j.Q=p
+q=I.dh(p,r,q,s.j(F.L,t))
+j.as=q
+o=g.createElement("div")
+j.m(o,"combined-explanations-conversion-delay-container")
+p=j.at=E.cX3(j,5)
+n=p.c
+o.appendChild(n)
+j.gD().E(n)
+n=s.n(C.ee,t)
+m=s.n(C.ar,t)
+m=j.ax=new E.a5V(n,s.n(L.wZ,t),m)
+p.X(0,m)
+r.Z(q,A.a([C.b,A.a([o],x.f),C.b],x.Q))
+q=x.z
+C.D.a3(w,"click",j.ad(new B.jca(j),q,q))
+C.D.a3(w,"keypress",j.ad(new B.jcb(j),q,q))
+C.D.a3(w,"keydown",j.ad(v.gcH(),q,x.v))
+C.D.a3(w,"mouseover",j.a8(v.gcr(v),q))
+C.D.a3(w,"mouseleave",j.a8(v.gc8(v),q))
+C.D.a3(w,"blur",j.ad(v.gck(v),q,x.Z))
+u=u.b
+l=new A.j(u,A.t(u).l("j<1>")).S(0,j.a8(i.gFQ(),x.L))
+v=v.k4
+u=A.t(v).l("j<1>")
+q=x.y
+k=new A.io(null,new A.j(v,u),u.l("io<bc.T>")).S(0,j.ae(i.gapL(),q,q))
+$.bo().I(0,m,p)
+i.a=m
+j.bc(A.a([l,k],x.x))},
+a0(d,e,f){var w,v,u,t=this
+if(d===C.u&&1<=e&&e<=2)return t.x.a
+if(3<=e&&e<=5){if(d===F.A)return t.Q
+if(d===K.aV||d===C.B)return t.as
+if(d===C.y){w=t.e
+if(w===$){v=t.d
+u=v.a.j(C.y,v.b)
+w=t.e=u==null?new A.cE(A.a([],x.g)):u}return w}if(d===K.aU){w=t.f
+return w===$?t.f=t.as.gcR():w}}return f},
+t(){var w,v,u,t,s=this,r=s.a,q=(s.d.f&1)!==0,p=s.y
+if(q){w=s.as
+w.a=G.e9("combined-explanations-conversion-delay",new A.dW(w.cx))}if(s.ay!==D.RF){s.ay=s.as.c=D.RF
+v=!0
+u=!0}else{u=q
+v=u}if(s.ch!==p){s.as.sd6(p)
+s.ch=p
+v=!0
+u=!0}if(v)s.z.d.f|=32
+w=r.e
+w===$&&A.d()
+v=s.CW!==w
+if(v){s.CW=s.ax.a=w
+u=!0}t=r.c.gbD()
+w=s.cx
+if(w==null?t!=null:w!==t){s.cx=s.ax.b=t
+v=!0
+u=!0}w=r.r
+w===$&&A.d()
+if(s.cy!==w){s.cy=s.ax.c=w
+v=!0
+u=!0}w=r.f
+w===$&&A.d()
+if(s.db!==w){s.db=s.ax.d=w
+v=!0
+u=!0}if(v)s.at.d.f|=32
+if(q)s.ax.ab()
+s.w.A()
+s.x.aZ(s,s.dx)
+r=r.d
+r===$&&A.d()
+s.r.U(r)
+s.z.C()
+s.at.C()
+if(q)p.ao()
+$.o().L(u)},
+F(){var w=this
+w.w.B()
+w.z.G()
+w.at.G()
+w.y.P()}}
+B.akG.prototype={
+aX(){return"ConversionAnalysisCellRenderer."+this.b}}
+B.bPK.prototype={
+apM(d){if(!d)return
+this.b.T(0,null)},
+UK(){var w=this.a
+if(w!=null)w.UK()}}
+B.eqB.prototype={
+gq(){return"StandaloneConversionDelayFieldComponent"},
+p(){var w,v,u,t,s,r,q,p,o,n,m=this,l=m.a,k=m.ai(),j=document,i=A.r(j,k)
+m.m(i,"ess-cell-ellipsis")
+w=A.a8(j,i)
+m.m(w,"tooltip-target hoverable")
+A.l(w,"clickableTooltipTarget","")
+v=new A.N(1,m,w)
+m.w=v
+u=m.d
+t=u.a
+u=u.b
+v=m.x=R.hW(t.n(A.n(F.E,G.aV()),u),v,w,m,null)
+w.appendChild(m.r.b)
+s=m.y=I.di(m,3)
+r=s.c
+i.appendChild(r)
+m.gD().E(r)
+q=G.bU(t.j(F.A,u),t.j(C.S,u))
+m.z=q
+r=I.dh(q,s,r,t.j(F.L,u))
+m.Q=r
+p=j.createElement("div")
+m.gD().E(p)
+q=m.as=B.oYW(m,5)
+o=q.c
+p.appendChild(o)
+m.gD().E(o)
+o=new M.aLI(new M.aww())
+m.at=o
+o=m.ax=new B.aLJ(q,t.n(C.x,u),o)
+q.X(0,o)
+s.Z(r,A.a([C.b,A.a([p],x.f),C.b],x.Q))
+r=x.z
+s=x.v
+C.D.a3(w,"keydown",m.ad(v.gcH(),r,s))
+C.D.a3(w,"click",m.a8(v.gd3(v),r))
+C.D.a3(w,"mouseover",m.a8(v.gcr(v),r))
+C.D.a3(w,"mouseleave",m.a8(v.gc8(v),r))
+C.D.a3(w,"blur",m.ad(v.gck(v),r,x.Z))
+C.D.a3(w,"keypress",m.ad(v.geQ(),r,s))
+v=v.k4
+s=A.t(v).l("j<1>")
+r=x.y
+n=new A.io(null,new A.j(v,s),s.l("io<bc.T>")).S(0,m.ae(l.gapL(),r,r))
+$.bo().I(0,o,q)
+l.a=o
+m.bc(A.a([n],x.x))},
+a0(d,e,f){var w,v,u,t=this
+if(3<=e&&e<=5){if(d===Z.UL&&5===e)return t.at
+if(d===F.A)return t.z
+if(d===K.aV||d===C.B)return t.Q
+if(d===C.y){w=t.e
+if(w===$){v=t.d
+u=v.a.j(C.y,v.b)
+w=t.e=u==null?new A.cE(A.a([],x.g)):u}return w}if(d===K.aU){w=t.f
+return w===$?t.f=t.Q.gcR():w}}return f},
+t(){var w,v,u=this,t=u.a,s=u.d.f,r=u.x,q=u.ay!==D.RF
+if(q)u.ay=u.Q.c=D.RF
+if(u.ch!==r){u.Q.sd6(r)
+u.ch=r
+q=!0
+w=!0}else w=q
+if(q)u.y.d.f|=32
+v=t.c
+v===$&&A.d()
+q=u.CW!==v
+if(q){u.CW=u.ax.d=v
+w=!0}v=t.d
+v===$&&A.d()
+if(u.cx!==v){u.cx=u.ax.e=v
+q=!0
+w=!0}v=t.e
+v===$&&A.d()
+if(u.cy!==v){u.cy=u.ax.f=v
+q=!0
+w=!0}if(q)u.as.d.f|=32
+u.w.A()
+t=t.f
+t===$&&A.d()
+u.r.U(t)
+u.y.C()
+u.as.C()
+if((s&1)!==0)r.ao()
+$.o().L(w)},
+F(){var w=this
+w.w.B()
+w.y.G()
+w.as.G()
+w.x.P()}}
+B.lDe.prototype={}
+B.etf.prototype={
+gq(){return"TimeComparisonCollapedExplanationsFieldComponent"},
+p(){var w,v,u,t,s,r,q,p,o,n=this,m=n.ai(),l=document,k=A.r(l,m)
+n.m(k,"ess-cell-ellipsis")
+k.appendChild(n.e.b)
+w=new B.dSb(A.Y(n,2,0))
+v=$.p9b
+w.b=v==null?$.p9b=A.a2($.At3,null):v
+u=l.createElement("explanations-collapsed-change-ratio")
+w.c=u
+n.f=w
+m.appendChild(u)
+n.gD().E(u)
+u=n.d
+t=u.a
+u=u.b
+s=new O.a_a(t.n(C.x,u),A.G(x.d,x.M))
+n.r=s
+s=n.w=new E.aOd(s,t.n(C.ee,u),t.n(C.p,u),t.j(T.qQ,u))
+r=new E.b4i(t.n(C.h,u),t.n(A.n(H.wR,N.aGS()),u),s)
+n.x=r
+q=t.n(C.aH,u)
+p=t.n(C.ee,u)
+o=t.n(A.n(H.wR,N.aGS()),u)
+u=t.n(C.ar,u)
+u=new B.chy(q,p,r,w,s,o,u,new A.E(null,null,x.O))
+n.y=u
+w.X(0,u)},
+a0(d,e,f){if(2===e){if(d===A.n(V.Dc,O.bgi()))return this.r
+if(d===L.a54)return this.w
+if(d===L.wZ)return this.x}return f},
+t(){var w,v,u=this,t=u.a,s=(u.d.f&1)!==0,r=t.c,q=u.z!=r
+if(q)u.z=u.y.y=r
+w=t.b
+if(u.Q!=w){u.Q=u.y.z=w
+q=!0
+v=!0}else v=q
+if(q)u.f.d.f|=32
+if(s)u.y.ab()
+t=t.a
+if(t==null)t=""
+u.e.U(t)
+t=u.f
+t.a9(s)
+t.C()
+$.o().L(v)},
+F(){this.f.G()
+this.y.P()}}
+B.lDf.prototype={}
+B.etg.prototype={
+gq(){return"TimeComparisonCollapedFieldComponent"},
+p(){var w,v,u,t=this,s=t.ai(),r=A.r(document,s)
+t.m(r,"ess-cell-ellipsis")
+r.appendChild(t.e.b)
+w=t.f=Q.d6o(t,2)
+v=w.c
+s.appendChild(v)
+t.gD().E(v)
+v=t.d
+u=v.a
+v=v.b
+v=Q.d6n(u.n(C.aH,v),w,u.n(C.aN,v),u.n(C.p,v),u.j(S.hA,v),u.j(A2.nv,v))
+t.r=v
+w.X(0,v)},
+t(){var w=this,v=w.a,u=(w.d.f&1)!==0
+if(u)w.r.ab()
+v=v.a
+v===$&&A.d()
+w.e.U(v)
+v=w.f
+v.a9(u)
+v.C()},
+F(){this.f.G()}}
+B.bRS.prototype={
+apM(d){if(!d)return
+this.b.T(0,null)},
+UK(){var w=this.a
+if(w!=null)w.UK()}}
+B.eti.prototype={
+gq(){return"TimeComparisonStandaloneConversionDelayFieldComponent"},
+p(){var w,v,u,t,s,r,q,p,o,n,m=this,l=m.a,k=m.ai(),j=document,i=A.r(j,k)
+m.m(i,"ess-cell-ellipsis")
+w=A.a8(j,i)
+m.m(w,"tooltip-target hoverable")
+A.l(w,"clickableTooltipTarget","")
+v=new A.N(1,m,w)
+m.w=v
+u=m.d
+t=u.a
+u=u.b
+v=m.x=R.hW(t.n(A.n(F.E,G.aV()),u),v,w,m,null)
+w.appendChild(m.r.b)
+s=m.y=I.di(m,3)
+r=s.c
+i.appendChild(r)
+m.gD().E(r)
+q=G.bU(t.j(F.A,u),t.j(C.S,u))
+m.z=q
+r=I.dh(q,s,r,t.j(F.L,u))
+m.Q=r
+p=j.createElement("div")
+m.gD().E(p)
+q=m.as=B.oYW(m,5)
+o=q.c
+p.appendChild(o)
+m.gD().E(o)
+o=new M.aLI(new M.aww())
+m.at=o
+o=m.ax=new B.aLJ(q,t.n(C.x,u),o)
+q.X(0,o)
+s.Z(r,A.a([C.b,A.a([p],x.f),C.b],x.Q))
+r=m.ay=Q.d6o(m,6)
+s=r.c
+k.appendChild(s)
+m.gD().E(s)
+u=Q.d6n(t.n(C.aH,u),r,t.n(C.aN,u),t.n(C.p,u),t.j(S.hA,u),t.j(A2.nv,u))
+m.ch=u
+r.X(0,u)
+u=x.z
+r=x.v
+C.D.a3(w,"keydown",m.ad(v.gcH(),u,r))
+C.D.a3(w,"click",m.a8(v.gd3(v),u))
+C.D.a3(w,"mouseover",m.a8(v.gcr(v),u))
+C.D.a3(w,"mouseleave",m.a8(v.gc8(v),u))
+C.D.a3(w,"blur",m.ad(v.gck(v),u,x.Z))
+C.D.a3(w,"keypress",m.ad(v.geQ(),u,r))
+v=v.k4
+r=A.t(v).l("j<1>")
+u=x.y
+n=new A.io(null,new A.j(v,r),r.l("io<bc.T>")).S(0,m.ae(l.gapL(),u,u))
+$.bo().I(0,o,q)
+l.a=o
+m.bc(A.a([n],x.x))},
+a0(d,e,f){var w,v,u,t=this
+if(3<=e&&e<=5){if(d===Z.UL&&5===e)return t.at
+if(d===F.A)return t.z
+if(d===K.aV||d===C.B)return t.Q
+if(d===C.y){w=t.e
+if(w===$){v=t.d
+u=v.a.j(C.y,v.b)
+w=t.e=u==null?new A.cE(A.a([],x.g)):u}return w}if(d===K.aU){w=t.f
+return w===$?t.f=t.Q.gcR():w}}return f},
+t(){var w,v,u=this,t=u.a,s=(u.d.f&1)!==0,r=u.x,q=u.CW!==D.RF
+if(q)u.CW=u.Q.c=D.RF
+if(u.cx!==r){u.Q.sd6(r)
+u.cx=r
+q=!0
+w=!0}else w=q
+if(q)u.y.d.f|=32
+v=t.c
+v===$&&A.d()
+q=u.cy!==v
+if(q){u.cy=u.ax.d=v
+w=!0}v=t.d
+v===$&&A.d()
+if(u.db!==v){u.db=u.ax.e=v
+q=!0
+w=!0}v=t.e
+v===$&&A.d()
+if(u.dx!==v){u.dx=u.ax.f=v
+q=!0
+w=!0}if(q)u.as.d.f|=32
+if(s)u.ch.ab()
+u.w.A()
+t=t.f
+t===$&&A.d()
+u.r.U(t)
+t=u.ay
+t.a9(s)
+u.y.C()
+u.as.C()
+t.C()
+if(s)r.ao()
+$.o().L(w)},
+F(){var w=this
+w.w.B()
+w.y.G()
+w.as.G()
+w.ay.G()
+w.x.P()}}
+B.a54.prototype={
+saY(d){this.b=d},
+fLN(){this.a=!0},
+fLL(){this.a=!1},
+san(d,e){this.b=e},
+$icB:1}
+B.dGt.prototype={
+gq(){return"ConversionDelayCalloutComponent"},
+p(){var w,v,u,t,s,r,q=this,p=q.ai(),o=document,n=A.r(o,p)
+q.m(n,"material-callout narrow")
+w=q.f=A.aB(q,1)
+v=w.c
+n.appendChild(v)
+q.gD().E(v)
+v=new A.aA(v,A.as(null,!1))
+q.r=v
+w.X(0,v)
+u=A.r(o,n)
+q.m(u,"material-callout-main")
+t=A.r(o,u)
+q.m(t,"material-callout-content")
+s=A.r(o,t)
+q.m(s,"top-section")
+r=A.ac(o,s,"p")
+q.m(r,"p-90days")
+r.appendChild(q.e.b)
+q.w=A.p(q,7,r,B.y9D())
+q.x=A.p(q,8,r,B.y9E())
+q.y=A.p(q,9,t,B.y9F())
+q.z=A.p(q,10,t,B.y9H())},
+t(){var w,v,u,t,s=this,r=s.a,q=(s.d.f&1)!==0
+if(q){w=$.rNZ()
+s.r.e=w}if(q)s.f.d.f|=32
+w=s.w
+w.c.sM(r.a)
+v=s.x
+v.c.sM(!r.a)
+u=s.y
+u.c.sM(r.a)
+t=s.z
+t.c.sM(r.a)
+w.a.A()
+v.a.A()
+u.a.A()
+t.a.A()
+r=r.b
+r===$&&A.d()
+r=r.a
+if(r==null)r=""
+s.e.U(r)
+s.f.C()
+$.o().L(q)},
+F(){var w=this
+w.w.a.B()
+w.x.a.B()
+w.y.a.B()
+w.z.a.B()
+w.f.G()}}
+B.ffQ.prototype={
+gq(){return"ConversionDelayCalloutComponent"},
+p(){var w,v,u,t=this,s=t.b=A.cO(t,0),r=s.c
+t.gD().E(r)
+w=t.a.c
+v=A.cp(w.gh().n(C.al,w.gk()),w.gh().j(C.aj,w.gk()),w.gh().j(C.am,w.gk()),w.gh().j(C.ak,w.gk()),w.gh().j(C.ae,w.gk()),w.gh().j(C.an,w.gk()),w.gh().j(C.ah,w.gk()),w.gh().j(C.ao,w.gk()))
+t.c=v
+u=w.gh().j(C.t,w.gk())
+u=new A.at(u===!0)
+t.d=u
+w=A.cN(v,r,u,new A.bL(s,null),w.gh().j(C.a9,w.gk()),w.gh().j(C.ap,w.gk()),w.gh().j(C.R,w.gk()),w.gh().j(C.h,w.gk()),w.gh().j(C.ag,w.gk()),w.gh().j(C.aB,w.gk()))
+t.e=w
+s.X(0,w)
+t.K(r)},
+a0(d,e,f){if(0===e){if(d===C.a8)return this.c
+if(d===C.r)return this.d
+if(d===C.U||d===C.aI||d===C.e)return this.e}return f},
+t(){var w,v,u,t,s,r=this,q=r.a,p=q.a
+q=q.Q
+w=p.b
+w===$&&A.d()
+v=w.d?"help_9916583":"help_6239119"
+u=r.f!==v
+if(u){w=r.e
+w.at=v
+w.bR()
+r.f=v}t=p.b.d?$.rNX():$.rNY()
+if(r.r!==t){r.r=r.e.ax=t
+u=!0
+s=!0}else s=u
+if(u)r.b.d.f|=32
+if((q&1)!==0)r.e.ab()
+r.b.C()
+$.o().L(s)},
+F(){this.b.G()
+this.e.P()}}
+B.ffR.prototype={
+gq(){return"ConversionDelayCalloutComponent"},
+p(){var w,v,u,t=this,s=document.createElement("div")
+t.d=s
+A.l(s,"buttonDecorator","")
+t.m(s,"link")
+A.l(s,"debugId","show-more")
+w=A.cQ(s,null,!1,!0)
+t.c=new Y.cL(w)
+s.appendChild(t.b.b)
+v=x.z
+C.i.a3(s,"click",t.ad(w.gco(),v,x.V))
+C.i.a3(s,"keypress",t.ad(w.gcl(),v,x.v))
+w=w.b
+u=new A.j(w,A.t(w).l("j<1>")).S(0,t.a8(t.a.a.gfLM(),x.L))
+t.ah(A.a([s],x.f),A.a([u],x.x))},
+a0(d,e,f){if(d===C.u&&e<=1)return this.c.a
+return f},
+t(){var w=this
+w.c.aZ(w,w.d)
+w.b.U(A.b(5734,"981443746"))}}
+B.ffS.prototype={
+gq(){return"ConversionDelayCalloutComponent"},
+p(){var w,v=this,u=document,t=u.createElement("div")
+v.m(t,"bottom-section")
+w=v.d=A.r(u,t)
+v.m(w,"paragraph")
+A.l(w,"debugId","p90-days")
+v.b=A.p(v,2,t,B.y9G())
+v.K(t)},
+t(){var w,v,u=this,t=u.a.a,s=u.b
+t.b===$&&A.d()
+s.c.sM(!0)
+s.a.A()
+w=t.b.b
+v=u.c!=w
+if(v){u.d.innerHTML=U.dM(w)
+u.c=w}$.o().L(v)},
+F(){this.b.a.B()}}
+B.ffT.prototype={
+gq(){return"ConversionDelayCalloutComponent"},
+p(){var w=document.createElement("div")
+this.c=w
+this.gD().E(w)
+this.K(w)},
+t(){var w,v,u=this,t=u.a.a.b
+t===$&&A.d()
+w=t.c
+v=u.b!==w
+if(v){u.c.innerHTML=U.dM(w)
+u.b=w}$.o().L(v)}}
+B.ffU.prototype={
+gq(){return"ConversionDelayCalloutComponent"},
+p(){var w,v,u,t=this,s=document.createElement("div")
+t.d=s
+A.l(s,"buttonDecorator","")
+t.m(s,"link")
+A.l(s,"debugId","show-less")
+w=A.cQ(s,null,!1,!0)
+t.c=new Y.cL(w)
+s.appendChild(t.b.b)
+v=x.z
+C.i.a3(s,"click",t.ad(w.gco(),v,x.V))
+C.i.a3(s,"keypress",t.ad(w.gcl(),v,x.v))
+w=w.b
+u=new A.j(w,A.t(w).l("j<1>")).S(0,t.a8(t.a.a.gfLK(),x.L))
+t.ah(A.a([s],x.f),A.a([u],x.x))},
+a0(d,e,f){if(d===C.u&&e<=1)return this.c.a
+return f},
+t(){var w=this
+w.c.aZ(w,w.d)
+w.b.U(A.b(5735,"981443746"))}}
+B.cAC.prototype={
+p(){var w,v=this,u=new B.dGt(A.v(),A.Y(v,0,0)),t=$.oYS
+u.b=t==null?$.oYS=A.a2($.Aoj,null):t
+w=document.createElement("conversion-delay-callout")
+u.c=w
+v.b=u
+v.a=new B.a54()
+v.K(w)},
+a0(d,e,f){var w
+if(d===Z.UL&&0===e){w=this.e
+return w===$?this.e=new M.aLI(new M.aww()):w}return f}}
+B.dGu.prototype={}
+B.ce6.prototype={
+aX(){return"ConversionDelayEntityType."+this.b}}
+B.aLJ.prototype={
+saY(d){this.d=d},
+gaJX(){var w,v=this.d
+v===$&&A.d()
+w=this.e
+w===$&&A.d()
+w=w.b
+w.toString
+w=v.SA(w)
+return w.a>w.b||w.c>w.d},
+gcjh(){var w,v,u,t,s=this,r=s.d
+r===$&&A.d()
+w=s.e
+w===$&&A.d()
+w=w.b
+w.toString
+w=r.SA(w)
+w.toString
+r=s.e
+v=s.f
+u=s.b
+t=P.jg0(r,w,s.d.z,!1,v,u.gbh()===C.z,!0)
+if((w.a>w.b||w.c>w.d)&&w.aky()){r=u.gbh()===C.z
+return t+" "+A.kC(r,A4.bPI,A.a([r],x.f),null,null,"retractionsMessage")}return t},
+UK(){var w,v,u=this,t=u.d
+t===$&&A.d()
+w=u.e
+w===$&&A.d()
+v=t.Pq(w)
+w=u.b
+u.x=P.jg7(v,w.gbh()===C.z)
+t=v!=null&&u.d.bkJ(v)
+u.y=P.jg6(v,t,!1,w.gbh()===C.z)
+u.a.al()},
+cFM(d){var w,v=this,u=d.d,t=v.d
+t===$&&A.d()
+w=v.e
+w===$&&A.d()
+t=t.abi(w)&&!v.gaJX()
+u.I(0,"ShowEstimation",String(t))
+if(v.d.abi(v.e)&&!v.gaJX()){u=d.d
+t=v.d
+w=v.e.b
+w.toString
+u.W(0,t.SA(w).gdD(0))}v.a.al()},
+gaoh(){var w,v=this,u=v.d
+u===$&&A.d()
+w=v.e
+w===$&&A.d()
+u=u.abi(w)&&!v.gaJX()
+w=v.x
+return u?A.L(w)+" "+A.b(7311,"981443746"):w}}
+B.dGA.prototype={
+gq(){return"ConversionDelayHovercardComponent"},
+p(){var w=this,v=w.ai()
+w.e=A.p(w,0,v,B.y9N())
+w.f=A.p(w,1,v,B.y9O())},
+t(){var w,v=this.a,u=this.e,t=v.d
+t===$&&A.d()
+t=t.gVB()&&t.e.a===0
+u.c.sM(t)
+t=this.f
+w=v.d
+v=!(w.gVB()&&w.e.a===0)&&v.gaoh()!=null&&v.y!=null
+t.c.sM(v)
+u.a.A()
+t.a.A()},
+F(){this.e.a.B()
+this.f.a.B()}}
+B.ffY.prototype={
+gq(){return"ConversionDelayHovercardComponent"},
+p(){var w,v=this,u=v.b=A.dk(v,0),t=u.c
+v.gD().E(t)
+w=new A.dg()
+v.c=w
+u.X(0,w)
+v.K(t)},
+t(){this.b.C()},
+F(){this.b.G()}}
+B.ffZ.prototype={
+gq(){return"ConversionDelayHovercardComponent"},
+p(){var w,v,u,t,s,r,q=this,p="paragraph",o=document,n=o.createElement("div")
+q.m(n,"popup-body")
+q.c=A.p(q,1,n,B.y9P())
+w=q.z=A.r(o,n)
+q.m(w,p)
+A.l(w,"debugId","p90-days")
+q.d=A.p(q,3,n,B.y9Q())
+v=A.r(o,n)
+q.m(v,p)
+v.appendChild(q.b.b)
+w=q.e=A.cO(q,6)
+u=w.c
+v.appendChild(u)
+q.gD().E(u)
+t=q.a.c
+s=A.cp(t.gh().n(C.al,t.gk()),t.gh().j(C.aj,t.gk()),t.gh().j(C.am,t.gk()),t.gh().j(C.ak,t.gk()),t.gh().j(C.ae,t.gk()),t.gh().j(C.an,t.gk()),t.gh().j(C.ah,t.gk()),t.gh().j(C.ao,t.gk()))
+q.f=s
+r=t.gh().j(C.t,t.gk())
+r=new A.at(r===!0)
+q.r=r
+t=A.cN(s,u,r,new A.bL(w,null),t.gh().j(C.a9,t.gk()),t.gh().j(C.ap,t.gk()),t.gh().j(C.R,t.gk()),t.gh().j(C.h,t.gk()),t.gh().j(C.ag,t.gk()),t.gh().j(C.aB,t.gk()))
+q.w=t
+w.X(0,t)
+q.K(n)},
+a0(d,e,f){if(6===e){if(d===C.a8)return this.f
+if(d===C.r)return this.r
+if(d===C.U||d===C.aI||d===C.e)return this.w}return f},
+t(){var w,v,u,t,s,r,q=this,p=q.a,o=p.a,n=(p.Q&1)!==0
+p=q.c
+w=o.d
+w===$&&A.d()
+v=o.e
+v===$&&A.d()
+v=w.bjl(v)
+if(v)o.gcjh()
+p.c.sM(v)
+w=q.d
+v=o.d.abi(o.e)&&!o.gaJX()
+w.c.sM(v)
+if(n){v=$.rOd()
+q.w.ax=v}u=o.b.gbh()===C.z?"help_9916583":"help_6239119"
+if(q.y!==u){v=q.w
+v.at=u
+v.bR()
+q.y=u
+t=!0
+s=!0}else{s=n
+t=s}if(t)q.e.d.f|=32
+if(n)q.w.ab()
+p.a.A()
+w.a.A()
+r=o.gaoh()
+if(q.x!=r){q.z.innerHTML=U.dM(r)
+q.x=r
+s=!0}p=o.y
+if(p==null)p=""
+q.b.U(p)
+q.e.C()
+$.o().L(s)},
+F(){var w=this
+w.c.a.B()
+w.d.a.B()
+w.e.G()
+w.w.P()}}
+B.fg_.prototype={
+gq(){return"ConversionDelayHovercardComponent"},
+p(){var w=document.createElement("div")
+this.d=w
+this.gD().E(w)
+this.K(w)},
+t(){var w=this,v="paragraph",u=w.a.a.gcjh(),t=w.b!==u
+if(t){w.d.innerHTML=U.dM(u)
+w.b=u}if(w.c!=="paragraph"){w.m(w.d,v)
+w.c=v
+t=!0}$.o().L(t)}}
+B.fg0.prototype={
+gq(){return"ConversionDelayHovercardComponent"},
+p(){var w,v,u=this,t=document.createElement("div")
+u.m(t,"estimate-bars")
+w=u.c=M.nwi(u,1)
+v=w.c
+t.appendChild(v)
+u.gD().E(v)
+v=new M.b0Z(A.a([],x.o))
+u.d=v
+w.X(0,v)
+u.K(t)},
+a0(d,e,f){var w
+if(d===Z.UL&&1===e){w=this.b
+return w===$?this.b=new M.aLI(new M.aww()):w}return f},
+t(){var w,v,u,t,s=this,r=s.a.a,q=r.e
+q===$&&A.d()
+w=q.b
+v=s.e!=w
+if(v)s.e=s.d.a=w
+q=r.d
+q===$&&A.d()
+w.toString
+u=q.SA(w)
+if(s.f!=u){s.d.b=M.hUc(u)
+s.f=u
+v=!0
+t=!0}else t=v
+if(v)s.c.d.f|=32
+s.c.C()
+$.o().L(t)},
+F(){this.c.G()}}
+B.chy.prototype={
+ab(){this.a.dO(0,this.gdEr(),x.A)},
+P(){},
+bS3(d){var w=this,v=w.a,u=v.geh()
+w.w=A.yM(u.gaV(u))
+w.x.T(0,w.gtC())
+if(w.gtC()){u=x.N
+w.f.a_h(H.ZY,A.H(["CustomerId",A.L(v.gbD().gbs()),"CampaignId",A.L(v.gbD().gbB())],u,u))}if(w.gtC()&&E.aWz(v.gbD()).b===C.b1)w.f.aMB()
+u=v.geh()
+w.c.aAb(u.gaV(u),v.gbD())
+w.d.al()},
+dEs(){return this.bS3(null)},
+gtC(){var w=this.a,v=w.geh()
+return this.e.aiv(v.gaV(v),w.gbD())},
+geh(){var w=this.a.geh()
+return w.gaV(w)},
+gbD(){return this.a.gbD()},
+FR(){var w,v,u,t=this
+if(t.gtC()){w=A0.wc.v(0,t.w)
+w.toString
+v=t.a
+u=t.b
+E.hVI(w,v.gbD(),$.uPP(),t.r,u.gan(u).a.p8(),u.gan(u).b.p8(),A1.ZM,E.hU0(v.gbD(),t.w,null),t.c)}}}
+B.dSb.prototype={
+gq(){return y.c},
+p(){var w=this,v=w.a,u=w.ai()
+w.e=A.p(w,0,u,B.yBh())
+J.aE(u,"click",w.a8(v.gFQ(),x.z))},
+t(){var w=this.a,v=this.e
+v.c.sM(w.gtC())
+v.a.A()},
+F(){this.e.a.B()},
+a9(d){var w=this,v=w.a,u=v.gtC()&&E.aWz(v.a.gbD()).b===C.b1,t=w.f!==u
+if(t){A.a_(w.c,"promo-explanations-cell",u)
+w.f=u}$.o().L(t)}}
+B.fF5.prototype={
+gq(){return y.c},
+p(){var w,v,u,t,s,r,q,p,o,n=this,m=document,l=m.createElement("div")
+n.m(l,"ess-cell-ellipsis hoverable")
+A.l(l,"trigger-hover","")
+w=A.a8(m,l)
+A.l(w,"clickableTooltipTarget","")
+n.gD().E(w)
+v=new A.N(1,n,w)
+n.d=v
+u=n.a.c
+v=n.e=R.hW(u.gh().n(A.n(F.E,G.aV()),u.gk()),v,w,n,null)
+t=n.f=Q.d6o(n,2)
+w.appendChild(t.c)
+t.a1("ess-cell-ellipsis change-ratio")
+s=Q.d6n(u.gh().n(C.aH,u.gk()),t,u.gh().n(C.aN,u.gk()),u.gh().n(C.p,u.gk()),u.gh().j(S.hA,u.gk()),u.gh().j(A2.nv,u.gk()))
+n.r=s
+t.X(0,s)
+s=n.w=I.di(n,3)
+t=s.c
+l.appendChild(t)
+n.gD().E(t)
+r=G.bU(u.gh().j(F.A,u.gk()),u.gh().j(C.S,u.gk()))
+n.x=r
+t=I.dh(r,s,t,u.gh().j(F.L,u.gk()))
+n.y=t
+q=m.createElement("div")
+n.gD().E(q)
+n.z=new A.ep(q,A.a([],x.s))
+r=n.Q=E.cX3(n,5)
+p=r.c
+q.appendChild(p)
+n.gD().E(p)
+p=u.gh().n(C.ee,u.gk())
+o=u.gh().n(C.ar,u.gk())
+o=new E.a5V(p,u.gh().n(L.wZ,u.gk()),o)
+n.as=o
+r.X(0,o)
+s.Z(t,A.a([C.b,A.a([q],x.f),C.b],x.Q))
+t=x.z
+s=x.v
+C.D.a3(w,"keydown",n.ad(v.gcH(),t,s))
+C.D.a3(w,"click",n.a8(v.gd3(v),t))
+C.D.a3(w,"mouseover",n.a8(v.gcr(v),t))
+C.D.a3(w,"mouseleave",n.a8(v.gc8(v),t))
+C.D.a3(w,"blur",n.ad(v.gck(v),t,x.Z))
+C.D.a3(w,"keypress",n.ad(v.geQ(),t,s))
+n.K(l)},
+a0(d,e,f){var w,v,u,t=this
+if(3<=e&&e<=5){if(d===F.A)return t.x
+if(d===K.aV||d===C.B)return t.y
+if(d===C.y){w=t.b
+if(w===$){v=t.a.c
+u=v.gh().j(C.y,v.gk())
+w=t.b=u==null?new A.cE(A.a([],x.g)):u}return w}if(d===K.aU){w=t.c
+return w===$?t.c=t.y.gcR():w}}return f},
+t(){var w,v,u,t,s,r,q,p,o,n,m=this,l=m.a,k=l.a,j=(l.Q&1)!==0
+l=m.e
+if(j)m.r.ab()
+w=k.y!=null?"explanations-tooltip-card-with-footer":"explanations-tooltip-card"
+v=m.at!==w
+if(v){u=m.y
+u.a=G.e9(w,new A.dW(u.cx))
+m.at=w}if(m.ax!==l){m.y.sd6(l)
+m.ax=l
+v=!0
+t=!0}else t=v
+if(v)m.w.d.f|=32
+s=k.y!=null?"explanations-tooltip-with-footer":""
+if(m.ay!==s){m.z.sdX(s)
+m.ay=s
+t=!0}m.z.au()
+u=k.a
+r=u.geh()
+q=r.gaV(r)
+v=m.ch!==q
+if(v){m.ch=m.as.a=q
+t=!0}p=u.gbD()
+u=m.CW
+if(u==null?p!=null:u!==p){m.CW=m.as.b=p
+v=!0
+t=!0}o=k.y
+if(m.cx!=o){m.cx=m.as.c=o
+v=!0
+t=!0}n=k.z
+if(m.cy!=n){m.cy=m.as.d=n
+v=!0
+t=!0}if(v)m.Q.d.f|=32
+if(j)m.as.ab()
+m.d.A()
+u=m.f
+u.a9(j)
+u.C()
+m.w.C()
+m.Q.C()
+if(j)l.ao()
+$.o().L(t)},
+F(){var w=this
+w.d.B()
+w.f.G()
+w.w.G()
+w.Q.G()
+w.e.P()
+w.z.P()}}
+B.chz.prototype={
+ab(){this.a.dO(0,this.gdEt(),x.A)},
+P(){},
+bS4(d){var w,v,u,t,s,r,q=this,p=q.a,o=p.geh()
+o=q.y=A.yM(o.gaV(o))
+q.x=C.c.a6(o,"#")?C.c.c4(o,0,C.c.dg(o,"#")):o
+w=p.gbD()
+v=p.gkl()
+u=A.nQ(w,o)
+q.z=A.B0(w,v,u)
+q.Q.T(0,q.gtC())
+if(q.gtC()){t=q.e.parentElement.parentElement
+o=p.geh()
+s=o.gaV(o)
+r=p.gbD()
+o=q.f
+if(o.abz(s,r)===H.aRp){t.toString
+J.iD(t).T(0,"significance-highest")}else if(o.abz(s,r)===H.a3u){t.toString
+J.iD(t).T(0,"significance-high")}else if(o.abz(s,r)===H.aRq){t.toString
+J.iD(t).T(0,"significance-medium")}else if(o.abz(s,r)===H.alI){t.toString
+J.iD(t).T(0,"significance-low")}}if(q.gtC()){o=x.N
+q.r.a_h(H.ZY,A.H(["CustomerId",A.L(p.gbD().gbs()),"CampaignId",A.L(p.gbD().gbB())],o,o))}if(q.gtC()&&E.aWz(p.gbD()).b===C.b1)q.r.aMB()
+o=p.geh()
+q.c.aAb(o.gaV(o),p.gbD())
+q.d.al()},
+dEu(){return this.bS4(null)},
+gtC(){var w=this.a,v=w.geh()
+return this.f.aiv(v.gaV(v),w.gbD())},
+geh(){var w=this.a.geh()
+return w.gaV(w)},
+gbD(){return this.a.gbD()},
+FR(){var w,v,u,t=this
+if(t.gtC()){w=A0.wc.v(0,t.x)
+w.toString
+v=t.a
+u=t.b
+E.hVI(w,v.gbD(),$.uPO(),t.w,u.gan(u).a.p8(),u.gan(u).b.p8(),A1.ZM,E.hU0(v.gbD(),t.x,null),t.c)}}}
+B.dSc.prototype={
+gq(){return"ExplanationsExpandedChangeRatioComponent"},
+p(){var w=this,v=w.a,u=w.ai()
+w.e=A.p(w,0,u,B.yBi())
+J.aE(u,"click",w.a8(v.gFQ(),x.z))},
+t(){var w=this.a,v=this.e
+v.c.sM(w.gtC())
+v.a.A()},
+F(){this.e.a.B()},
+a9(d){var w=this,v=w.a,u=v.gtC()&&E.aWz(v.a.gbD()).b===C.b1,t=w.f!==u
+if(t){A.a_(w.c,"promo-explanations-cell",u)
+w.f=u}$.o().L(t)}}
+B.fF6.prototype={
+gq(){return"ExplanationsExpandedChangeRatioComponent"},
+p(){var w,v,u,t,s,r,q,p,o,n,m=this,l=document,k=l.createElement("div")
+m.m(k,"ess-cell-ellipsis hoverable")
+A.l(k,"trigger-hover","")
+w=A.a8(l,k)
+A.l(w,"clickableTooltipTarget","")
+m.gD().E(w)
+v=new A.N(1,m,w)
+m.e=v
+u=m.a.c
+v=m.f=R.hW(u.gh().n(A.n(F.E,G.aV()),u.gk()),v,w,m,null)
+t=A.r(l,w)
+m.m(t,"stats-text")
+t.appendChild(m.d.b)
+s=m.r=I.di(m,4)
+r=s.c
+k.appendChild(r)
+m.gD().E(r)
+q=G.bU(u.gh().j(F.A,u.gk()),u.gh().j(C.S,u.gk()))
+m.w=q
+r=I.dh(q,s,r,u.gh().j(F.L,u.gk()))
+m.x=r
+p=l.createElement("div")
+m.gD().E(p)
+q=x.s
+m.y=new A.ep(p,A.a([],q))
+o=m.z=E.cX3(m,6)
+n=o.c
+p.appendChild(n)
+m.gD().E(n)
+m.Q=new A.ep(n,A.a([],q))
+q=u.gh().n(C.ee,u.gk())
+n=u.gh().n(C.ar,u.gk())
+n=new E.a5V(q,u.gh().n(L.wZ,u.gk()),n)
+m.as=n
+o.X(0,n)
+s.Z(r,A.a([C.b,A.a([p],x.f),C.b],x.Q))
+r=x.z
+s=x.v
+C.D.a3(w,"keydown",m.ad(v.gcH(),r,s))
+C.D.a3(w,"click",m.a8(v.gd3(v),r))
+C.D.a3(w,"mouseover",m.a8(v.gcr(v),r))
+C.D.a3(w,"mouseleave",m.a8(v.gc8(v),r))
+C.D.a3(w,"blur",m.ad(v.gck(v),r,x.Z))
+C.D.a3(w,"keypress",m.ad(v.geQ(),r,s))
+m.K(k)},
+a0(d,e,f){var w,v,u,t=this
+if(4<=e&&e<=6){if(d===F.A)return t.w
+if(d===K.aV||d===C.B)return t.x
+if(d===C.y){w=t.b
+if(w===$){v=t.a.c
+u=v.gh().j(C.y,v.gk())
+w=t.b=u==null?new A.cE(A.a([],x.g)):u}return w}if(d===K.aU){w=t.c
+return w===$?t.c=t.x.gcR():w}}return f},
+t(){var w,v,u,t,s,r,q,p,o,n,m,l=this,k="explanations-tooltip-with-footer",j=l.a,i=j.a,h=(j.Q&1)!==0
+j=l.f
+w=i.as!=null?"explanations-tooltip-card-with-footer":"explanations-tooltip-card"
+v=l.at!==w
+if(v){u=l.x
+u.a=G.e9(w,new A.dW(u.cx))
+l.at=w}if(l.ax!==j){l.x.sd6(j)
+l.ax=j
+v=!0
+t=!0}else t=v
+if(v)l.r.d.f|=32
+s=i.as!=null?k:""
+if(l.ay!==s){l.y.sdX(s)
+l.ay=s
+t=!0}l.y.au()
+r=i.as!=null?k:""
+if(l.ch!==r){l.Q.sdX(r)
+l.ch=r
+t=!0}l.Q.au()
+u=i.a
+q=u.geh()
+p=q.gaV(q)
+v=l.CW!==p
+if(v){l.CW=l.as.a=p
+t=!0}o=u.gbD()
+u=l.cx
+if(u==null?o!=null:u!==o){l.cx=l.as.b=o
+v=!0
+t=!0}n=i.as
+if(l.cy!=n){l.cy=l.as.c=n
+v=!0
+t=!0}m=i.at
+if(l.db!=m){l.db=l.as.d=m
+v=!0
+t=!0}if(v)l.z.d.f|=32
+if(h)l.as.ab()
+l.e.A()
+l.d.U(i.z)
+l.r.C()
+l.z.C()
+if(h)j.ao()
+$.o().L(t)},
+F(){var w=this
+w.e.B()
+w.r.G()
+w.z.G()
+w.f.P()
+w.Q.P()
+w.y.P()}}
+B.chC.prototype={
+dbm(d,e,f,g,h,i,j,k){var w,v=this,u=v.b
+if(u.gan(u).b==null){u=v.a
+if(u.gbD() instanceof A.aU){u=W.agG(u.gbD(),!1)
+w=new W.P7(u==null?null:u.ap(0))}else{u=A3.cv0(u.gbD(),!1)
+w=new A3.agF(u==null?null:u.ap(0))}if(w.a!=null)v.e.gre().x9(w,new B.jOL(v))}},
+geh(){var w=this.a.geh()
+return w.gaV(w)},
+gbD(){return this.a.gbD()},
+gtC(){var w=this.a,v=w.geh()
+return this.r.aiv(v.gaV(v),w.gbD())},
+ab(){this.a.dO(0,this.gdEv(),x.A)},
+P(){this.as=!0},
+bS6(d){var w,v,u,t=this,s=t.a,r=s.geh()
+r=t.z=A.yM(r.gaV(r))
+t.y=!C.c.a6(r,"#")?r:C.c.c4(r,0,C.c.dg(r,"#"))
+w=s.gbD()
+v=s.gkl()
+u=A.nQ(w,r)
+t.Q=A.B0(w,v,u)
+t.x.T(0,t.gtC())
+if(t.gtC()){r=x.N
+t.f.a_h(H.ZY,A.H(["CustomerId",A.L(s.gbD().gbs()),"CampaignId",A.L(s.gbD().gbB())],r,r))}if(t.gtC()&&E.aWz(s.gbD()).b===C.b1)t.f.aMB()
+r=s.geh()
+t.c.aAb(r.gaV(r),s.gbD())
+t.d.al()},
+bS5(){return this.bS6(null)},
+FR(){var w,v,u,t=this
+if(t.gtC()){w=A0.wc.v(0,t.y)
+w.toString
+v=t.a
+u=t.b
+E.hVI(w,v.gbD(),$.uPQ(),t.w,u.gan(u).a.p8(),u.gan(u).a.gtg().p8(),A1.ad3,E.hU0(v.gbD(),t.y,null),t.c)}}}
+B.dSl.prototype={
+gq(){return"ExplanationsTimeCompareOffComponent"},
+p(){this.e=A.p(this,0,this.ai(),B.yBC())},
+t(){var w=this.a,v=this.e
+v.c.sM(w.gtC())
+v.a.A()},
+F(){this.e.a.B()},
+a9(d){var w,v=this,u=v.a,t=u.gtC(),s=v.f!==t
+if(s){A.a_(v.c,"explanations-available",t)
+v.f=t}w=u.gtC()&&E.aWz(u.a.gbD()).b===C.b1
+if(v.r!==w){A.a_(v.c,"promo-explanations-cell",w)
+v.r=w
+s=!0}$.o().L(s)}}
+B.fFr.prototype={
+gq(){return"ExplanationsTimeCompareOffComponent"},
+p(){var w,v,u,t,s,r,q,p,o,n,m,l=this,k="keypress",j=l.a,i=document,h=i.createElement("div")
+l.ay=h
+A.l(h,"buttonDecorator","")
+l.m(h,"ess-cell-ellipsis hoverable")
+A.l(h,"trigger-hover","")
+w=A.cQ(h,null,!1,!0)
+l.e=new Y.cL(w)
+v=A.a8(i,h)
+A.l(v,"clickableTooltipTarget","")
+l.gD().E(v)
+u=new A.N(1,l,v)
+l.f=u
+t=j.c
+u=l.r=R.hW(t.gh().n(A.n(F.E,G.aV()),t.gk()),u,v,l,null)
+v.appendChild(l.d.b)
+s=l.w=I.di(l,3)
+r=s.c
+h.appendChild(r)
+A.l(r,"tooltipClass","explanations-tooltip-card")
+l.gD().E(r)
+q=G.bU(t.gh().j(F.A,t.gk()),t.gh().j(C.S,t.gk()))
+l.x=q
+r=I.dh(q,s,r,t.gh().j(F.L,t.gk()))
+l.y=r
+q=l.z=E.cX3(l,4)
+p=q.c
+l.gD().E(p)
+o=t.gh().n(C.ee,t.gk())
+n=t.gh().n(C.ar,t.gk())
+n=new E.a5V(o,t.gh().n(L.wZ,t.gk()),n)
+l.Q=n
+q.X(0,n)
+n=x.f
+s.Z(r,A.a([C.b,A.a([p],n),C.b],x.Q))
+p=x.z
+C.i.a3(h,"click",l.ad(w.gco(),p,x.V))
+r=x.v
+C.i.a3(h,k,l.ad(w.gcl(),p,r))
+w=w.b
+m=new A.j(w,A.t(w).l("j<1>")).S(0,l.a8(j.a.gFQ(),x.L))
+C.D.a3(v,"keydown",l.ad(u.gcH(),p,r))
+C.D.a3(v,"click",l.a8(u.gd3(u),p))
+C.D.a3(v,"mouseover",l.a8(u.gcr(u),p))
+C.D.a3(v,"mouseleave",l.a8(u.gc8(u),p))
+C.D.a3(v,"blur",l.ad(u.gck(u),p,x.Z))
+C.D.a3(v,k,l.ad(u.geQ(),p,r))
+l.ah(A.a([h],n),A.a([m],x.x))},
+a0(d,e,f){var w,v,u,t=this
+if(e<=4){if(3<=e){if(d===F.A)return t.x
+if(d===K.aV||d===C.B)return t.y
+if(d===C.y){w=t.b
+if(w===$){v=t.a.c
+u=v.gh().j(C.y,v.gk())
+w=t.b=u==null?new A.cE(A.a([],x.g)):u}return w}if(d===K.aU){w=t.c
+return w===$?t.c=t.y.gcR():w}}if(d===C.u)return t.e.a}return f},
+t(){var w,v,u,t,s,r,q=this,p=q.a,o=p.a,n=(p.Q&1)!==0
+p=q.r
+if(n){w=q.y
+w.a=G.e9("explanations-tooltip-card",new A.dW(w.cx))}if(q.as!==p){q.y.sd6(p)
+q.as=p
+v=!0
+u=!0}else{u=n
+v=u}if(v)q.w.d.f|=32
+w=o.a
+t=w.geh()
+s=t.gaV(t)
+v=q.at!==s
+if(v){q.at=q.Q.a=s
+u=!0}r=w.gbD()
+w=q.ax
+if(w==null?r!=null:w!==r){q.ax=q.Q.b=r
+v=!0
+u=!0}if(v)q.z.d.f|=32
+if(n)q.Q.ab()
+q.f.A()
+q.e.aZ(q,q.ay)
+q.d.U(o.Q)
+q.w.C()
+q.z.C()
+if(n)p.ao()
+$.o().L(u)},
+F(){var w=this
+w.f.B()
+w.w.G()
+w.z.G()
+w.r.P()}}
+var z=a.updateTypes(["e<~>(c,B)","~()","~(x)","~([@])","bPK(bXg)","bRS(bXh)","cAy()","cAC()"])
+B.jfF.prototype={
+$1(d){return this.a.aR3()},
+$S:0}
+B.jfE.prototype={
+$1(d){var w,v,u=this.a,t=x.E.a(u.w.gbD())
+if(u.cx||t.a.i(48).a.az(0))return
+w=d.gd8()
+v=$.njB()
+if(!w.aN(0,v.d))return
+if(v.bgC(d.gd8())>0){w=d.gahQ()
+v=t.a
+v.O(34,w)
+v.O(200,d.gd8())}u.aR3()},
+$S:0}
+B.jfD.prototype={
+$1(d){var w,v,u=this.a,t=x.w.a(u.w.gbD())
+if(u.cx||t.a.i(163).a.az(0))return
+w=d.gd8()
+v=$.njB()
+if(!w.aN(0,v.d))return
+if(v.bgC(d.gd8())>0){w=d.gckw()
+v=t.a
+v.O(156,w)
+v.O(157,d.geWv())
+v.O(145,d.gh2H())
+v.O(133,d.gfxC())
+v.O(200,d.gd8())}u.aR3()},
+$S:0}
+B.jfB.prototype={
+$1(d){var w=$.bo(),v=d.c
+w.I(0,v,d.b)
+return v},
+$S:z+4}
+B.jfC.prototype={
+$1(d){var w=$.bo(),v=d.c
+w.I(0,v,d.b)
+return v},
+$S:z+5}
+B.jca.prototype={
+$1(d){var w=this.a
+w.x.a.iy(d)
+w.y.K9()},
+$S:0}
+B.jcb.prototype={
+$1(d){var w=this.a
+w.x.a.vZ(d)
+w.y.a7A(d)},
+$S:0}
+B.jOL.prototype={
+$1(d){var w=this.a
+if(w.as)return
+w.a.gbD().sd8(d.gd8())
+w.bS5()},
+$S:0};(function installTearOffs(){var w=a._instance_0u,v=a._static_2,u=a._static_0,t=a._instance_1u,s=a.installInstanceTearOff
+w(B.Lz.prototype,"gmv","fMQ",1)
+v(B,"y9k","BWP",0)
+v(B,"y9l","BWQ",0)
+v(B,"y9m","BWR",0)
+v(B,"y9n","BWS",0)
+v(B,"y9o","BWT",0)
+v(B,"y9p","BWU",0)
+v(B,"y9q","BWV",0)
+v(B,"y9r","BWW",0)
+u(B,"y9j","wOt",6)
+var r
+t(r=B.dFd.prototype,"gapL","apM",2)
+w(r,"gFQ","FR",1)
+t(B.bPK.prototype,"gapL","apM",2)
+t(B.bRS.prototype,"gapL","apM",2)
+w(r=B.a54.prototype,"gfLM","fLN",1)
+w(r,"gfLK","fLL",1)
+v(B,"y9D","BX_",0)
+v(B,"y9E","BX0",0)
+v(B,"y9F","BX1",0)
+v(B,"y9G","BX2",0)
+v(B,"y9H","BX3",0)
+u(B,"y9C","wOx",7)
+v(B,"y9N","BX7",0)
+v(B,"y9O","BX8",0)
+v(B,"y9P","BX9",0)
+v(B,"y9Q","BXa",0)
+s(r=B.chy.prototype,"gdEr",0,0,null,["$1","$0"],["bS3","dEs"],3,0,0)
+w(r,"gFQ","FR",1)
+v(B,"yBh","CeT",0)
+s(r=B.chz.prototype,"gdEt",0,0,null,["$1","$0"],["bS4","dEu"],3,0,0)
+w(r,"gFQ","FR",1)
+v(B,"yBi","CeU",0)
+s(r=B.chC.prototype,"gdEv",0,0,null,["$1","$0"],["bS6","bS5"],3,0,0)
+w(r,"gFQ","FR",1)
+v(B,"yBC","Cfc",0)})();(function inheritance(){var w=a.inheritMany,v=a.inherit
+w(A.aL,[B.er_,B.akG,B.ce6])
+v(B.d8d,X.qM)
+w(A.y,[B.Lz,B.dFd,B.bPK,B.lDe,B.lDf,B.bRS,B.a54,B.dGu,B.aLJ,B.chy,B.chz,B.chC])
+w(A.aF,[B.jfF,B.jfE,B.jfD,B.jfB,B.jfC,B.jca,B.jcb,B.jOL])
+w(A.b_,[B.dGh,B.dFe,B.eqB,B.etf,B.etg,B.eti,B.dGt,B.dGA,B.dSb,B.dSc,B.dSl])
+w(A.e,[B.ffv,B.ffw,B.bXg,B.ffx,B.ffy,B.ffz,B.bXh,B.ffA,B.ffQ,B.ffR,B.ffS,B.ffT,B.ffU,B.ffY,B.ffZ,B.fg_,B.fg0,B.fF5,B.fF6,B.fFr])
+w(A.Z,[B.cAy,B.cAC])})()
+A.a9(b.typeUniverse,JSON.parse('{"er_":{"aL":[],"be":[]},"d8d":{"qM":["fz"]},"Lz":{"aTX":["@"]},"bXg":{"e":["Lz"],"c":[],"h":[]},"bXh":{"e":["Lz"],"c":[],"h":[]},"cAy":{"Z":["Lz"],"h":[],"Z.T":"Lz"},"dGh":{"c":[]},"ffv":{"e":["Lz"],"c":[],"h":[]},"ffw":{"e":["Lz"],"c":[],"h":[]},"ffx":{"e":["Lz"],"c":[],"h":[]},"ffy":{"e":["Lz"],"c":[],"h":[]},"ffz":{"e":["Lz"],"c":[],"h":[]},"ffA":{"e":["Lz"],"c":[],"h":[]},"dFe":{"c":[]},"akG":{"aL":[],"be":[]},"eqB":{"c":[]},"etf":{"c":[]},"etg":{"c":[]},"eti":{"c":[]},"a54":{"cB":["dGu"]},"cAC":{"Z":["a54"],"h":[],"Z.T":"a54"},"dGt":{"c":[]},"ffQ":{"e":["a54"],"c":[],"h":[]},"ffR":{"e":["a54"],"c":[],"h":[]},"ffS":{"e":["a54"],"c":[],"h":[]},"ffT":{"e":["a54"],"c":[],"h":[]},"ffU":{"e":["a54"],"c":[],"h":[]},"ce6":{"aL":[],"be":[]},"dGA":{"c":[]},"ffY":{"e":["aLJ"],"c":[],"h":[]},"ffZ":{"e":["aLJ"],"c":[],"h":[]},"fg_":{"e":["aLJ"],"c":[],"h":[]},"fg0":{"e":["aLJ"],"c":[],"h":[]},"dSb":{"c":[]},"fF5":{"e":["chy"],"c":[],"h":[]},"dSc":{"c":[]},"fF6":{"e":["chz"],"c":[],"h":[]},"dSl":{"c":[]},"fFr":{"e":["chC"],"c":[],"h":[]}}'))
+var y={c:"ExplanationsCollapsedChangeRatioComponent"}
+var x=(function rtii(){var w=A.f
+return{R:w("df"),u:w("fz"),I:w("aU"),S:w("Lz"),W:w("a54"),P:w("aLJ"),M:w("awD"),q:w("J9<ej>"),z:w("b2"),B:w("chy"),r:w("chz"),t:w("chC"),Z:w("de"),d:w("af"),o:w("m<awy>"),Q:w("m<A<y>>"),f:w("m<y>"),g:w("m<ex>"),x:w("m<bg<~>>"),s:w("m<i>"),k:w("m<z7?>"),v:w("bf"),V:w("cn"),T:w("bPK"),N:w("i"),F:w("bRS"),L:w("bS"),O:w("E<x>"),H:w("E<~>"),J:w("bXg"),p:w("bXh"),y:w("x"),A:w("@"),E:w("fz?"),w:w("aU?"),n:w("~")}})();(function constants(){var w=a.makeConstList
+D.axt=new B.akG(0,"none")
+D.bbJ=new B.akG(1,"standaloneConversionDelay")
+D.bbK=new B.akG(2,"standaloneExplanations")
+D.bbL=new B.akG(3,"bothConversionDelayExplanations")
+D.bbM=new B.akG(4,"timeComparisonCollapsed")
+D.bbN=new B.akG(5,"timeComparisonCollapsedStandaloneConversionDelay")
+D.bbO=new B.akG(6,"timeComparisonCollapsedExplanationsOptionalConversionDelay")
+D.bbP=new B.akG(7,"timeComparisonExpandedExplanations")
+D.bcu=new B.ce6(0,"biddingStrategy")
+D.ab9=new B.ce6(1,"campaign")
+D.bcv=new B.ce6(2,"customer")
+D.e7Q=new N.b4l(13,"conversionDelay")
+D.RF=w([A_.zy,A_.CF,A_.Mb,A_.wx,A6.uy,A5.qp,A8.qo,A7.uw],A.f("m<hO>"))
+D.aRd=new A.bF([C.hS,C.bs,C.bz,C.b7,C.bj],A.f("bF<er>"))
+D.it_=new B.er_(0,"biddingHomeSecondary")})();(function staticFields(){$.oYK=null
+$.oXJ=null
+$.dk0=A.a(["._nghost-%ID%{overflow:hidden}.combined-explanations-conversion-delay._ngcontent-%ID% .popup-wrapper.mixin .paper-container{padding:0}.combined-explanations-conversion-delay._ngcontent-%ID% .popup-wrapper.mixin .paper-container{max-height:600px}.combined-explanations-conversion-delay._ngcontent-%ID% .popup-wrapper.mixin .paper-container{max-width:400px}.combined-explanations-conversion-delay-container._ngcontent-%ID%{box-shadow:0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.12),0 1px 5px 0 rgba(0,0,0,.2)}.combined-explanations-conversion-delay-container._ngcontent-%ID% explanations-stat-tooltip._ngcontent-%ID% .explanations-tooltip {display:inline}.combined-explanations-conversion-delay-container._ngcontent-%ID% explanations-stat-tooltip._ngcontent-%ID% .horizontal-line{display:none}.hoverable._ngcontent-%ID%{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;cursor:pointer;display:inline-block}.explanations-hoverable._ngcontent-%ID%{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;cursor:pointer;display:inline-block;color:var(--acx-sys-color--info-contrast,#1967d2);transition:border-color 1.5s ease-in}.tooltip-target._ngcontent-%ID%{cursor:pointer}"],x.f)
+$.pAy=null
+$.pDy=null
+$.pDz=null
+$.pDB=null
+$.ATf=A.a([".gmTypographyDisplay1._ngcontent-%ID%{font-family:Google Sans Display,Roboto,Arial,sans-serif;line-height:4.75rem;font-size:4rem;letter-spacing:0;font-weight:400}.gmTypographyDisplay2._ngcontent-%ID%{font-family:Google Sans Display,Roboto,Arial,sans-serif;line-height:4rem;font-size:3.5rem;letter-spacing:0;font-weight:400}.gmTypographyDisplay3._ngcontent-%ID%{font-family:Google Sans Display,Roboto,Arial,sans-serif;line-height:3.25rem;font-size:2.75rem;letter-spacing:0;font-weight:400}.gmTypographyHeadline1._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:2.75rem;font-size:2.25rem;letter-spacing:0;font-weight:400}.gmTypographyHeadline2._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:2.5rem;font-size:2rem;letter-spacing:0;font-weight:400}.gmTypographyHeadline3._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:2.25rem;font-size:1.75rem;letter-spacing:0;font-weight:400}.gmTypographyHeadline4._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:2rem;font-size:1.5rem;letter-spacing:0;font-weight:400}.gmTypographyHeadline5._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:1.75rem;font-size:1.375rem;letter-spacing:0;font-weight:400}.gmTypographyHeadline6._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:1.5rem;font-size:1.125rem;letter-spacing:0;font-weight:400}.gmTypographySubhead1._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:1.5rem;font-size:1rem;letter-spacing:.00625em;font-weight:500}.gmTypographySubhead2._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:1.25rem;font-size:.875rem;letter-spacing:.0178571429em;font-weight:500}.gmTypographySubtitle1._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1.5rem;font-size:1rem;letter-spacing:.0125em;font-weight:500}.gmTypographySubtitle2._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1.25rem;font-size:.875rem;letter-spacing:.0178571429em;font-weight:500}.gmTypographyOverline._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1rem;font-size:.6875rem;letter-spacing:.0727272727em;font-weight:500;text-transform:uppercase}.gmTypographyBody1._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1.5rem;font-size:1rem;letter-spacing:.00625em;font-weight:400}.gmTypographyBody2._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1.25rem;font-size:.875rem;letter-spacing:.0142857143em;font-weight:400}.gmTypographyCaption._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1rem;font-size:.75rem;letter-spacing:.025em;font-weight:400}.link._ngcontent-%ID%{color:var(--acx-sys-color--info-contrast,#1967d2)}.link:hover._ngcontent-%ID%{text-decoration:underline}.material-callout._ngcontent-%ID%>material-icon._ngcontent-%ID%{margin-left:8px}help-learn-more-link._ngcontent-%ID% .help-link.help-link.help-link.help-link{color:var(--acx-sys-color--info-contrast,#1967d2)}"],x.f)
+$.oYS=null
+$.ANm=A.a(["._nghost-%ID%{align-items:center;display:flex;justify-content:center;min-height:120px;width:400px}material-icon._ngcontent-%ID%{margin-left:4px}.popup-body._ngcontent-%ID% .heading._ngcontent-%ID%{font-family:Google Sans,Roboto,Arial,sans-serif;line-height:1.25rem;font-size:.875rem;letter-spacing:.0178571429em;font-weight:500;color:var(--acx-sys-color--on-background,#202124)}.popup-body._ngcontent-%ID% .paragraph._ngcontent-%ID%{font-family:Roboto,Arial,sans-serif;line-height:1.25rem;font-size:.875rem;letter-spacing:.0142857143em;font-weight:400;color:var(--acx-sys-color--on-surface,#3c4043)}.popup-body._ngcontent-%ID% .heading._ngcontent-%ID%,.popup-body._ngcontent-%ID% .paragraph._ngcontent-%ID%{color:var(--acx-sys-color--on-surface,#3c4043);padding-bottom:8px}.popup-body._ngcontent-%ID% .middle-section._ngcontent-%ID%{border-top:1px solid var(--acx-sys-color--hairline,#dadce0);margin-left:-24px;margin-right:-24px;padding:8px 24px}.popup-body._ngcontent-%ID% .estimate-bars._ngcontent-%ID%{padding-top:8px;padding-bottom:16px}"],x.f)
+$.oYX=null
+$.ANn=A.a(["._nghost-%ID%{cursor:auto;overflow:hidden}.change-ratio._ngcontent-%ID%{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;color:var(--acx-sys-color--info-contrast,#1967d2);cursor:pointer;display:block}.explanations-tooltip-card._ngcontent-%ID% .popup-wrapper.mixin .paper-container{padding:0}.explanations-tooltip-card-with-footer._ngcontent-%ID% .popup-wrapper.mixin .paper-container{padding:0}.explanations-tooltip-card-with-footer._ngcontent-%ID% .popup-wrapper.mixin .paper-container{max-width:432px}.explanations-tooltip-card-with-footer._ngcontent-%ID% .popup-wrapper.mixin .paper-container{max-height:600px}.explanations-tooltip-with-footer._ngcontent-%ID% explanations-stat-tooltip._ngcontent-%ID% .explanations-tooltip {display:inline}"],x.f)
+$.p9b=null
+$.ANk=A.a([" div:not(.particle-table-summary-row)>div>div .significance-highest{background-color:#669df6;cursor:auto} div:not(.particle-table-summary-row)>div>div .significance-highest .ess-cell-ellipsis{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;color:#fff;cursor:pointer} div:not(.particle-table-summary-row)>div>div .significance-high{background-color:#8ab4f8;cursor:auto} div:not(.particle-table-summary-row)>div>div .significance-high .ess-cell-ellipsis{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;color:#fff;cursor:pointer} div:not(.particle-table-summary-row)>div>div .significance-medium{background-color:#d2e3fc;cursor:auto} div:not(.particle-table-summary-row)>div>div .significance-medium .ess-cell-ellipsis{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;color:#fff;cursor:pointer} div:not(.particle-table-summary-row)>div>div .significance-low{background-color:#d2e3fc;cursor:auto} div:not(.particle-table-summary-row)>div>div .significance-low .ess-cell-ellipsis{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;color:#fff;cursor:pointer}._nghost-%ID%{cursor:auto;overflow:hidden}.explanations-tooltip-card._ngcontent-%ID% .popup-wrapper.mixin .paper-container{padding:0}.explanations-tooltip-card-with-footer._ngcontent-%ID% .popup-wrapper.mixin .paper-container{padding:0}.explanations-tooltip-card-with-footer._ngcontent-%ID% .popup-wrapper.mixin .paper-container{max-width:432px}.explanations-tooltip-card-with-footer._ngcontent-%ID% .popup-wrapper.mixin .paper-container{max-height:600px}.explanations-tooltip-with-footer._ngcontent-%ID% explanations-stat-tooltip._ngcontent-%ID% .explanations-tooltip {display:inline}"],x.f)
+$.p9c=null
+$.ANo=A.a(["._nghost-%ID%{cursor:auto;overflow:hidden}.explanations-available._nghost-%ID%{cursor:pointer}.explanations-available._nghost-%ID% .ess-cell-ellipsis._ngcontent-%ID%{-webkit-text-decoration:underline dashed;text-decoration:underline dashed;text-underline-offset:3px;cursor:pointer;color:var(--acx-sys-color--info-contrast,#1967d2);transition:border-color 1.5s ease-in}.ess-cell-ellipsis._ngcontent-%ID%{border-bottom-color:transparent}.explanations-tooltip-card._ngcontent-%ID% .popup-wrapper.mixin .paper-container{padding:0}"],x.f)
+$.p9l=null
+$.Aof=A.a([$.dk0],x.f)
+$.AnO=A.a([$.dk0],x.f)
+$.AEP=A.a([$.dk0],x.f)
+$.AFS=A.a([$.dk0],x.f)
+$.AFT=A.a([$.dk0],x.f)
+$.AFV=A.a([$.dk0],x.f)
+$.Aoj=A.a([$.ATf,$.arI],x.f)
+$.Aom=A.a([$.ANm],x.f)
+$.At3=A.a([$.ANn],x.f)
+$.At4=A.a([$.ANk],x.f)
+$.Atc=A.a([$.ANo],x.f)})();(function lazyInitializers(){var w=a.lazyFinal
+w($,"EhG","rNB",()=>A.aK("conversion-analysis-stats-field",B.y9j(),x.S))
+w($,"Eib","rNZ",()=>$.cNd())
+w($,"Ei9","rNX",()=>A.b(4304,"981443746"))
+w($,"Eia","rNY",()=>A.b(4305,"981443746"))
+w($,"Ei8","rNW",()=>A.aK("conversion-delay-callout",B.y9C(),x.W))
+w($,"Eir","rOd",()=>A.b(7310,"981443746"))
+w($,"GPC","uPP",()=>A.b7("ads.awapps2.shared.explanations.explanations_collapsed_change_ratio"))
+w($,"GPD","uPO",()=>A.b7("ads.awapps2.shared.explanations.explanations_expanded_change_ratio"))
+w($,"GPE","uPQ",()=>A.b7("ads.awapps2.shared.explanations.explanations_time_compare_off"))})()};
+(a=>{a["RxavIE5N299qvnWKo1u3+C+eJbU="]=a.current})($__dart_deferred_initializers__);
+
+window.$_intl_pending_msg = window.$_intl_pending_msg || new Map();
+window.$_intl_pending_msg["981443746"] = window.$_intl_pending_msg["981443746"] || [];window.$_intl_pending_msg["981443746"].push('{"4304":"Learn about how to get more complete conversion data","4305":"Find out how long it takes for your customers to convert","5734":"Show more","5735":"Show less","7310":"Learn more about how long it takes for your customers to convert.","7311":"Estimated % of conversion data received for this date range:"}');
+;(function() { let load = window['__mss_moduleLoaded']; load && load('p4978', {"mssAppName":"awn-essentials-mss","moduleSetId":"essentials_sharded_localization","isMainPayload":false}); })();
+// Google Inc.

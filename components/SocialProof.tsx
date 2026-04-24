@@ -1,7 +1,7 @@
 const stats = [
   { value: '500+', label: 'Jobs Completed' },
   { value: 'Same Day', label: 'Service Available' },
-  { value: '2', label: 'Counties Covered' },
+  { value: '3', label: 'Counties Covered' },
   { value: '100%', label: 'Satisfaction Guarantee' },
 ]
 

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R&D Trash — Long Sleeve Uniform Mockup</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0c0c0c;
+      font-family: 'Arial Black', 'Helvetica Neue', Arial, sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      padding: 56px 24px 80px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .badge {
+      display: inline-block;
+      background: #F5A623;
+      color: #0B1E3D;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 2px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      font-size: clamp(26px, 5vw, 42px);
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      color: #fff;
+    }
+    .header h1 em {
+      color: #F5A623;
+      font-style: normal;
+    }
+    .header p {
+      margin-top: 14px;
+      font-family: Arial, sans-serif;
+      font-weight: 400;
+      color: #555;
+      font-size: 13px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .mockups {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 72px;
+      flex-wrap: wrap;
+      margin-bottom: 72px;
+    }
+    .mockup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .mockup-title {
+      font-size: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: #F5A623;
+    }
+
+    .detail-section {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .detail-heading {
+      font-family: Arial, sans-serif;
+      font-weight: 400;
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #444;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .detail-card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 28px 28px 20px;
+      text-align: center;
+    }
+    .detail-card p {
+      margin-top: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #555;
+      text-transform: uppercase;
+    }
+
+    hr.divider {
+      border: none;
+      border-top: 1px solid #1e1e1e;
+      margin: 0 auto 48px;
+      max-width: 840px;
+    }
+
+    .specs {
+      max-width: 840px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .spec {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .spec-label {
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 8px;
+    }
+    .spec-value {
+      font-size: 13px;
+      color: #ddd;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 48px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      color: #2a2a2a;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">Uniform Design</div>
+  <h1>R&amp;D Trash &mdash; <em>Long Sleeve</em></h1>
+  <p>Performance Dri-Fit &middot; Dark Navy &middot; South Florida</p>
+</div>
+
+<div class="mockups">
+
+  <!-- ─────────── FRONT VIEW ─────────── -->
+  <div class="mockup">
+    <div class="mockup-title">Front</div>
+    <svg viewBox="0 0 420 570" width="295" height="400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="fs" x="-15%" y="-10%" width="130%" height="125%">
+          <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#000" flood-opacity="0.8"/>
+        </filter>
+        <linearGradient id="f-body" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#112758"/>
+          <stop offset="28%"  stop-color="#1a3870"/>
+          <stop offset="50%"  stop-color="#1e407c"/>
+          <stop offset="72%"  stop-color="#1a3870"/>
+          <stop offset="100%" stop-color="#112758"/>
+        </linearGradient>
+        <linearGradient id="f-ls" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#0b1c44"/>
+          <stop offset="100%" stop-color="#163060"/>
+        </linearGradient>
+        <linearGradient id="f-rs" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#163060"/>
+          <stop offset="100%" stop-color="#0b1c44"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Main shirt shape -->
+      <path d="M 158 65 Q 210 38 262 65 L 330 85 Q 370 100 398 128 L 418 412 L 378 418 Q 358 170 322 164 L 322 527 L 98 527 L 98 164 Q 62 170 42 418 L 2 412 L 22 128 Q 50 100 90 85 Z"
+        fill="url(#f-body)" filter="url(#fs)"/>
+
+      <!-- Left sleeve tint -->
+      <path d="M 90 85 Q 50 100 22 128 L 2 412 L 42 418 Q 62 170 98 164 L 98 92 Z"
+        fill="url(#f-ls)" opacity="0.55"/>
+
+      <!-- Right sleeve tint -->
+      <path d="M 330 85 Q 370 100 398 128 L 418 412 L 378 418 Q 358 170 322 164 L 322 92 Z"
+        fill="url(#f-rs)" opacity="0.55"/>
+
+      <!-- Collar band -->
+      <path d="M 160 65 Q 210 38 260 65 L 258 79 Q 210 53 162 79 Z"
+        fill="#0c1c3c" opacity="0.9"/>
+
+      <!-- Center seam -->
+      <line x1="210" y1="93" x2="210" y2="522"
+        stroke="#0d1e3f" stroke-width="1.5" opacity="0.55"/>
+
+      <!-- LEFT CHEST LOGO -->
+      <!-- Shield center ≈ (148, 218) -->
+      <g transform="translate(122, 192) scale(0.83)">
+        <path d="M 32 4 L 60 18 L 60 38 C 60 50 46 60 32 62 C 18 60 4 50 4 38 L 4 18 Z"
+          fill="#091832"/>
+        <path d="M 32 7 L 57 20 L 57 38 C 57 49 44 59 32 61 C 20 59 7 49 7 38 L 7 20 Z"
+          fill="none" stroke="#F5A623" stroke-width="2.5"/>
+        <text x="32" y="37"
+          font-family="'Arial Black', Arial, sans-serif"
+          font-weight="900" font-size="18" fill="#F5A623"
+          text-anchor="middle" dominant-baseline="alphabetic">R&amp;D</text>
+      </g>
+      <!-- TRASH label below shield -->
+      <text x="148" y="255"
+        font-family="'Arial Black', Arial, sans-serif"
+        font-weight="900" font-size="9" fill="#F5A623"
+        text-anchor="middle" letter-spacing="4.5">TRASH</text>
+
+      <!-- Cuff bands -->
+      <path d="M 2 412 L 42 418 L 45 446 L 0 439 Z" fill="#0b1c40"/>
+      <path d="M 418 412 L 378 418 L 375 446 L 421 439 Z" fill="#0b1c40"/>
+
+      <!-- Hem accent -->
+      <line x1="98" y1="524" x2="322" y2="524"
+        stroke="#F5A623" stroke-width="1" opacity="0.3"/>
+    </svg>
+  </div>
+
+  <!-- ─────────── BACK VIEW ─────────── -->
+  <div class="mockup">
+    <div class="mockup-title">Back</div>
+    <svg viewBox="0 0 420 570" width="295" height="400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="bs" x="-15%" y="-10%" width="130%" height="125%">
+          <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#000" flood-opacity="0.8"/>
+        </filter>
+        <linearGradient id="b-body" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#112758"/>
+          <stop offset="28%"  stop-color="#1a3870"/>
+          <stop offset="50%"  stop-color="#1e407c"/>
+          <stop offset="72%"  stop-color="#1a3870"/>
+          <stop offset="100%" stop-color="#112758"/>
+        </linearGradient>
+        <linearGradient id="b-ls" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#0b1c44"/>
+          <stop offset="100%" stop-color="#163060"/>
+        </linearGradient>
+        <linearGradient id="b-rs" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#163060"/>
+          <stop offset="100%" stop-color="#0b1c44"/>
+        </linearGradient>
+      </defs>
+
+      <!-- Main shirt shape (back — flatter collar curve) -->
+      <path d="M 158 65 Q 210 60 262 65 L 330 85 Q 370 100 398 128 L 418 412 L 378 418 Q 358 170 322 164 L 322 527 L 98 527 L 98 164 Q 62 170 42 418 L 2 412 L 22 128 Q 50 100 90 85 Z"
+        fill="url(#b-body)" filter="url(#bs)"/>
+
+      <!-- Sleeve tints -->
+      <path d="M 90 85 Q 50 100 22 128 L 2 412 L 42 418 Q 62 170 98 164 L 98 92 Z"
+        fill="url(#b-ls)" opacity="0.55"/>
+      <path d="M 330 85 Q 370 100 398 128 L 418 412 L 378 418 Q 358 170 322 164 L 322 92 Z"
+        fill="url(#b-rs)" opacity="0.55"/>
+
+      <!-- Back collar band -->
+      <path d="M 166 65 Q 210 62 254 65 L 253 76 Q 210 70 167 76 Z"
+        fill="#0c1c3c" opacity="0.9"/>
+
+      <!-- Center seam -->
+      <line x1="210" y1="93" x2="210" y2="522"
+        stroke="#0d1e3f" stroke-width="1.5" opacity="0.55"/>
+
+      <!-- LARGE BACK DESIGN -->
+
+      <!-- Shield: scale 1.45 → center-x = 32*1.45 = 46.4 → translate(163.6 ≈ 164, 118) -->
+      <g transform="translate(164, 118) scale(1.45)">
+        <path d="M 32 4 L 60 18 L 60 38 C 60 50 46 60 32 62 C 18 60 4 50 4 38 L 4 18 Z"
+          fill="#091832"/>
+        <path d="M 32 7 L 57 20 L 57 38 C 57 49 44 59 32 61 C 20 59 7 49 7 38 L 7 20 Z"
+          fill="none" stroke="#F5A623" stroke-width="2.2"/>
+        <text x="32" y="37"
+          font-family="'Arial Black', Arial, sans-serif"
+          font-weight="900" font-size="18" fill="#F5A623"
+          text-anchor="middle" dominant-baseline="alphabetic">R&amp;D</text>
+      </g>
+
+      <!-- Shield bottom ≈ y 208 → text at y 244 -->
+      <text x="210" y="244"
+        font-family="'Arial Black', Arial, sans-serif"
+        font-weight="900" font-size="27" fill="#ffffff"
+        text-anchor="middle" letter-spacing="6">R&amp;D TRASH</text>
+
+      <!-- Gold rule -->
+      <line x1="120" y1="259" x2="300" y2="259"
+        stroke="#F5A623" stroke-width="1.5" opacity="0.8"/>
+
+      <!-- Service areas -->
+      <text x="210" y="282"
+        font-family="Arial, sans-serif"
+        font-weight="700" font-size="11" fill="#F5A623"
+        text-anchor="middle" letter-spacing="2">BROWARD &middot; DADE &middot; PALM BEACH</text>
+
+      <!-- Phone -->
+      <text x="210" y="312"
+        font-family="Arial, sans-serif"
+        font-weight="400" font-size="12.5"
+        fill="rgba(255,255,255,0.68)"
+        text-anchor="middle" letter-spacing="2.5">786-408-3783</text>
+
+      <!-- Cuff bands -->
+      <path d="M 2 412 L 42 418 L 45 446 L 0 439 Z" fill="#0b1c40"/>
+      <path d="M 418 412 L 378 418 L 375 446 L 421 439 Z" fill="#0b1c40"/>
+
+      <!-- Hem accent -->
+      <line x1="98" y1="524" x2="322" y2="524"
+        stroke="#F5A623" stroke-width="1" opacity="0.3"/>
+    </svg>
+  </div>
+
+</div><!-- /mockups -->
+
+<!-- ─────────── CLOSE-UP DETAILS ─────────── -->
+<div class="detail-section">
+  <div class="detail-heading">Design Details</div>
+  <div class="detail-row">
+
+    <!-- Front chest zoom -->
+    <div class="detail-card">
+      <svg viewBox="88 178 128 98" width="210" height="161" xmlns="http://www.w3.org/2000/svg">
+        <rect x="88" y="178" width="128" height="98" rx="6" fill="#1a3870"/>
+        <g transform="translate(122, 192) scale(0.83)">
+          <path d="M 32 4 L 60 18 L 60 38 C 60 50 46 60 32 62 C 18 60 4 50 4 38 L 4 18 Z" fill="#091832"/>
+          <path d="M 32 7 L 57 20 L 57 38 C 57 49 44 59 32 61 C 20 59 7 49 7 38 L 7 20 Z" fill="none" stroke="#F5A623" stroke-width="2.5"/>
+          <text x="32" y="37" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="18" fill="#F5A623" text-anchor="middle" dominant-baseline="alphabetic">R&amp;D</text>
+        </g>
+        <text x="148" y="255" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="9" fill="#F5A623" text-anchor="middle" letter-spacing="4.5">TRASH</text>
+      </svg>
+      <p>Left Chest &mdash; Embroidery or Print</p>
+    </div>
+
+    <!-- Back design zoom -->
+    <div class="detail-card">
+      <svg viewBox="108 108 204 216" width="230" height="243" xmlns="http://www.w3.org/2000/svg">
+        <rect x="108" y="108" width="204" height="216" rx="6" fill="#1a3870"/>
+        <g transform="translate(164, 118) scale(1.45)">
+          <path d="M 32 4 L 60 18 L 60 38 C 60 50 46 60 32 62 C 18 60 4 50 4 38 L 4 18 Z" fill="#091832"/>
+          <path d="M 32 7 L 57 20 L 57 38 C 57 49 44 59 32 61 C 20 59 7 49 7 38 L 7 20 Z" fill="none" stroke="#F5A623" stroke-width="2.2"/>
+          <text x="32" y="37" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="18" fill="#F5A623" text-anchor="middle" dominant-baseline="alphabetic">R&amp;D</text>
+        </g>
+        <text x="210" y="244" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="27" fill="#ffffff" text-anchor="middle" letter-spacing="6">R&amp;D TRASH</text>
+        <line x1="120" y1="259" x2="300" y2="259" stroke="#F5A623" stroke-width="1.5" opacity="0.8"/>
+        <text x="210" y="282" font-family="Arial, sans-serif" font-weight="700" font-size="11" fill="#F5A623" text-anchor="middle" letter-spacing="2">BROWARD &middot; DADE &middot; PALM BEACH</text>
+        <text x="210" y="312" font-family="Arial, sans-serif" font-weight="400" font-size="12.5" fill="rgba(255,255,255,0.68)" text-anchor="middle" letter-spacing="2.5">786-408-3783</text>
+      </svg>
+      <p>Full Back Print</p>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ─────────── SPECS ─────────── -->
+<div class="specs">
+  <div class="spec">
+    <div class="spec-label">Style</div>
+    <div class="spec-value">Long Sleeve Dri-Fit</div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Base Color</div>
+    <div class="spec-value">
+      <span class="swatch" style="background:#1a3870"></span>
+      Navy #1A3870
+    </div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Accent Color</div>
+    <div class="spec-value">
+      <span class="swatch" style="background:#F5A623"></span>
+      Gold #F5A623
+    </div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Front Print</div>
+    <div class="spec-value">Left Chest Shield + TRASH</div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Back Print</div>
+    <div class="spec-value">Logo &middot; Name &middot; Areas &middot; Phone</div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Print Method</div>
+    <div class="spec-value">Screen Print or Embroidery</div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Service Areas</div>
+    <div class="spec-value">Broward &middot; Dade &middot; Palm Beach</div>
+  </div>
+  <div class="spec">
+    <div class="spec-label">Phone</div>
+    <div class="spec-value">786-408-3783</div>
+  </div>
+</div>
+
+<div class="footer">R&amp;D Trash &middot; Junk &amp; Trash Removal &middot; South Florida &middot; rdtrash.org</div>
+
+</body>
+</html>

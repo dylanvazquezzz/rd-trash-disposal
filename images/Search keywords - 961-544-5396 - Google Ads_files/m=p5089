@@ -1,0 +1,33 @@
+((a,b)=>{a[b]=a[b]||{}})(self,"$__dart_deferred_initializers__")
+$__dart_deferred_initializers__.current=function(a,b,c,$){var A,C,D,B={
+wUB(){return new B.cGi(new A.aG())},
+cGi:function cGi(d){var _=this
+_.c=_.b=_.a=$
+_.d=d}},E,F,G,H
+A=c[0]
+C=c[2]
+D=c[934]
+B=a.updateHolder(c[304],B)
+E=c[1559]
+F=c[2095]
+G=c[1536]
+H=c[2049]
+B.cGi.prototype={
+p(){var y=this,x=null,w=y.b=D.l80(y,0),v=w.c
+y.a=D.l8_(y.n(C.h,x),y.n(C.K,x),y.n(C.O,x),y.n(A.n(F.fi,E.qt()),x),y.n(A.n(H.dM,G.o3()),x),w)
+y.K(v)},
+t(){var y,x=(this.d.d&1)!==0
+if(x)this.a.ab()
+y=this.b
+y.a9(x)
+y.C()},
+F(){this.a.P()}}
+var z=a.updateTypes(["cGi()"]);(function installTearOffs(){var y=a._static_0
+y(B,"zXn","wUB",0)})();(function inheritance(){var y=a.inherit
+y(B.cGi,A.Z)})()
+A.a9(b.typeUniverse,JSON.parse('{"cGi":{"Z":["vn"],"h":[],"Z.T":"vn"}}'));(function lazyInitializers(){var y=a.lazyFinal
+y($,"FUz","u6e",()=>A.aK("recommendation-card",B.zXn(),A.f("vn")))})()};
+(a=>{a["LUKK7Afo4ryq1KOFxyVgyHbtLDI="]=a.current})($__dart_deferred_initializers__);
+
+;(function() { let load = window['__mss_moduleLoaded']; load && load('p5089', {"mssAppName":"awn-essentials-mss","moduleSetId":"essentials_sharded_localization","isMainPayload":false}); })();
+// Google Inc.

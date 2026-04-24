@@ -1,3 +1,9 @@
+export function formatPhone(phone: string): string {
+  const digits = phone.replace(/\D/g, '')
+  if (digits.length === 10) return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`
+  return phone
+}
+
 export function formatTime(time: string): string {
   const [hStr, mStr] = time.split(':')
   const h = parseInt(hStr, 10)
@@ -40,7 +46,7 @@ export function buildBookingBlocks(job: JobFields): object[] {
     `*Address:* ${job.address}, ${job.zip_code}`,
     `*Contact:* ${job.contact_name}`,
   ]
-  if (job.contact_phone) lines.push(`*Phone:* ${job.contact_phone}`)
+  if (job.contact_phone) lines.push(`*Phone:* ${formatPhone(job.contact_phone)}`)
   if (job.description) lines.push(`*Notes:* ${job.description}`)
 
   return [
@@ -57,7 +63,7 @@ export function buildReminderBlocks(job: JobFields): object[] {
     `*Address:* ${job.address}, ${job.zip_code}`,
     `*Contact:* ${job.contact_name}`,
   ]
-  if (job.contact_phone) lines.push(`*Phone:* ${job.contact_phone}`)
+  if (job.contact_phone) lines.push(`*Phone:* ${formatPhone(job.contact_phone)}`)
   if (job.description) lines.push(`*Notes:* ${job.description}`)
 
   return [
