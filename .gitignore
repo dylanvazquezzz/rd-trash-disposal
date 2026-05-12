@@ -32,3 +32,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# saved webpages (browser "Save As" artifacts)
+*_files/
+*.html
