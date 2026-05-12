@@ -12,7 +12,9 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
+  const isCommercial = pathname.startsWith('/commercial')
   const navHref = (anchor: string) => isHome ? anchor : `/${anchor}`
+  const estimateHref = isCommercial ? '/commercial/estimate' : '/estimate'
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md border-b border-gray-100">
@@ -55,7 +57,7 @@ export default function Nav() {
               786-408-3783
             </a>
             <a
-              href="/estimate"
+              href={estimateHref}
               className="bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
             >
               Instant Estimate
@@ -113,7 +115,7 @@ export default function Nav() {
                 786-408-3783
               </a>
               <a
-                href="/estimate"
+                href={estimateHref}
                 className="mt-1 bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-3 rounded text-center"
                 onClick={() => setMenuOpen(false)}
               >
