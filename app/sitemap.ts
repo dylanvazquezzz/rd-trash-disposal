@@ -20,6 +20,20 @@ const cities = [
   'boca-raton',
 ]
 
+const commercialCities = [
+  'miami',
+  'doral',
+  'fort-lauderdale',
+  'hialeah',
+  'miami-beach',
+  'boca-raton',
+  'pompano-beach',
+  'miramar',
+  'coral-springs',
+  'hollywood',
+  'kendall',
+]
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${siteUrl}/junk-removal-${city}`,
@@ -30,6 +44,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const demolitionPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${siteUrl}/demolition/${city}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  }))
+
+  const commercialCityPages: MetadataRoute.Sitemap = commercialCities.map((city) => ({
+    url: `${siteUrl}/commercial/junk-removal/${city}`,
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -48,7 +69,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${siteUrl}/commercial/junk-removal`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/commercial/estimate`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     ...cityPages,
     ...demolitionPages,
+    ...commercialCityPages,
   ]
 }
