@@ -43,23 +43,63 @@ const cities = [
   { name: 'Boca Raton', slug: 'boca-raton' },
 ]
 
-const schema = {
+const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
-  name: 'R&D Trash Disposal — Commercial',
+  '@id': `${siteUrl}#organization`,
+  name: 'R&D Trash Disposal',
   description: 'Commercial junk removal across Miami-Dade and Broward County. Office cleanouts, construction debris, warehouse haul-away. Invoicing and COI available.',
-  url: `${siteUrl}/commercial/junk-removal`,
+  url: siteUrl,
   telephone: `+1${phone}`,
-  areaServed: ['Miami-Dade County', 'Broward County'],
+  priceRange: '$$',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '07:00',
+      closes: '19:00',
+    },
+  ],
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Miami-Dade County', containedInPlace: { '@type': 'State', name: 'Florida' } },
+    { '@type': 'AdministrativeArea', name: 'Broward County', containedInPlace: { '@type': 'State', name: 'Florida' } },
+  ],
+}
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${siteUrl}/commercial/junk-removal#service`,
+  name: 'Commercial Junk Removal South Florida',
+  description: 'Commercial junk removal services across Miami-Dade and Broward County — office cleanouts, warehouse haul-away, construction debris, concrete, tile, drywall, scrap metal, and property management cleanouts. Invoicing and COI available on every job.',
+  serviceType: 'Commercial Junk Removal',
+  provider: {
+    '@type': 'LocalBusiness',
+    '@id': `${siteUrl}#organization`,
+    name: 'R&D Trash Disposal',
+    telephone: `+1${phone}`,
+  },
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Miami-Dade County' },
+    { '@type': 'AdministrativeArea', name: 'Broward County' },
+  ],
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Junk Removal', item: `${siteUrl}/commercial/junk-removal` },
+  ],
 }
 
 export default function CommercialJunkRemovalPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
       <main>
         {/* Hero */}

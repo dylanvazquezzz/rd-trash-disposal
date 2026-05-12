@@ -15,6 +15,8 @@ type CommercialCity = {
   areas: string[]
   localContent: string
   clientTypes: string[]
+  lat: number
+  lng: number
 }
 
 const cities: Record<string, CommercialCity> = {
@@ -27,6 +29,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Brickell', 'Downtown Miami', 'Wynwood', 'Doral Corridor', 'NW Industrial', 'Little Havana', 'Midtown', 'Edgewater', 'Overtown', 'Liberty City'],
     localContent: "Miami's commercial market moves fast — offices get cleared, restaurants close and reopen, construction crews leave debris behind. We work directly with property managers, GCs, and business owners across Brickell, Wynwood, and the downtown corridor. Whether it's an office gut-out, post-renovation debris on a job site, or a full commercial cleanout, we show up with a hydraulic-bed F350 and haul everything out in one trip. Invoicing and certificate of insurance available on every job.",
     clientTypes: ['Property Managers', 'General Contractors', 'Office Managers', 'Restaurant Owners', 'Retail Businesses', 'HOAs'],
+    lat: 25.76168,
+    lng: -80.19179,
   },
   doral: {
     name: 'Doral',
@@ -37,6 +41,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Blue Lagoon', 'Medley', 'Airport Corridor', 'Virginia Gardens', 'Sweetwater', 'Doral Industrial Park', 'NW 107th Ave Corridor', 'Fontainebleau'],
     localContent: "Doral is Miami-Dade's commercial engine — the airport corridor, industrial parks, and business campuses generate a constant flow of junk removal work. We service warehouses being cleared, offices being relocated, construction sites needing debris haul-away, and distribution centers doing equipment turnover. Our F350 runs the Doral corridor daily. Bulk loads, recurring contracts, and same-day service all available. Invoicing standard on every commercial job.",
     clientTypes: ['Warehouse Operators', 'Logistics Companies', 'Property Managers', 'General Contractors', 'Office Tenants', 'Distribution Centers'],
+    lat: 25.81973,
+    lng: -80.35066,
   },
   'fort-lauderdale': {
     name: 'Fort Lauderdale',
@@ -47,6 +53,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Downtown Fort Lauderdale', 'Cypress Creek', 'Las Olas', 'Flagler Village', 'Wilton Manors', 'Oakland Park', 'Pompano Corridor', 'I-95 Business Corridor'],
     localContent: "Fort Lauderdale is Broward's commercial and hospitality hub — and commercial junk removal here spans everything from downtown office cleanouts to marina-adjacent warehouse hauls. We work with GCs, property managers, and business owners throughout Fort Lauderdale and the Cypress Creek corridor. Construction debris, office furniture, bulk commercial waste — we haul it all with our hydraulic-bed truck. COI available, invoicing standard, same-day service on most calls.",
     clientTypes: ['Property Managers', 'General Contractors', 'Marine Industry', 'Hospitality & Hotels', 'Office Tenants', 'Retail Businesses'],
+    lat: 26.12231,
+    lng: -80.14338,
   },
   hialeah: {
     name: 'Hialeah',
@@ -57,6 +65,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Palm Springs Mile', 'Hialeah Industrial District', 'Auto Row', 'Hialeah Gardens', 'Westland', 'Opa-locka Corridor', 'W 49th St Commercial', 'E 4th Ave Industrial'],
     localContent: "Hialeah's dense industrial and commercial base — auto shops, light manufacturing, warehouses, and the Palm Springs Mile retail corridor — generates steady commercial removal work. We serve business owners and property managers throughout Hialeah with fast, reliable junk haul-away. Metal scrap, concrete debris, warehouse cleanouts, commercial furniture removal — our hydraulic-bed truck handles bulk loads that smaller operators can't. Invoicing and COI on every job.",
     clientTypes: ['Auto Industry Businesses', 'Light Manufacturers', 'Warehouse Operators', 'Retail Property Managers', 'General Contractors', 'Industrial Tenants'],
+    lat: 25.85794,
+    lng: -80.27836,
   },
   'miami-beach': {
     name: 'Miami Beach',
@@ -67,6 +77,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['South Beach', 'Mid-Beach', 'North Beach', 'Lincoln Road', 'Collins Ave Corridor', 'Alton Road', 'Surfside', 'Bal Harbour'],
     localContent: "Miami Beach's commercial landscape is driven by hospitality and high-density condo management. Hotels turning over rooms, property managers clearing units between tenants, restaurants closing or remodeling, retail on Lincoln Road changing hands — all of it generates removal work. We understand the operational constraints of working on the Beach: permit requirements, building hours, elevator access. COI provided for every building that requires it. Invoicing standard.",
     clientTypes: ['Hotel & Hospitality', 'Condo Property Managers', 'Restaurant Owners', 'Retail Property Managers', 'Building Managers', 'Event Venues'],
+    lat: 25.79065,
+    lng: -80.13005,
   },
   'boca-raton': {
     name: 'Boca Raton',
@@ -77,6 +89,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Boca Corporate Center', 'Arvida Parkway', 'Town Center Corridor', 'Broken Sound', 'Glades Rd Commercial', 'Yamato Rd Offices', 'East Boca Commercial', 'Medical Arts District'],
     localContent: "Boca Raton's corporate and medical office market is one of South Florida's most active. Office relocations, medical practice cleanouts, corporate furniture disposal, and post-renovation debris — we handle commercial removal for businesses throughout Boca's office corridors and the Town Center area. Our crew is professional and discreet. COI provided, invoicing available, and we work around your schedule to minimize disruption to your tenants or clients.",
     clientTypes: ['Corporate Property Managers', 'Medical Practices', 'Law Firms', 'Office Tenants', 'General Contractors', 'Retail Property Managers'],
+    lat: 26.35479,
+    lng: -80.08309,
   },
   'pompano-beach': {
     name: 'Pompano Beach',
@@ -87,6 +101,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Pompano Industrial Park', 'Copans Rd Corridor', 'Dixie Hwy Commercial', 'Powerline Rd Businesses', 'McNab Rd Industrial', 'Coconut Creek Pkwy', 'Sample Rd Commercial', 'Lighthouse Point Area'],
     localContent: "Pompano Beach has one of Broward's largest industrial footprints — warehouses, distribution, light manufacturing, and construction staging all concentrated along the Copans and Powerline corridors. We service these businesses with bulk junk haul-away, warehouse cleanouts, construction debris removal, and scrap metal disposal. Our hydraulic-bed F350 is built for the kind of volume that these jobs produce. Invoicing standard, COI available on request.",
     clientTypes: ['Industrial Tenants', 'Warehouse Operators', 'General Contractors', 'Distribution Companies', 'Manufacturing Facilities', 'Property Managers'],
+    lat: 26.23786,
+    lng: -80.12480,
   },
   miramar: {
     name: 'Miramar',
@@ -97,6 +113,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Miramar Pkwy Corporate', 'Pembroke Commerce Center', 'Red Road Corridor', 'SW 145th Ave Businesses', 'Miramar Industrial', 'Pembroke Pines Border', 'Palm Ave Commercial', 'University Dr Corridor'],
     localContent: "Miramar is home to major corporate facilities and a growing commercial sector along the Miramar Parkway and Pembroke Commerce corridors. Companies relocating, doing office turnovers, or running construction projects call us for fast, professional junk removal. We understand the expectations of corporate environments — on time, invoiced properly, COI in hand. Our hydraulic-bed truck handles bulk commercial loads and we work around building access schedules.",
     clientTypes: ['Corporate Facilities Teams', 'Property Managers', 'General Contractors', 'Office Tenants', 'Distribution Companies', 'HOA Management'],
+    lat: 25.98724,
+    lng: -80.23285,
   },
   'coral-springs': {
     name: 'Coral Springs',
@@ -107,6 +125,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Sample Rd Commercial', 'Coral Hills Business Park', 'University Dr Corridor', 'Wiles Rd Businesses', 'Atlantic Blvd Commercial', 'Coral Square Area', 'Sawgrass Expressway Corridor', 'NW 80th Ave Industrial'],
     localContent: "Coral Springs has a dense mix of medical offices, retail strips, and suburban business parks spread along Sample Road, University Drive, and Atlantic Boulevard. We service commercial tenants and property managers throughout the city — office cleanouts, retail store haul-outs, medical office furniture disposal, and post-construction debris removal. Professional service with invoicing and COI available. Same-day service on most Coral Springs commercial calls.",
     clientTypes: ['Medical Offices', 'Retail Property Managers', 'Office Tenants', 'General Contractors', 'Business Park Managers', 'Restaurant Owners'],
+    lat: 26.27119,
+    lng: -80.27065,
   },
   hollywood: {
     name: 'Hollywood',
@@ -117,6 +137,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Hollywood Blvd Commercial', 'Young Circle Area', 'I-95 Business Corridor', 'Sheridan St Commercial', 'Dania Beach Industrial', 'Hollywood Beach Hospitality', 'Pembroke Rd Businesses', 'S State Rd 7 Corridor'],
     localContent: "Hollywood sits between Miami and Fort Lauderdale — and its commercial base reflects both markets. Hospitality properties along the beach, office parks along the I-95 corridor, and industrial tenants near Dania Beach all generate consistent commercial removal work. We service hotels doing room turnovers, businesses relocating on Hollywood Boulevard, GCs clearing construction debris, and property managers doing full commercial cleanouts. Invoicing and COI available on every job.",
     clientTypes: ['Hotel & Hospitality', 'Property Managers', 'General Contractors', 'Retail Businesses', 'Office Tenants', 'Industrial Tenants'],
+    lat: 26.01120,
+    lng: -80.14949,
   },
   kendall: {
     name: 'Kendall',
@@ -127,6 +149,8 @@ const cities: Record<string, CommercialCity> = {
     areas: ['Baptist Health Area', 'Kendall Dr Commercial', 'Dadeland Corridor', 'Miller Rd Businesses', 'Sunset Dr Commercial', 'SW 88th St Strip', 'Westchester Medical', 'Hammocks Business Park'],
     localContent: "Kendall's commercial core is anchored by Baptist Health, the Dadeland corridor, and a dense network of medical offices and retail strips along Kendall Drive. We work with medical practices doing office turnovers, retail property managers clearing out spaces, and GCs handling post-renovation debris in the area. Kendall businesses expect professional service — and we deliver: on time, properly invoiced, COI provided for any building that requires it.",
     clientTypes: ['Medical Practices', 'Retail Property Managers', 'Office Tenants', 'General Contractors', 'Healthcare Facilities', 'HOA Management'],
+    lat: 25.67899,
+    lng: -80.37168,
   },
 }
 
@@ -157,7 +181,7 @@ export async function generateMetadata({
 
   return {
     title: `Commercial Junk Removal ${data.name} FL | Licensed & Insured`,
-    description: `Commercial junk removal in ${data.name}, FL. Office cleanouts, warehouse haul-away, construction debris. Invoicing & COI available. Free estimates — call ${data.phoneFormatted}.`,
+    description: `Commercial junk removal in ${data.name}, FL. Office cleanouts, warehouse haul-away, construction debris, scrap metal. Invoicing & COI available. Free estimates — call ${data.phoneFormatted}.`,
     alternates: {
       canonical: `${siteUrl}/commercial/junk-removal/${params.city}`,
     },
@@ -177,75 +201,92 @@ export default function CommercialCityPage({
   const data = cities[params.city]
   if (!data) notFound()
 
-  const schema = {
+  const businessId = `${siteUrl}/commercial/junk-removal/${params.city}#business`
+  const serviceId = `${siteUrl}/commercial/junk-removal/${params.city}#service`
+
+  const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+    '@id': businessId,
     name: 'R&D Trash Disposal',
-    description: `Commercial junk removal in ${data.name}, FL. Office cleanouts, warehouse haul-away, construction debris removal.`,
+    description: `Commercial junk removal in ${data.name}, FL. Office cleanouts, warehouse haul-away, construction debris, and scrap metal hauling. Invoicing and COI available.`,
+    url: `${siteUrl}/commercial/junk-removal/${params.city}`,
+    telephone: `+1${data.phone}`,
+    priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
       addressLocality: data.name,
       addressRegion: 'FL',
       addressCountry: 'US',
     },
-    url: `${siteUrl}/commercial/junk-removal/${params.city}`,
-    telephone: `+1${data.phone}`,
-    areaServed: [data.name, ...data.areas],
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: data.lat,
+      longitude: data.lng,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '07:00',
+        closes: '19:00',
+      },
+    ],
+    areaServed: [
+      { '@type': 'City', name: data.name, containedInPlace: { '@type': 'State', name: 'Florida' } },
+      ...data.areas.map((area) => ({ '@type': 'Place', name: area })),
+    ],
+    parentOrganization: {
+      '@type': 'Organization',
+      '@id': `${siteUrl}#organization`,
+      name: 'R&D Trash Disposal',
+      url: siteUrl,
+    },
   }
 
-  const richSchema = {
+  const serviceSchema = {
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-          { '@type': 'ListItem', position: 2, name: 'Commercial Junk Removal', item: `${siteUrl}/commercial/junk-removal` },
-          { '@type': 'ListItem', position: 3, name: `Commercial Junk Removal ${data.name}`, item: `${siteUrl}/commercial/junk-removal/${params.city}` },
-        ],
+    '@type': 'Service',
+    '@id': serviceId,
+    name: `Commercial Junk Removal in ${data.name}, FL`,
+    description: `Commercial junk removal services in ${data.name}, FL — office cleanouts, warehouse haul-away, construction debris removal, concrete and tile disposal, scrap metal hauling, and property management cleanouts. Invoicing and COI available.`,
+    serviceType: 'Commercial Junk Removal',
+    provider: {
+      '@type': 'LocalBusiness',
+      '@id': businessId,
+      name: 'R&D Trash Disposal',
+      telephone: `+1${data.phone}`,
+    },
+    areaServed: {
+      '@type': 'City',
+      name: data.name,
+      containedInPlace: { '@type': 'State', name: 'Florida' },
+    },
+    offers: {
+      '@type': 'Offer',
+      priceSpecification: {
+        '@type': 'PriceSpecification',
+        priceCurrency: 'USD',
+        description: 'Pricing based on volume and job type. Free estimates provided.',
       },
-      {
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `Do you provide invoices for commercial junk removal in ${data.name}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `Yes. We provide itemized invoices on every commercial job in ${data.name}. Certificate of insurance available on request. Call ${data.phoneFormatted}.`,
-            },
-          },
-          {
-            '@type': 'Question',
-            name: `What commercial junk removal services do you offer in ${data.name}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `We offer office cleanouts, warehouse haul-away, construction debris removal, concrete and tile disposal, scrap metal hauling, property management cleanouts, and bulk commercial junk removal throughout ${data.name} and ${data.county} County.`,
-            },
-          },
-          {
-            '@type': 'Question',
-            name: `How quickly can you respond to a commercial job in ${data.name}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `Same-day service is available on most commercial calls in ${data.name}. Call ${data.phoneFormatted} or submit a request online and we'll confirm availability within the hour.`,
-            },
-          },
-        ],
-      },
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+      { '@type': 'ListItem', position: 2, name: 'Commercial Junk Removal', item: `${siteUrl}/commercial/junk-removal` },
+      { '@type': 'ListItem', position: 3, name: `Commercial Junk Removal ${data.name}`, item: `${siteUrl}/commercial/junk-removal/${params.city}` },
     ],
   }
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(richSchema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
       <main>
         {/* Hero */}
@@ -384,6 +425,21 @@ export default function CommercialCityPage({
             </div>
             <p className="mt-6 text-gray-500 text-sm max-w-lg mx-auto">
               Don&apos;t see your area? Call us — if it&apos;s in {data.county} County, we cover it.
+            </p>
+          </div>
+        </section>
+
+        {/* Internal link to residential JR page for this city */}
+        <section className="py-10 bg-[#F5F7FA]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <p className="text-gray-500 text-sm">
+              Need residential junk removal in {data.name}?{' '}
+              <a
+                href={`/junk-removal-${params.city}`}
+                className="text-[#F5A623] font-semibold hover:underline"
+              >
+                See our residential service page →
+              </a>
             </p>
           </div>
         </section>

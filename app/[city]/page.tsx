@@ -156,6 +156,11 @@ const cities: Record<string, CityData> = {
 
 const PREFIX = 'junk-removal-'
 
+const commercialCities = new Set([
+  'miami', 'doral', 'fort-lauderdale', 'hialeah', 'miami-beach',
+  'boca-raton', 'pompano-beach', 'miramar', 'coral-springs', 'hollywood', 'kendall',
+])
+
 export function generateStaticParams() {
   return Object.keys(cities).map((city) => ({ city: `${PREFIX}${city}` }))
 }
@@ -351,6 +356,23 @@ export default function CityPage({
             </div>
           </div>
         </section>
+
+        {/* Commercial cross-link */}
+        {commercialCities.has(cityKey) && (
+          <section className="py-8 bg-[#F5F7FA] border-t border-gray-100">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+              <p className="text-gray-500 text-sm">
+                Need commercial junk removal in {data.name}?{' '}
+                <a
+                  href={`/commercial/junk-removal/${cityKey}`}
+                  className="text-[#F5A623] font-semibold hover:underline"
+                >
+                  See our commercial service page — invoicing & COI available →
+                </a>
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* Services */}
         <section className="py-16 bg-[#F5F7FA]">
