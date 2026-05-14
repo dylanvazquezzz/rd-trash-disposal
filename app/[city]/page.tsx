@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PhoneLink from '@/components/PhoneLink'
@@ -23,8 +24,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'From Wynwood to Brickell to Little Havana, we cover all of Miami. Call for same-day pickup.',
-    neighborhoods: ['Brickell', 'Wynwood', 'Little Havana', 'Coral Gables', 'Coconut Grove', 'Edgewater', 'Downtown', 'Midtown', 'Liberty City', 'Overtown'],
-    localContent: "Miami is one of South Florida's most active renovation markets, and we're the crew that handles the mess. Whether it's a Brickell condo gut-out, a Wynwood loft cleanout, or an estate cleanout in Coral Gables, we show up same day and haul everything away. Furniture, appliances, construction debris, yard waste — no job too big or too small in Miami-Dade.",
+    neighborhoods: ['Brickell', 'Wynwood', 'Little Havana', 'Coral Gables', 'Coconut Grove', 'Edgewater', 'Downtown', 'Midtown', 'Liberty City', 'Overtown', 'Allapattah', 'Little Haiti', 'Design District', 'Upper East Side', 'Flagami', 'Westchester', 'Coral Way', 'Shenandoah', 'Spring Garden', 'Model City'],
+    localContent: "Miami is one of South Florida's most active renovation markets, and we're the crew that handles the mess. Whether it's a Brickell condo gut-out, a Wynwood loft cleanout, an estate cleanout in Coral Gables, or a garage haul-out in Westchester or Flagami, we show up same day and haul everything away. Furniture, appliances, construction debris, yard waste — from Downtown to Allapattah to the Upper East Side, no job too big or too small in Miami-Dade.",
   },
   'miami-beach': {
     name: 'Miami Beach',
@@ -32,8 +33,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Serving Miami Beach and South Beach. Furniture, appliances, cleanouts — same day.',
-    neighborhoods: ['South Beach', 'Mid-Beach', 'North Beach', 'Surfside', 'Bal Harbour', 'Bay Harbor Islands'],
-    localContent: "Miami Beach's dense condo market means constant unit turnover — and we handle the haul-outs. Dumpster permits on the Beach are a headache, which is why local residents and property managers call us for same-day furniture removal, appliance swaps, and full unit cleanouts from South Beach to Surfside. No dumpster needed, no permit required.",
+    neighborhoods: ['South Beach', 'South of Fifth', 'Flamingo / Lummus', 'Mid-Beach', 'North Beach', 'Surfside', 'Bal Harbour', 'Bay Harbor Islands', 'Normandy Isle', 'Normandy Shores', 'La Gorce Island', 'Venetian Islands', 'Palm Island', 'Hibiscus Island', 'Biscayne Point', 'North Shore', 'Sunny Isles Beach', 'Indian Creek'],
+    localContent: "Miami Beach's dense condo market means constant unit turnover — and we handle the haul-outs. Dumpster permits on the Beach are a headache, which is why local residents and property managers call us for same-day furniture removal, appliance swaps, and full unit cleanouts from South of Fifth to Bal Harbour. We serve every neighborhood on the barrier island and the surrounding communities. No dumpster needed, no permit required.",
   },
   hialeah: {
     name: 'Hialeah',
@@ -41,8 +42,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Local junk removal in Hialeah. We haul furniture, appliances, yard waste, and more.',
-    neighborhoods: ['Hialeah Gardens', 'Palm Springs North', 'Westland', 'Opa-locka', 'Miami Lakes'],
-    localContent: "Hialeah is one of the most densely populated cities in Florida, and our team runs routes through it daily. We handle garage cleanouts, furniture removal, and bulk junk haul-away throughout Hialeah and into Hialeah Gardens and Palm Springs North. If it won't fit in your trash can, we'll take it.",
+    neighborhoods: ['Hialeah Gardens', 'Palm Springs North', 'Palm Springs Lakes', 'Miami Lakes', 'Opa-locka', 'Medley', 'Hialeah Park', 'Country Club', 'Westland', 'East Hialeah', 'West Hialeah', 'North Hialeah', 'Hialeah Heights', 'Garden Lakes', 'Palm Lakes', 'Royal Poinciana', 'Lake Hialeah', 'Carol City'],
+    localContent: "Hialeah is one of the most densely populated cities in Florida, and our team runs routes through it daily. We handle garage cleanouts, furniture removal, and bulk junk haul-away across all of Hialeah — from East Hialeah near the airport corridor to West Hialeah and Hialeah Gardens, down through Palm Springs Lakes and north into Miami Lakes and Opa-locka. If it won't fit in your trash can, we'll take it.",
   },
   doral: {
     name: 'Doral',
@@ -50,8 +51,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Serving Doral and surrounding areas. Same-day junk removal and demolition available.',
-    neighborhoods: ['Blue Lagoon', 'Sweetwater', 'Medley', 'Virginia Gardens', 'Fontainebleau'],
-    localContent: "Doral's commercial and residential growth means constant renovation work — and a constant need for debris removal. We serve businesses and homeowners throughout Doral, Sweetwater, and Medley with same-day junk haul-away, office furniture removal, construction debris cleanup, and full property cleanouts. We run routes near the airport corridor daily.",
+    neighborhoods: ['Blue Lagoon', 'Sweetwater', 'Medley', 'Virginia Gardens', 'Fontainebleau', 'Downtown Doral', 'CityPlace Doral', 'Doral Park', 'Doral Isles', 'Waterford', 'Morgan Levy', 'Miami Springs', 'Flagler Station', 'Palm Springs Mile', 'Northwest Doral', 'Doral Commons', 'Beacon Tradeport', 'Golf Club area'],
+    localContent: "Doral's commercial and residential growth means constant renovation work — and a constant need for debris removal. We serve businesses and homeowners throughout Doral, Sweetwater, and Medley with same-day junk haul-away, office furniture removal, construction debris cleanup, and full property cleanouts. From Downtown Doral and CityPlace to the Blue Lagoon corridor, we run routes near the airport daily.",
   },
   kendall: {
     name: 'Kendall',
@@ -59,8 +60,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Kendall junk removal and cleanouts. Any size load, same-day service available.',
-    neighborhoods: ['Kendale Lakes', 'West Kendall', 'Pinecrest', 'The Hammocks', 'Glenvar Heights', 'Sunset'],
-    localContent: "Kendall's single-family neighborhoods generate some of the biggest cleanout jobs we see — full garage haul-outs, furniture removal after a move, shed cleanouts, and bulk junk after a renovation. We cover all of Kendall from Pinecrest to West Kendall to Kendale Lakes, with same-day availability on most requests.",
+    neighborhoods: ['Kendale Lakes', 'West Kendall', 'The Hammocks', 'Pinecrest', 'Glenvar Heights', 'Sunset', 'Dadeland', 'South Miami', 'Cutler Ridge', 'Country Walk', 'Palmetto Estates', 'Three Lakes', 'Snapper Creek', 'Coral Reef', 'Quail Heights', 'Richmond Heights', 'Howard Drive', 'Miller Drive', 'Killian Drive', 'East Kendall'],
+    localContent: "Kendall's single-family neighborhoods generate some of the biggest cleanout jobs we see — full garage haul-outs, furniture removal after a move, shed cleanouts, and bulk junk after a renovation. We cover all of Kendall from Pinecrest and Dadeland on the east to West Kendall and Country Walk on the west, from Snapper Creek down to Cutler Ridge, with same-day availability on most requests.",
   },
   homestead: {
     name: 'Homestead',
@@ -68,8 +69,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Serving Homestead and South Miami-Dade. Full property cleanouts and junk haul-away.',
-    neighborhoods: ['Florida City', 'Leisure City', 'Cutler Bay', 'Naranja', 'Princeton', 'Goulds'],
-    localContent: "South Miami-Dade has large lots and older properties that generate big cleanout jobs. We serve Homestead, Florida City, Cutler Bay, and the surrounding agricultural communities with full property cleanouts, post-storm debris removal, bulk junk haul-away, and appliance disposal. If you're clearing land, cleaning out a rental, or doing a full renovation teardown — we've got you covered.",
+    neighborhoods: ['Florida City', 'Leisure City', 'Cutler Bay', 'Naranja', 'Princeton', 'Goulds', 'Perrine', 'Palmetto Bay', 'Redland', 'South Dade', 'Silver Palm', 'Biscayne Estates', 'Stiles Manor', 'Country Club Homes', 'Homestead Gardens', 'Palm Drive area', 'Homestead Downtown', 'Ingraham Highway'],
+    localContent: "South Miami-Dade has large lots and older properties that generate big cleanout jobs. We serve Homestead, Florida City, Cutler Bay, Palmetto Bay, Perrine, and the surrounding agricultural communities — from Redland and the Ingraham Highway corridor all the way south through Naranja and Princeton. Full property cleanouts, post-storm debris removal, bulk junk haul-away, and appliance disposal. If you're clearing land, cleaning out a rental, or doing a full renovation teardown — we've got you covered.",
   },
   aventura: {
     name: 'Aventura',
@@ -77,8 +78,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Junk removal in Aventura. Furniture, appliances, estate cleanouts — same day.',
-    neighborhoods: ['Williams Island', 'Hallandale Beach', 'Golden Beach', 'Sunny Isles Beach', 'North Miami Beach'],
-    localContent: "Aventura and the surrounding high-rise corridor see constant unit flips and estate cleanouts. We specialize in furniture removal and appliance haul-outs for condo renovations — no elevator damage, no building violations, just fast removal. We cover Aventura, Sunny Isles Beach, and Golden Beach with same-day service.",
+    neighborhoods: ['Williams Island', 'Hallandale Beach', 'Golden Beach', 'Sunny Isles Beach', 'North Miami Beach', 'Turnberry', 'Porto Vita', 'Hidden Bay', 'Aventura Isles', 'Mystic Pointe', 'Country Club Drive', 'Ojus', 'West Aventura', 'Highland Lakes', 'Skylake', 'North Shore', 'Biscayne Gardens', 'Ives Estates'],
+    localContent: "Aventura and the surrounding high-rise corridor see constant unit flips and estate cleanouts. We specialize in furniture removal and appliance haul-outs for condo renovations — no elevator damage, no building violations, just fast removal. We cover Aventura, Sunny Isles Beach, Golden Beach, and the surrounding communities from Hallandale Beach to North Miami Beach and Ojus. Same-day service available.",
   },
   'north-miami': {
     name: 'North Miami',
@@ -86,8 +87,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'North Miami junk removal and demolition. Licensed, insured, same-day available.',
-    neighborhoods: ['North Miami Beach', 'Biscayne Park', 'El Portal', 'Miami Shores', 'Ives Estates'],
-    localContent: "North Miami and its surrounding communities — Miami Shores, El Portal, Biscayne Park — are a mix of older single-family homes and condos that regularly need full cleanouts. We handle furniture removal, appliance disposal, yard waste haul-away, and demolition debris throughout North Miami and North Miami Beach, same day.",
+    neighborhoods: ['North Miami Beach', 'Biscayne Park', 'El Portal', 'Miami Shores', 'Ives Estates', 'Scott Lake', 'Norland', 'Ojus', 'North Miami Heights', 'Highland Lakes', 'Keystone Islands', 'Arch Creek', 'Biscayne Gardens', 'West Little River', 'Skylake', 'Westview', 'Biscayne Point', 'Palm Springs North'],
+    localContent: "North Miami and its surrounding communities are a mix of older single-family homes and condos that regularly need full cleanouts. We handle furniture removal, appliance disposal, yard waste haul-away, and demolition debris across Miami Shores, El Portal, Biscayne Park, Scott Lake, Norland, and everything in between — from West Little River on the south to Ojus and Ives Estates in the north. Same-day service throughout the area.",
   },
   'fort-lauderdale': {
     name: 'Fort Lauderdale',
@@ -95,8 +96,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Fort Lauderdale junk removal and interior demolition. Serving all of Broward County.',
-    neighborhoods: ['Las Olas', 'Wilton Manors', 'Victoria Park', 'Flagler Village', 'Tarpon River', 'Colee Hammock', 'Rio Vista'],
-    localContent: "Fort Lauderdale is our Broward home base. Las Olas and the barrier island neighborhoods are renovation-heavy — we handle gut-outs in Victoria Park, construction debris on the islands, and estate cleanouts throughout the city. From Wilton Manors to Flagler Village, our crew runs Fort Lauderdale routes daily and can usually get there same day.",
+    neighborhoods: ['Las Olas', 'Wilton Manors', 'Victoria Park', 'Flagler Village', 'Tarpon River', 'Colee Hammock', 'Rio Vista', 'Poinsettia Heights', 'Sailboat Bend', 'Croissant Park', 'Harbordale', 'Nurmi Isles', 'Idlewyld', 'Middle River Terrace', 'Edgewood', 'Lauderdale Manors', 'Oakland Park', 'Coral Ridge', 'Progresso Village', 'Shady Banks'],
+    localContent: "Fort Lauderdale is our Broward home base. The barrier island and Las Olas neighborhoods are renovation-heavy — we handle gut-outs in Victoria Park, construction debris along the isles, and estate cleanouts throughout the city. From Wilton Manors and Oakland Park in the north to Rio Vista and Harbordale in the south, and from Sailboat Bend out to Coral Ridge and beyond, our crew runs Fort Lauderdale routes daily.",
   },
   hollywood: {
     name: 'Hollywood',
@@ -104,8 +105,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Hollywood FL junk removal. Furniture, appliances, yard waste — same-day haul-away.',
-    neighborhoods: ['Hollywood Beach', 'Hallandale Beach', 'Dania Beach', 'West Hollywood', 'Emerald Hills'],
-    localContent: "Hollywood, FL sits right between Miami and Fort Lauderdale, and we cover it from the beach to the western developments. We handle estate cleanouts in Emerald Hills, furniture removal along Hollywood Beach, yard waste haul-away in West Hollywood, and appliance disposal throughout the city. Same-day service available most days.",
+    neighborhoods: ['Hollywood Beach', 'Hallandale Beach', 'Dania Beach', 'West Hollywood', 'Emerald Hills', 'Downtown Hollywood', 'Hollywood Lakes', 'Sheridan Hills', 'Parkside', 'Boulevard Gardens', 'Orange Brook', 'East Hollywood', 'South Hollywood', 'North Hollywood', 'Hollywood Hills', 'Liberia', 'Washington Park', 'Diplomat Beach', 'Oakridge', 'Carver Ranches'],
+    localContent: "Hollywood, FL sits right between Miami and Fort Lauderdale, and we cover it from the beach to the western communities. We handle estate cleanouts in Emerald Hills and Sheridan Hills, furniture removal along Hollywood Beach and Diplomat Beach, yard waste haul-away in West Hollywood and Orange Brook, and appliance disposal throughout the city. Same-day service available most days.",
   },
   'pembroke-pines': {
     name: 'Pembroke Pines',
@@ -113,8 +114,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Junk removal in Pembroke Pines. Same-day service, licensed and insured.',
-    neighborhoods: ['Pembroke Lakes', 'Chapel Trail', 'Silver Lakes', 'Pines City Center', 'Towngate', 'Walnut Creek'],
-    localContent: "Pembroke Pines is one of Broward's largest cities, and its planned communities generate steady cleanout work. We handle garage haul-outs in Chapel Trail, furniture removal in Silver Lakes, and full property cleanouts throughout Pembroke Pines. Most residents get same-day or next-day service.",
+    neighborhoods: ['Chapel Trail', 'Silver Lakes', 'Towngate', 'Walnut Creek', 'Pembroke Falls', 'Pembroke Isles', 'Pines City Center', 'Pembroke Lakes', 'Century Village', 'Palm Cay', 'The Meadows', 'Flamingo Pines', 'Grand Palms', 'Laguna Isles', 'Pembroke Shores', 'Pembroke Pointe', 'Regency Lake', 'Emerald Park', 'Westgate', 'Country Club Ranches'],
+    localContent: "Pembroke Pines is one of Broward's largest cities — stretching from the I-95 corridor on the east all the way to the Everglades on the west. We run routes through all of it. Whether you're in Century Village or Palm Cay near Pines Blvd, in the central communities around Pembroke Lakes, or out west in Chapel Trail, Silver Lakes, or Grand Palms, we handle garage haul-outs, furniture removal, full property cleanouts, and construction debris. Most residents get same-day or next-day service.",
   },
   miramar: {
     name: 'Miramar',
@@ -122,8 +123,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Miramar junk removal and cleanouts. We haul anything — call for a free estimate.',
-    neighborhoods: ['Monarch Lakes', 'Riviera Isles', 'Sunset Lakes', 'Royal Palm Ranches', 'Nautica'],
-    localContent: "Miramar's residential communities have large homes with garages and storage that fill up fast. We handle furniture and appliance removal, full garage cleanouts, renovation debris, and bulk junk haul-away throughout Miramar — from Monarch Lakes to Royal Palm Ranches. Quick turnaround, no hidden fees.",
+    neighborhoods: ['Monarch Lakes', 'Riviera Isles', 'Sunset Lakes', 'Royal Palm Ranches', 'Nautica', 'Vizcaya', 'Avalon Trails', 'Miramar Isles', 'Caribbean Isles', 'Tuscan Isles', 'Country Lakes', 'Sunset Falls', 'Grand Palms', 'Miramar Town Center', 'Fairways', 'West Miramar', 'East Miramar', 'Palms at Miramar', 'Andros Isles', 'Silver Shores'],
+    localContent: "Miramar's residential communities have large homes with garages and storage that fill up fast. We handle furniture and appliance removal, full garage cleanouts, renovation debris, and bulk junk haul-away throughout Miramar — from East Miramar near I-95 to the far west communities like Royal Palm Ranches, Grand Palms, and Sunset Lakes. Quick turnaround, no hidden fees.",
   },
   'coral-springs': {
     name: 'Coral Springs',
@@ -131,8 +132,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Coral Springs junk removal and demolition service. Same-day available 7 days a week.',
-    neighborhoods: ['Wyndham Lakes', 'Eagle Trace', 'Heron Bay', 'Ramblewood', 'Forest Hills', 'The Crossings'],
-    localContent: "Coral Springs is one of the most active home renovation markets in Broward County. We handle demolition debris haul-away, kitchen and bathroom gut-outs, furniture removal, and full property cleanouts throughout Coral Springs. Neighborhoods like Heron Bay and Eagle Trace see constant remodeling work — we're the crew that clears it out.",
+    neighborhoods: ['Wyndham Lakes', 'Eagle Trace', 'Heron Bay', 'Ramblewood', 'Forest Hills', 'The Crossings', 'Maplewood', 'Pine Ridge', 'Cobblestone Creek', 'Ridgewood', 'Hampton Greens', 'Coral Creek', 'Orchid Hammock', 'Westview', 'Coral Lago', 'Shadow Wood', 'Country Club', 'Kensington', 'Turtle Run', 'Lakeview'],
+    localContent: "Coral Springs is one of the most active home renovation markets in Broward County. We handle demolition debris haul-away, kitchen and bathroom gut-outs, furniture removal, and full property cleanouts throughout Coral Springs — from Heron Bay and Eagle Trace in the north to Ramblewood, The Crossings, and Turtle Run throughout the city. We're the crew that clears it out.",
   },
   'pompano-beach': {
     name: 'Pompano Beach',
@@ -140,8 +141,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Pompano Beach junk removal. Furniture, appliances, debris — free estimates.',
-    neighborhoods: ['Lighthouse Point', 'Hillsboro Beach', 'Coconut Creek', 'Pompano Beach Highlands', 'Crystal Lake'],
-    localContent: "Pompano Beach covers a lot of ground — from the beachside condos to the inland communities like Coconut Creek and Pompano Beach Highlands. We handle furniture and appliance removal, estate cleanouts, construction debris, and yard waste haul-away throughout the area. Licensed and insured, same-day service available.",
+    neighborhoods: ['Lighthouse Point', 'Hillsboro Beach', 'Coconut Creek', 'Pompano Beach Highlands', 'Crystal Lake', 'Palm-Aire', 'The Cove', 'Collier Manor', 'Pompano Beach Isles', 'Pompano Estates', 'Old Pompano', 'Deerfield Beach', 'Margate', 'North Andrews Gardens', 'McNab Park', 'Harbor Village', 'Cresthaven', 'Sunfield', 'Garden Isles', 'Loch Lomond'],
+    localContent: "Pompano Beach covers a lot of ground — from Hillsboro Beach and Lighthouse Point on the coast to Coconut Creek and Margate inland. We handle furniture and appliance removal, estate cleanouts, construction debris, and yard waste haul-away across the entire area. From Palm-Aire and The Cove to Old Pompano and Pompano Beach Highlands, licensed and insured, same-day service available.",
   },
   'boca-raton': {
     name: 'Boca Raton',
@@ -149,8 +150,8 @@ const cities: Record<string, CityData> = {
     phone: '7864083783',
     phoneFormatted: '786-408-3783',
     blurb: 'Boca Raton junk removal and interior demolition. Licensed, insured, same-day service.',
-    neighborhoods: ['Boca Del Mar', 'Mission Bay', 'Broken Sound', 'Woodfield', 'Boca West', 'Mizner Park'],
-    localContent: "Boca Raton's upscale residential market means high-value renovations — and the debris that comes with them. We handle interior demolition debris, furniture removal from estate cleanouts, appliance haul-outs, and full property cleanouts in communities like Broken Sound, Boca West, and Woodfield. Discreet, professional service with same-day availability.",
+    neighborhoods: ['Boca Del Mar', 'Mission Bay', 'Broken Sound', 'Woodfield', 'Boca West', 'Mizner Park', 'Boca Lago', 'Boca Pointe', 'Boca Isles', 'Boca Falls', 'Boca Winds', 'The Polo Club', 'Stonebridge', 'Boca Grove', 'Old Floresta', 'Royal Palm Yacht & Country Club', 'Boca Country Club', 'Boca Bath & Tennis', 'Town Place', 'Boca Highlands'],
+    localContent: "Boca Raton's upscale residential market means high-value renovations — and the debris that comes with them. We handle interior demolition debris, furniture removal from estate cleanouts, appliance haul-outs, and full property cleanouts across Boca — from Broken Sound and Woodfield in the north to Boca Del Mar, Boca West, and Boca Falls in the south. Discreet, professional service with same-day availability.",
   },
 }
 
@@ -289,8 +290,16 @@ export default function CityPage({
       <Nav />
       <main>
         {/* Hero */}
-        <section className="bg-[#0B1E3D] pt-32 pb-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative overflow-hidden pt-32 pb-20 px-4">
+          <Image
+            src="/trash.pickuptruck.png"
+            alt="R&D Trash Disposal truck and trailer"
+            fill
+            className="object-cover object-[center_65%]"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#0B1E3D]/70" />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
             <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
               {data.county} County
             </p>
@@ -336,22 +345,26 @@ export default function CityPage({
                 </p>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-zinc-400 uppercase tracking-widest mb-3">
-                  Neighborhoods We Serve in {data.name}
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  {data.neighborhoods.map((n) => (
-                    <span
-                      key={n}
-                      className="bg-[#F5F7FA] text-[#0B1E3D] text-sm font-medium px-3 py-1.5 rounded-full border border-gray-200"
-                    >
-                      {n}
-                    </span>
-                  ))}
-                </div>
-                <p className="mt-6 text-gray-500 text-sm">
-                  Don&apos;t see your neighborhood? Call us — if it&apos;s in {data.county} County, we likely cover it.
+                <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
+                  What We Haul
                 </p>
+                <h3 className="font-display text-[#0B1E3D] text-3xl mb-5">
+                  WE TAKE IT ALL.
+                </h3>
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-6">
+                  {services.map((service) => (
+                    <li key={service} className="flex items-center gap-2 text-sm text-[#0B1E3D]">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#F5A623] flex-shrink-0" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/estimate"
+                  className="inline-flex items-center gap-1.5 text-[#F5A623] font-semibold text-sm hover:underline"
+                >
+                  Get a free estimate →
+                </a>
               </div>
             </div>
           </div>
@@ -374,32 +387,37 @@ export default function CityPage({
           </section>
         )}
 
-        {/* Services */}
+        {/* Neighborhoods */}
         <section className="py-16 bg-[#F5F7FA]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <div className="text-center mb-12">
+            <div className="text-center mb-10">
               <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
-                What We Haul
+                Our Coverage Area
               </p>
-              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
-                WE TAKE IT ALL.
+              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl mb-4">
+                NEIGHBORHOODS WE SERVE.
               </h2>
-              <p className="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
-                Serving {data.name} and all of {data.county} County. Same-day service available 7 days a week.
+              <p className="text-gray-500 text-base max-w-2xl mx-auto">
+                We cover all of {data.name} — every corner of {data.county} County. Same-day service available 7 days a week.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-3 mb-12">
-              {services.map((service) => (
-                <div
-                  key={service}
-                  className="flex items-center gap-3 bg-white rounded-xl px-5 py-4 border border-gray-100"
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
+              {data.neighborhoods.map((n) => (
+                <span
+                  key={n}
+                  className="bg-white text-[#0B1E3D] text-sm font-medium px-4 py-2 rounded-full border border-gray-200 shadow-sm"
                 >
-                  <div className="w-2 h-2 rounded-full bg-[#F5A623] flex-shrink-0" />
-                  <span className="text-[#0B1E3D] font-medium">{service}</span>
-                </div>
+                  {n}
+                </span>
               ))}
             </div>
+
+            <p className="text-center text-gray-400 text-sm mb-12">
+              Don&apos;t see your neighborhood?{' '}
+              <PhoneLink phone={data.phone} display="Call us" source="city_neighborhoods" className="text-[#F5A623] font-medium hover:underline" />
+              {' '}— if it&apos;s in {data.county} County, we cover it.
+            </p>
 
             {/* Trust bar */}
             <div className="grid grid-cols-3 gap-6 border-t border-gray-200 pt-10">

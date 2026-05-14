@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PhoneLink from '@/components/PhoneLink'
@@ -275,8 +276,16 @@ export default function DemoPage({
       <Nav />
       <main>
         {/* Hero */}
-        <section className="bg-[#0B1E3D] pt-32 pb-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="relative overflow-hidden pt-32 pb-20 px-4">
+          <Image
+            src="/trash.pickuptruck.png"
+            alt="R&D Trash Disposal truck and trailer"
+            fill
+            className="object-cover object-[center_65%]"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#0B1E3D]/70" />
+          <div className="relative z-10 max-w-4xl mx-auto text-center">
             <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
               {data.county} County — Licensed &amp; Insured
             </p>
