@@ -41,7 +41,7 @@ export default function ThankYouPage() {
       </main>
       <Footer />
       <Script id="gtag-conversion" strategy="afterInteractive">
-        {`gtag('event', 'conversion_event_submit_lead_form', {});`}
+        {`if (typeof gtag === 'function') { gtag('event', 'conversion_event_submit_lead_form', {}); }`}
       </Script>
     </>
   )
