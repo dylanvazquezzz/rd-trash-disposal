@@ -370,6 +370,54 @@ export default function CityPage({
           </div>
         </section>
 
+        {/* Testimonials */}
+        <section className="py-16 bg-[#F5F7FA]">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10">
+              <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
+                Customer Reviews
+              </p>
+              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+                WHAT OUR CUSTOMERS SAY.
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  name: 'Carlos M.',
+                  location: 'Hialeah, FL',
+                  quote: 'Called at 9am and they were at my house by noon. Took a couch, two mattresses, and a ton of yard waste. Guys were professional and the price was fair.',
+                },
+                {
+                  name: 'Jennifer R.',
+                  location: 'Kendall, FL',
+                  quote: 'We needed a kitchen gutted before our contractor showed up. R&D came in, demo\'d everything, and hauled it all out in one day. Saved us a ton of time.',
+                },
+                {
+                  name: 'Mike T.',
+                  location: 'Hollywood, FL',
+                  quote: 'Did a full house cleanout for my mom\'s estate. They were respectful, fast, and came back a second time when there was more than expected. Would hire again.',
+                },
+              ].map(({ name, location, quote }) => (
+                <div key={name} className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 flex flex-col gap-4">
+                  <div className="flex gap-0.5">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="w-5 h-5 text-[#F5A623]" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.175 0l-3.37 2.448c-.784.57-1.838-.197-1.54-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.049 2.927z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-gray-600 leading-relaxed text-sm flex-1">&ldquo;{quote}&rdquo;</p>
+                  <div>
+                    <p className="font-semibold text-[#0B1E3D] text-sm">{name}</p>
+                    <p className="text-gray-400 text-xs">{location}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Commercial cross-link */}
         {commercialCities.has(cityKey) && (
           <section className="py-8 bg-[#F5F7FA] border-t border-gray-100">
@@ -429,6 +477,50 @@ export default function CityPage({
                 <div key={item.label} className="text-center">
                   <p className="font-display text-[#0B1E3D] text-2xl">{item.label.toUpperCase()}</p>
                   <p className="text-gray-400 text-sm mt-1">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why R&D */}
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10">
+              <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
+                Why Choose Us
+              </p>
+              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+                WHY R&amp;D.
+              </h2>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-8">
+              {[
+                {
+                  title: 'Licensed & Insured in Florida',
+                  body: 'State-licensed and fully insured. Certificate of insurance available on every commercial job.',
+                },
+                {
+                  title: 'Same-Day Service, 7 Days a Week',
+                  body: `Call by noon for same-day pickup in ${data.name}. We run routes through ${data.county} County daily.`,
+                },
+                {
+                  title: 'Upfront Pricing, No Hidden Fees',
+                  body: 'We quote the full job before we start. What we say is what you pay.',
+                },
+                {
+                  title: "We Haul What Others Won't",
+                  body: 'Bulk loads, heavy appliances, full property cleanouts, demolition debris — no job too big.',
+                },
+              ].map(({ title, body }) => (
+                <div key={title} className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#F5A623]/10 flex items-center justify-center">
+                    <div className="w-3 h-3 rounded-full bg-[#F5A623]" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-[#0B1E3D] text-xl mb-2">{title.toUpperCase()}</h3>
+                    <p className="text-gray-600 leading-relaxed text-sm">{body}</p>
+                  </div>
                 </div>
               ))}
             </div>
