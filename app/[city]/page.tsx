@@ -293,7 +293,7 @@ export default function CityPage({
         <section className="relative overflow-hidden pt-32 pb-20 px-4">
           <Image
             src="/trash.pickuptruck.png"
-            alt="R&D Trash Disposal truck and trailer"
+            alt={`Junk removal truck serving ${data.name}, FL — R&D Trash Disposal`}
             fill
             className="object-cover object-[center_65%]"
             priority
@@ -429,6 +429,41 @@ export default function CityPage({
                 <div key={item.label} className="text-center">
                   <p className="font-display text-[#0B1E3D] text-2xl">{item.label.toUpperCase()}</p>
                   <p className="text-gray-400 text-sm mt-1">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-16 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-10">
+              <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">Common Questions</p>
+              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">FAQ.</h2>
+            </div>
+            <div className="divide-y divide-gray-100">
+              {[
+                {
+                  q: `Do you offer same-day junk removal in ${data.name}?`,
+                  a: `Yes. Call by noon for same-day junk removal in ${data.name} and surrounding areas. We run routes 7 days a week. Call ${data.phoneFormatted} and we'll give you an arrival window.`,
+                },
+                {
+                  q: `What areas of ${data.name} do you serve?`,
+                  a: `We serve all of ${data.name} including ${data.neighborhoods.slice(0, 8).join(', ')}, and more. If you're in ${data.county} County, we cover it.`,
+                },
+                {
+                  q: `How much does junk removal cost in ${data.name}?`,
+                  a: `Most jobs in ${data.name} run $100–$600 depending on volume. We price by the load — the more you have, the better the per-item rate. Call or fill out the estimate form for an instant quote with no obligation.`,
+                },
+                {
+                  q: `What items do you take?`,
+                  a: `We take almost everything: furniture, appliances, mattresses, yard waste, construction debris, electronics, and full property cleanouts. The few things we can't take: hazardous materials, paint, and chemicals.`,
+                },
+              ].map(({ q, a }) => (
+                <div key={q} className="py-6">
+                  <h3 className="font-semibold text-[#0B1E3D] text-lg mb-2">{q}</h3>
+                  <p className="text-gray-600 leading-relaxed">{a}</p>
                 </div>
               ))}
             </div>

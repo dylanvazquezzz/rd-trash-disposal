@@ -62,10 +62,16 @@ export default function Footer() {
                 { name: 'Hialeah', slug: 'hialeah' },
                 { name: 'Doral', slug: 'doral' },
                 { name: 'Kendall', slug: 'kendall' },
+                { name: 'Homestead', slug: 'homestead' },
+                { name: 'Aventura', slug: 'aventura' },
+                { name: 'North Miami', slug: 'north-miami' },
                 { name: 'Fort Lauderdale', slug: 'fort-lauderdale' },
                 { name: 'Hollywood', slug: 'hollywood' },
                 { name: 'Pembroke Pines', slug: 'pembroke-pines' },
+                { name: 'Miramar', slug: 'miramar' },
                 { name: 'Coral Springs', slug: 'coral-springs' },
+                { name: 'Pompano Beach', slug: 'pompano-beach' },
+                { name: 'Boca Raton', slug: 'boca-raton' },
               ].map((area) => (
                 <li key={area.slug} className="flex items-center gap-1.5">
                   <span className="w-1 h-1 rounded-full bg-[#F5A623]" />
