@@ -45,6 +45,12 @@ export default function Nav() {
                 </a>
               )
             )}
+            <a
+              href="/about"
+              className="text-sm font-medium text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
+            >
+              About
+            </a>
           </nav>
 
           {/* Phone + CTA */}
@@ -106,6 +112,13 @@ export default function Nav() {
                 </a>
               )
             )}
+            <a
+              href="/about"
+              className="text-[#0B1E3D] font-medium text-base py-1 border-b border-gray-100"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </a>
             <div className="flex flex-col gap-2 pt-2">
               <a
                 href="tel:7864083783"
