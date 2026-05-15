@@ -28,7 +28,7 @@ export default function HowItWorks() {
           <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
             The Process
           </p>
-          <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+          <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
             3 STEPS. THAT&apos;S IT.
           </h2>
           <p className="mt-4 text-gray-500 text-lg max-w-md mx-auto">
@@ -44,13 +44,13 @@ export default function HowItWorks() {
           {steps.map((step, idx) => (
             <div key={step.number} className="relative z-10 flex flex-col items-center text-center">
               {/* Number circle */}
-              <div className="w-20 h-20 rounded-full bg-[#0B1E3D] flex items-center justify-center mb-6 shadow-lg">
+              <div className="w-20 h-20 rounded-full bg-[#010c1c] flex items-center justify-center mb-6 shadow-lg">
                 <span className="font-display text-[#F5A623] text-3xl">{step.number}</span>
               </div>
 
               {/* Card */}
               <div className="bg-white rounded-2xl p-6 shadow-md w-full border border-gray-100 hover:border-[#F5A623] transition-colors">
-                <h3 className="font-display text-[#0B1E3D] text-2xl mb-3">
+                <h3 className="font-display text-[#010c1c] text-2xl mb-3">
                   {step.title.toUpperCase()}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{step.description}</p>
@@ -72,7 +72,7 @@ export default function HowItWorks() {
         <div className="text-center mt-14">
           <a
             href="/estimate"
-            className="inline-flex items-center gap-2 bg-[#0B1E3D] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#1a3560] transition-all hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 bg-[#010c1c] text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-[#0a1e3a] transition-all hover:scale-105 active:scale-95"
           >
             Book Same-Day Pickup
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

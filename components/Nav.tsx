@@ -21,15 +21,12 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 group">
+          <a href="/" className="flex items-center group md:-ml-8">
             <img
-              src="/favicon.svg"
+              src="/logo-nav.png"
               alt="R&D Trash Disposal logo"
-              className="w-10 h-10"
+              className="h-7 md:h-12 w-auto"
             />
-            <span className="font-display text-2xl tracking-wide text-[#0B1E3D]">
-              TRASH DISPOSAL
-            </span>
           </a>
 
           {/* Desktop nav */}
@@ -39,7 +36,7 @@ export default function Nav() {
                 <a
                   key={item}
                   href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
-                  className="text-sm font-medium text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
+                  className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
                 >
                   {item}
                 </a>
@@ -47,7 +44,7 @@ export default function Nav() {
             )}
             <a
               href="/about"
-              className="text-sm font-medium text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
+              className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
             >
               About
             </a>
@@ -58,13 +55,13 @@ export default function Nav() {
             <a
               href="tel:7864083783"
               onClick={trackCall}
-              className="text-sm font-semibold text-[#0B1E3D] transition-colors hover:text-[#F5A623]"
+              className="text-sm font-semibold text-[#010c1c] transition-colors hover:text-[#F5A623]"
             >
               786-408-3783
             </a>
             <a
               href={estimateHref}
-              className="bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
+              className="bg-[#F5A623] text-[#010c1c] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
             >
               Instant Estimate
             </a>
@@ -80,7 +77,7 @@ export default function Nav() {
               {[0, 1, 2].map((i) => (
                 <span
                   key={i}
-                  className={`block h-0.5 w-6 bg-[#0B1E3D] transition-all ${
+                  className={`block h-0.5 w-6 bg-[#010c1c] transition-all ${
                     menuOpen && i === 0
                       ? 'rotate-45 translate-y-2'
                       : menuOpen && i === 1
@@ -105,7 +102,7 @@ export default function Nav() {
                 <a
                   key={item}
                   href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
-                  className="text-[#0B1E3D] font-medium text-base py-1 border-b border-gray-100"
+                  className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item}
@@ -114,7 +111,7 @@ export default function Nav() {
             )}
             <a
               href="/about"
-              className="text-[#0B1E3D] font-medium text-base py-1 border-b border-gray-100"
+              className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
               onClick={() => setMenuOpen(false)}
             >
               About
@@ -123,13 +120,13 @@ export default function Nav() {
               <a
                 href="tel:7864083783"
                 onClick={trackCall}
-                className="text-[#0B1E3D] font-semibold text-base"
+                className="text-[#010c1c] font-semibold text-base"
               >
                 786-408-3783
               </a>
               <a
                 href={estimateHref}
-                className="mt-1 bg-[#F5A623] text-[#0B1E3D] font-semibold text-sm px-5 py-3 rounded text-center"
+                className="mt-1 bg-[#F5A623] text-[#010c1c] font-semibold text-sm px-5 py-3 rounded text-center"
                 onClick={() => setMenuOpen(false)}
               >
                 Get Instant Estimate

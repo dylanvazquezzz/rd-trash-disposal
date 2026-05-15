@@ -47,7 +47,7 @@ export default function AboutPage() {
       <main>
 
         {/* Hero — animated, no image */}
-        <section className="bg-[#0B1E3D] pt-36 pb-28 px-4 overflow-hidden">
+        <section className="bg-[#010c1c] pt-36 pb-28 px-4 overflow-hidden">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-6 sub-fade" style={{ animationDelay: '0.05s' }}>
               South Florida&apos;s Local Crew
@@ -85,10 +85,10 @@ export default function AboutPage() {
               {/* Left — copy */}
               <div>
                 <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">Our Story</p>
-                <h2 className="font-display text-[#0B1E3D] text-5xl leading-none mb-8">HOW IT<br />STARTED.</h2>
+                <h2 className="font-display text-[#010c1c] text-5xl leading-none mb-8">HOW IT<br />STARTED.</h2>
                 <div className="space-y-4 text-gray-600 text-base leading-relaxed">
                   <p>
-                    Started by three friends — <strong className="text-[#0B1E3D]">Randy, David, and Dylan</strong> — who got tired of junk removal companies that didn&apos;t show up. We saw a gap in South Florida: reliable haulers who showed up on time, priced fairly, and left the place clean.
+                    Started by three friends — <strong className="text-[#010c1c]">Randy, David, and Dylan</strong> — who got tired of junk removal companies that didn&apos;t show up. We saw a gap in South Florida: reliable haulers who showed up on time, priced fairly, and left the place clean.
                   </p>
                   <p>
                     We almost called it R&amp;D&amp;D Trash Disposal. Turns out that sounds more like a fantasy game than a hauling company — so two out of three names made the cut. Randy and David got top billing. Dylan built the website.
@@ -112,7 +112,7 @@ export default function AboutPage() {
                     className="bg-[#F5F7FA] rounded-2xl p-6 border border-gray-200 text-center"
                   >
                     <p className="font-display text-[#F5A623] text-5xl">{s.value}</p>
-                    <p className="text-[#0B1E3D] text-sm font-medium mt-1">{s.label}</p>
+                    <p className="text-[#010c1c] text-sm font-medium mt-1">{s.label}</p>
                   </div>
                 ))}
               </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
         </section>
 
         {/* Pull quote */}
-        <section className="bg-[#0B1E3D] py-16 px-4">
+        <section className="bg-[#010c1c] py-16 px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="font-display text-white text-3xl sm:text-4xl leading-snug">
               &ldquo;We&apos;re not a call center that dispatches strangers.<br />
@@ -139,7 +139,7 @@ export default function AboutPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
               <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">How We Work</p>
-              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">THE R&amp;D WAY.</h2>
+              <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">THE R&amp;D WAY.</h2>
             </div>
             <div className="grid sm:grid-cols-3 gap-6">
               {[
@@ -161,7 +161,7 @@ export default function AboutPage() {
               ].map((v) => (
                 <div key={v.num} className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
                   <p className="font-display text-[#F5A623] text-5xl mb-4">{v.num}</p>
-                  <h3 className="font-display text-[#0B1E3D] text-2xl mb-3">{v.title.toUpperCase()}</h3>
+                  <h3 className="font-display text-[#010c1c] text-2xl mb-3">{v.title.toUpperCase()}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{v.body}</p>
                 </div>
               ))}
@@ -173,7 +173,7 @@ export default function AboutPage() {
         <section className="py-20 bg-white">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">Get In Touch</p>
-            <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl mb-4">READY TO WORK<br />WITH US?</h2>
+            <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl mb-4">READY TO WORK<br />WITH US?</h2>
             <p className="text-gray-500 text-lg mb-10">
               Call us or fill out the estimate form. We serve all of Miami-Dade and Broward County, seven days a week.
             </p>
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 phone="7864083783"
                 display="786-408-3783"
                 source="about_cta"
-                className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-400 transition-all hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-400 transition-all hover:scale-105"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -191,7 +191,7 @@ export default function AboutPage() {
               </PhoneLink>
               <a
                 href="/estimate"
-                className="inline-flex items-center justify-center gap-2 border-2 border-[#0B1E3D] text-[#0B1E3D] font-semibold px-8 py-4 rounded-lg text-lg hover:bg-[#0B1E3D] hover:text-white transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-[#010c1c] text-[#010c1c] font-semibold px-8 py-4 rounded-lg text-lg hover:bg-[#010c1c] hover:text-white transition-all"
               >
                 Get Free Estimate
               </a>

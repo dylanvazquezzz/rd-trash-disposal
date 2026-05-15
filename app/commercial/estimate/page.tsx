@@ -173,7 +173,7 @@ function CommercialEstimateForm() {
 
           <div className="mb-10">
             <p className="text-[#F5A623] font-semibold text-sm uppercase tracking-widest mb-2">Commercial Quote</p>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#0B1E3D] mb-4">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#010c1c] mb-4">
               Get a Commercial Estimate
             </h1>
             <p className="text-gray-600 text-lg">
@@ -181,7 +181,7 @@ function CommercialEstimateForm() {
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               {['Invoicing Available', 'COI on Request', 'Licensed & Insured'].map((badge) => (
-                <span key={badge} className="bg-[#0B1E3D] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                <span key={badge} className="bg-[#010c1c] text-white text-xs font-semibold px-3 py-1.5 rounded-full">
                   {badge}
                 </span>
               ))}
@@ -192,7 +192,7 @@ function CommercialEstimateForm() {
 
             {/* Company name */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Company Name <span className="text-[#F5A623]">*</span>
               </label>
               <input
@@ -201,13 +201,13 @@ function CommercialEstimateForm() {
                 value={form.companyName}
                 onChange={(e) => setForm({ ...form, companyName: e.target.value })}
                 placeholder="Your business or company name"
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
               />
             </div>
 
             {/* Contact name */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Your Name <span className="text-[#F5A623]">*</span>
               </label>
               <input
@@ -216,13 +216,13 @@ function CommercialEstimateForm() {
                 value={form.contactName}
                 onChange={(e) => setForm({ ...form, contactName: e.target.value })}
                 placeholder="First and last name"
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
               />
             </div>
 
             {/* City */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Job City or ZIP Code <span className="text-[#F5A623]">*</span>
               </label>
               <input
@@ -231,13 +231,13 @@ function CommercialEstimateForm() {
                 value={form.city}
                 onChange={(e) => setForm({ ...form, city: e.target.value })}
                 placeholder="e.g. Doral or 33122"
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
               />
             </div>
 
             {/* Property type */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-3">
                 Property Type <span className="text-[#F5A623]">*</span>
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -248,8 +248,8 @@ function CommercialEstimateForm() {
                     onClick={() => setForm({ ...form, propertyType: value })}
                     className={`py-3 px-4 rounded text-sm font-semibold border-2 text-left transition-all ${
                       form.propertyType === value
-                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                        ? 'bg-[#010c1c] border-[#010c1c] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#010c1c]'
                     }`}
                   >
                     {label}
@@ -263,7 +263,7 @@ function CommercialEstimateForm() {
 
             {/* Estimated volume */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-3">
                 Estimated Volume <span className="text-gray-400 font-normal">(optional)</span>
               </label>
               <div className="grid grid-cols-3 gap-3">
@@ -274,8 +274,8 @@ function CommercialEstimateForm() {
                     onClick={() => setForm({ ...form, estimatedVolume: value })}
                     className={`py-3 px-3 rounded text-sm font-semibold border-2 text-center transition-all ${
                       form.estimatedVolume === value
-                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                        ? 'bg-[#010c1c] border-[#010c1c] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#010c1c]'
                     }`}
                   >
                     <span className="block">{label}</span>
@@ -287,7 +287,7 @@ function CommercialEstimateForm() {
 
             {/* Invoice needed */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-3">
                 Do you need an invoice?
               </label>
               <div className="flex gap-3">
@@ -301,8 +301,8 @@ function CommercialEstimateForm() {
                     onClick={() => setForm({ ...form, invoiceNeeded: value })}
                     className={`flex-1 py-3 rounded font-semibold text-sm border-2 transition-all ${
                       form.invoiceNeeded === value
-                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                        ? 'bg-[#010c1c] border-[#010c1c] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#010c1c]'
                     }`}
                   >
                     {label}
@@ -313,7 +313,7 @@ function CommercialEstimateForm() {
 
             {/* Contact preference */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-3">
                 How should we send your quote? <span className="text-[#F5A623]">*</span>
               </label>
               <div className="flex gap-3 mb-4">
@@ -324,8 +324,8 @@ function CommercialEstimateForm() {
                     onClick={() => setForm({ ...form, contactPreference: pref, contactValue: '' })}
                     className={`flex-1 py-3 rounded font-semibold text-sm border-2 transition-all ${
                       form.contactPreference === pref
-                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                        ? 'bg-[#010c1c] border-[#010c1c] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#010c1c]'
                     }`}
                   >
                     {pref === 'text' ? 'Text Message' : 'Email'}
@@ -339,7 +339,7 @@ function CommercialEstimateForm() {
                   value={form.contactValue}
                   onChange={(e) => setForm({ ...form, contactValue: e.target.value })}
                   placeholder="(305) 000-0000"
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               ) : (
                 <input
@@ -348,14 +348,14 @@ function CommercialEstimateForm() {
                   value={form.contactValue}
                   onChange={(e) => setForm({ ...form, contactValue: e.target.value })}
                   placeholder="you@company.com"
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               )}
             </div>
 
             {/* Description */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Job Description <span className="text-gray-400 font-normal">(optional)</span>
               </label>
               <textarea
@@ -363,14 +363,14 @@ function CommercialEstimateForm() {
                 onChange={(e) => setForm({ ...form, description: e.target.value })}
                 placeholder="Type of materials, access notes, job site details, recurring needs, etc."
                 rows={3}
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white resize-none"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white resize-none"
               />
             </div>
 
             {/* Date & time */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+                <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                   Preferred Date <span className="text-gray-400 font-normal">(optional)</span>
                 </label>
                 <input
@@ -378,17 +378,17 @@ function CommercialEstimateForm() {
                   value={form.preferredDate}
                   min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+                <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                   Preferred Time <span className="text-gray-400 font-normal">(optional)</span>
                 </label>
                 <select
                   value={form.preferredTime}
                   onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 >
                   <option value="">Any time</option>
                   <option value="early-morning">Early morning (6am – 9am)</option>
@@ -400,7 +400,7 @@ function CommercialEstimateForm() {
 
             {/* Photos */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Job Site Photos <span className="text-gray-400 font-normal">(optional, up to {MAX_PHOTOS})</span>
               </label>
               <div
@@ -409,7 +409,7 @@ function CommercialEstimateForm() {
                 onDrop={handleDrop}
                 onClick={() => fileInputRef.current?.click()}
                 className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${
-                  dragging ? 'border-[#F5A623] bg-amber-50' : 'border-gray-300 hover:border-[#0B1E3D] bg-white'
+                  dragging ? 'border-[#F5A623] bg-amber-50' : 'border-gray-300 hover:border-[#010c1c] bg-white'
                 } ${photos.length >= MAX_PHOTOS ? 'opacity-50 pointer-events-none' : ''}`}
               >
                 <svg className="w-10 h-10 text-gray-400 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -456,7 +456,7 @@ function CommercialEstimateForm() {
             <button
               type="submit"
               disabled={submitting || !form.propertyType}
-              className="w-full bg-[#F5A623] text-[#0B1E3D] font-bold text-lg py-4 rounded hover:bg-[#d48e10] transition-all hover:scale-[1.01] active:scale-[0.99] shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="w-full bg-[#F5A623] text-[#010c1c] font-bold text-lg py-4 rounded hover:bg-[#d48e10] transition-all hover:scale-[1.01] active:scale-[0.99] shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
               {submitting ? 'Uploading...' : 'Send Commercial Quote Request'}
             </button>

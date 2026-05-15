@@ -30,7 +30,7 @@ export default function SocialProof() {
   return (
     <section className="py-20 bg-white">
       {/* Stats bar */}
-      <div className="bg-[#0B1E3D] py-12 mb-16">
+      <div className="bg-[#010c1c] py-12 mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
@@ -49,7 +49,7 @@ export default function SocialProof() {
           <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
             What People Say
           </p>
-          <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+          <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
             TRUSTED BY SOUTH FLORIDA.
           </h2>
         </div>
@@ -58,7 +58,7 @@ export default function SocialProof() {
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-[#F5F7FA] rounded-2xl p-6 border border-gray-200 hover:border-[#0B1E3D] transition-colors hover:shadow-md"
+              className="bg-[#F5F7FA] rounded-2xl p-6 border border-gray-200 hover:border-[#010c1c] transition-colors hover:shadow-md"
             >
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -74,13 +74,13 @@ export default function SocialProof() {
               </blockquote>
 
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-[#0B1E3D] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#010c1c] flex items-center justify-center">
                   <span className="text-[#F5A623] font-display text-base">
                     {t.name.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-[#0B1E3D] text-sm">{t.name}</p>
+                  <p className="font-semibold text-[#010c1c] text-sm">{t.name}</p>
                   <p className="text-gray-400 text-xs">{t.location}</p>
                 </div>
               </div>

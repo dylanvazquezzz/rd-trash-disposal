@@ -298,7 +298,7 @@ export default function CityPage({
             className="object-cover object-[center_65%]"
             priority
           />
-          <div className="absolute inset-0 bg-[#0B1E3D]/70" />
+          <div className="absolute inset-0 bg-[#010c1c]/70" />
           <div className="relative z-10 max-w-4xl mx-auto text-center">
             <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
               {data.county} County
@@ -310,7 +310,7 @@ export default function CityPage({
               {data.blurb} Licensed &amp; insured. Free estimates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PhoneLink phone={data.phone} display={data.phoneFormatted} source="city_hero" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-400 transition-all hover:scale-105">
+              <PhoneLink phone={data.phone} display={data.phoneFormatted} source="city_hero" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-400 transition-all hover:scale-105">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -318,7 +318,7 @@ export default function CityPage({
               </PhoneLink>
               <a
                 href="/estimate"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-[#0B1E3D] transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-[#010c1c] transition-all"
               >
                 Get Instant Estimate
               </a>
@@ -334,7 +334,7 @@ export default function CityPage({
                 <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
                   Serving {data.name}
                 </p>
-                <h2 className="font-display text-[#0B1E3D] text-4xl sm:text-5xl mb-6">
+                <h2 className="font-display text-[#010c1c] text-4xl sm:text-5xl mb-6">
                   YOUR LOCAL HAULING CREW.
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">
@@ -348,12 +348,12 @@ export default function CityPage({
                 <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
                   What We Haul
                 </p>
-                <h3 className="font-display text-[#0B1E3D] text-3xl mb-5">
+                <h3 className="font-display text-[#010c1c] text-3xl mb-5">
                   WE TAKE IT ALL.
                 </h3>
                 <ul className="grid grid-cols-2 gap-x-4 gap-y-3 mb-6">
                   {services.map((service) => (
-                    <li key={service} className="flex items-center gap-2 text-sm text-[#0B1E3D]">
+                    <li key={service} className="flex items-center gap-2 text-sm text-[#010c1c]">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#F5A623] flex-shrink-0" />
                       {service}
                     </li>
@@ -377,7 +377,7 @@ export default function CityPage({
               <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
                 Customer Reviews
               </p>
-              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+              <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
                 WHAT OUR CUSTOMERS SAY.
               </h2>
             </div>
@@ -409,7 +409,7 @@ export default function CityPage({
                   </div>
                   <p className="text-gray-600 leading-relaxed text-sm flex-1">&ldquo;{quote}&rdquo;</p>
                   <div>
-                    <p className="font-semibold text-[#0B1E3D] text-sm">{name}</p>
+                    <p className="font-semibold text-[#010c1c] text-sm">{name}</p>
                     <p className="text-gray-400 text-xs">{location}</p>
                   </div>
                 </div>
@@ -442,7 +442,7 @@ export default function CityPage({
               <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
                 Our Coverage Area
               </p>
-              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl mb-4">
+              <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl mb-4">
                 NEIGHBORHOODS WE SERVE.
               </h2>
               <p className="text-gray-500 text-base max-w-2xl mx-auto">
@@ -454,7 +454,7 @@ export default function CityPage({
               {data.neighborhoods.map((n) => (
                 <span
                   key={n}
-                  className="bg-white text-[#0B1E3D] text-sm font-medium px-4 py-2 rounded-full border border-gray-200 shadow-sm"
+                  className="bg-white text-[#010c1c] text-sm font-medium px-4 py-2 rounded-full border border-gray-200 shadow-sm"
                 >
                   {n}
                 </span>
@@ -475,7 +475,7 @@ export default function CityPage({
                 { label: 'Instant Estimates', sub: 'No hidden fees' },
               ].map((item) => (
                 <div key={item.label} className="text-center">
-                  <p className="font-display text-[#0B1E3D] text-2xl">{item.label.toUpperCase()}</p>
+                  <p className="font-display text-[#010c1c] text-2xl">{item.label.toUpperCase()}</p>
                   <p className="text-gray-400 text-sm mt-1">{item.sub}</p>
                 </div>
               ))}
@@ -490,7 +490,7 @@ export default function CityPage({
               <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
                 Why Choose Us
               </p>
-              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+              <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
                 WHY R&amp;D.
               </h2>
             </div>
@@ -518,7 +518,7 @@ export default function CityPage({
                     <div className="w-3 h-3 rounded-full bg-[#F5A623]" />
                   </div>
                   <div>
-                    <h3 className="font-display text-[#0B1E3D] text-xl mb-2">{title.toUpperCase()}</h3>
+                    <h3 className="font-display text-[#010c1c] text-xl mb-2">{title.toUpperCase()}</h3>
                     <p className="text-gray-600 leading-relaxed text-sm">{body}</p>
                   </div>
                 </div>
@@ -532,7 +532,7 @@ export default function CityPage({
           <div className="max-w-3xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-10">
               <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">Common Questions</p>
-              <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">FAQ.</h2>
+              <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">FAQ.</h2>
             </div>
             <div className="divide-y divide-gray-100">
               {[
@@ -554,7 +554,7 @@ export default function CityPage({
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="py-6">
-                  <h3 className="font-semibold text-[#0B1E3D] text-lg mb-2">{q}</h3>
+                  <h3 className="font-semibold text-[#010c1c] text-lg mb-2">{q}</h3>
                   <p className="text-gray-600 leading-relaxed">{a}</p>
                 </div>
               ))}
@@ -563,7 +563,7 @@ export default function CityPage({
         </section>
 
         {/* CTA */}
-        <section className="py-16 bg-[#0B1E3D]">
+        <section className="py-16 bg-[#010c1c]">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <h2 className="font-display text-white text-5xl mb-4">
               READY TO CLEAR IT OUT?
@@ -572,12 +572,12 @@ export default function CityPage({
               Call us or fill out the estimate form. We serve {data.name} and all surrounding areas in {data.county} County.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <PhoneLink phone={data.phone} display={data.phoneFormatted} source="city_cta" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-8 py-4 rounded-lg hover:bg-amber-400 transition-all hover:scale-105">
+              <PhoneLink phone={data.phone} display={data.phoneFormatted} source="city_cta" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold px-8 py-4 rounded-lg hover:bg-amber-400 transition-all hover:scale-105">
                 Call {data.phoneFormatted}
               </PhoneLink>
               <a
                 href="/estimate"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#0B1E3D] transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#010c1c] transition-all"
               >
                 Request Estimate Online
               </a>

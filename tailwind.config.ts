@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#0B1E3D',
-          light: '#1a3560',
-          dark: '#060f1e',
+          DEFAULT: '#010c1c',
+          light: '#0a1e3a',
+          dark: '#000810',
         },
         amber: {
           DEFAULT: '#F5A623',

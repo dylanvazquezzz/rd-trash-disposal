@@ -42,7 +42,7 @@ export default function WhatWeTake() {
           <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
             No Limits
           </p>
-          <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+          <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
             WE TAKE EVERYTHING.
           </h2>
           <p className="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
@@ -55,11 +55,11 @@ export default function WhatWeTake() {
           {categories.map((cat) => (
             <div
               key={cat.category}
-              className="group rounded-xl border border-gray-200 p-6 hover:border-[#0B1E3D] hover:shadow-md transition-all"
+              className="group rounded-xl border border-gray-200 p-6 hover:border-[#010c1c] hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">{cat.icon}</span>
-                <h3 className="font-display text-[#0B1E3D] text-2xl group-hover:text-[#F5A623] transition-colors">
+                <h3 className="font-display text-[#010c1c] text-2xl group-hover:text-[#F5A623] transition-colors">
                   {cat.category.toUpperCase()}
                 </h3>
               </div>
@@ -86,7 +86,7 @@ export default function WhatWeTake() {
         </div>
 
         {/* Not sure? Banner */}
-        <div className="mt-12 bg-[#0B1E3D] rounded-2xl p-8 text-center">
+        <div className="mt-12 bg-[#010c1c] rounded-2xl p-8 text-center">
           <h3 className="font-display text-white text-3xl sm:text-4xl mb-2">
             NOT SURE IF WE TAKE IT?
           </h3>
@@ -94,7 +94,7 @@ export default function WhatWeTake() {
             Just ask. If it&apos;s not hazardous waste, we can almost certainly haul it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <PhoneLink source="what_we_take" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold px-6 py-3 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105">
+            <PhoneLink source="what_we_take" className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold px-6 py-3 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105">
               Call 786-408-3783
             </PhoneLink>
           </div>

@@ -4,17 +4,18 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer id="contact" className="bg-[#060f1e] text-white">
+    <footer id="contact" className="bg-[#000810] text-white">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-[#F5A623] rounded flex items-center justify-center">
-                <span className="font-display text-[#0B1E3D] text-sm font-bold">R&D</span>
-              </div>
-              <span className="font-display text-2xl tracking-wide text-white">TRASH DISPOSAL</span>
+            <div className="mb-4">
+              <img
+                src="/logo-dark.jpeg"
+                alt="R&D Trash Disposal logo"
+                className="h-24 w-auto rounded-lg"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs mb-6">
               South Florida&apos;s local junk removal and demolition team. Same-day service, upfront pricing, no hassle.

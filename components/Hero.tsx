@@ -21,15 +21,15 @@ export default function Hero() {
           quality={90}
         />
         {/* Dark navy overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#060f1e]/90 via-[#0B1E3D]/80 to-[#0B1E3D]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#000810]/90 via-[#010c1c]/80 to-[#010c1c]/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
         <div className="max-w-3xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-[#F5A623] text-[#0B1E3D] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded mb-6 animate-fade-in">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0B1E3D] animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#F5A623] text-[#010c1c] text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded mb-6 animate-fade-in">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#010c1c] animate-pulse" />
             South Florida — Same Day Available
           </div>
 
@@ -50,7 +50,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 animate-fade-up delay-300">
             <a
               href="/estimate"
-              className="group inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#0B1E3D] font-bold text-base px-8 py-4 rounded shadow-xl hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95"
+              className="group inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold text-base px-8 py-4 rounded shadow-xl hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95"
             >
               Get Your Instant Estimate
               <svg

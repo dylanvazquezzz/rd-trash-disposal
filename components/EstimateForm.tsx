@@ -83,7 +83,7 @@ export default function EstimateForm() {
   }
 
   return (
-    <section id="estimate" className="py-20 bg-[#0B1E3D]">
+    <section id="estimate" className="py-20 bg-[#010c1c]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-10">
@@ -124,7 +124,7 @@ export default function EstimateForm() {
             {/* STEP 1: Service type */}
             {step === 'service' && (
               <div>
-                <h3 className="font-display text-[#0B1E3D] text-2xl mb-6">
+                <h3 className="font-display text-[#010c1c] text-2xl mb-6">
                   WHAT DO YOU NEED?
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
@@ -155,10 +155,10 @@ export default function EstimateForm() {
                       href={opt.id === 'demo' ? '/estimate?service=demolition' : '/estimate'}
                       className="group border-2 border-gray-200 rounded-xl p-6 text-left hover:border-[#F5A623] hover:shadow-md transition-all"
                     >
-                      <div className="text-[#0B1E3D] group-hover:text-[#F5A623] transition-colors mb-3">
+                      <div className="text-[#010c1c] group-hover:text-[#F5A623] transition-colors mb-3">
                         {opt.icon}
                       </div>
-                      <p className="font-display text-[#0B1E3D] text-xl">{opt.label.toUpperCase()}</p>
+                      <p className="font-display text-[#010c1c] text-xl">{opt.label.toUpperCase()}</p>
                       <p className="text-gray-500 text-sm mt-1">{opt.desc}</p>
                     </a>
                   ))}
@@ -175,7 +175,7 @@ export default function EstimateForm() {
                 >
                   ← Back
                 </button>
-                <h3 className="font-display text-[#0B1E3D] text-2xl mb-2">
+                <h3 className="font-display text-[#010c1c] text-2xl mb-2">
                   HOW MUCH DO YOU HAVE?
                 </h3>
                 <p className="text-gray-500 text-sm mb-6">Rough estimate is fine — we&apos;ll confirm on-site.</p>
@@ -187,13 +187,13 @@ export default function EstimateForm() {
                         setLoadSize(opt.id)
                         setStep('items')
                       }}
-                      className="group border-2 border-gray-200 rounded-xl p-4 text-left hover:border-[#0B1E3D] hover:shadow-md transition-all"
+                      className="group border-2 border-gray-200 rounded-xl p-4 text-left hover:border-[#010c1c] hover:shadow-md transition-all"
                     >
                       <p className={`text-[#F5A623] font-bold mb-2 ${opt.scale}`}>{opt.visual}</p>
-                      <p className="font-semibold text-[#0B1E3D] text-base">{opt.label}</p>
+                      <p className="font-semibold text-[#010c1c] text-base">{opt.label}</p>
                       <p className="text-gray-400 text-xs mt-0.5">{opt.sub}</p>
                       {PRICING[opt.id!][service ?? 'junk'] && (
-                        <p className="text-[#0B1E3D] font-bold text-sm mt-2">
+                        <p className="text-[#010c1c] font-bold text-sm mt-2">
                           {PRICING[opt.id!][service ?? 'junk']}
                         </p>
                       )}
@@ -212,7 +212,7 @@ export default function EstimateForm() {
                 >
                   ← Back
                 </button>
-                <h3 className="font-display text-[#0B1E3D] text-2xl mb-2">
+                <h3 className="font-display text-[#010c1c] text-2xl mb-2">
                   ANY SPECIAL ITEMS?
                 </h3>
                 <p className="text-gray-500 text-sm mb-6">Some items have extra disposal fees. Select all that apply.</p>
@@ -222,7 +222,7 @@ export default function EstimateForm() {
                       key={item.id}
                       className={`flex items-center justify-between p-4 rounded-xl border-2 cursor-pointer transition-all ${
                         extras.includes(item.id)
-                          ? 'border-[#0B1E3D] bg-[#0B1E3D]/5'
+                          ? 'border-[#010c1c] bg-[#010c1c]/5'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                     >
@@ -230,7 +230,7 @@ export default function EstimateForm() {
                         <div
                           className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                             extras.includes(item.id)
-                              ? 'bg-[#0B1E3D] border-[#0B1E3D]'
+                              ? 'bg-[#010c1c] border-[#010c1c]'
                               : 'border-gray-300'
                           }`}
                         >
@@ -240,7 +240,7 @@ export default function EstimateForm() {
                             </svg>
                           )}
                         </div>
-                        <span className="text-sm font-medium text-[#0B1E3D]">{item.label}</span>
+                        <span className="text-sm font-medium text-[#010c1c]">{item.label}</span>
                       </div>
                       <span className="text-xs text-gray-500 font-semibold">{item.surcharge}</span>
                       <input
@@ -254,7 +254,7 @@ export default function EstimateForm() {
                 </div>
                 <button
                   onClick={() => setStep('info')}
-                  className="w-full bg-[#0B1E3D] text-white font-semibold py-3 rounded-xl hover:bg-[#1a3560] transition-all"
+                  className="w-full bg-[#010c1c] text-white font-semibold py-3 rounded-xl hover:bg-[#0a1e3a] transition-all"
                 >
                   Continue
                 </button>
@@ -271,7 +271,7 @@ export default function EstimateForm() {
                 >
                   ← Back
                 </button>
-                <h3 className="font-display text-[#0B1E3D] text-2xl mb-6">
+                <h3 className="font-display text-[#010c1c] text-2xl mb-6">
                   WHERE DO WE REACH YOU?
                 </h3>
 
@@ -279,7 +279,7 @@ export default function EstimateForm() {
                 {loadSize && (
                   <div className="bg-[#F5F7FA] rounded-xl p-4 mb-6 border border-gray-200">
                     <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Estimated Price</p>
-                    <p className="font-display text-[#0B1E3D] text-3xl">
+                    <p className="font-display text-[#010c1c] text-3xl">
                       {hasCallForQuote ? 'Call for Quote' : priceRange}
                     </p>
                     {!hasCallForQuote && (
@@ -297,7 +297,7 @@ export default function EstimateForm() {
                         required
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#0B1E3D] focus:ring-1 focus:ring-[#0B1E3D]"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#010c1c] focus:ring-1 focus:ring-[#010c1c]"
                         placeholder="John Smith"
                       />
                     </div>
@@ -308,7 +308,7 @@ export default function EstimateForm() {
                         required
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#0B1E3D] focus:ring-1 focus:ring-[#0B1E3D]"
+                        className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#010c1c] focus:ring-1 focus:ring-[#010c1c]"
                         placeholder="305-000-0000"
                       />
                     </div>
@@ -320,7 +320,7 @@ export default function EstimateForm() {
                       required
                       value={form.zip}
                       onChange={(e) => setForm({ ...form, zip: e.target.value })}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#0B1E3D] focus:ring-1 focus:ring-[#0B1E3D]"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#010c1c] focus:ring-1 focus:ring-[#010c1c]"
                       placeholder="Miami or 33101"
                     />
                   </div>
@@ -330,13 +330,13 @@ export default function EstimateForm() {
                       rows={3}
                       value={form.notes}
                       onChange={(e) => setForm({ ...form, notes: e.target.value })}
-                      className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#0B1E3D] focus:ring-1 focus:ring-[#0B1E3D] resize-none"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[#010c1c] focus:ring-1 focus:ring-[#010c1c] resize-none"
                       placeholder="Describe what needs to be removed, access notes, etc."
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[#F5A623] text-[#0B1E3D] font-bold py-4 rounded-xl hover:bg-[#d48e10] transition-all hover:scale-[1.02] active:scale-[0.98] text-base shadow-lg"
+                    className="w-full bg-[#F5A623] text-[#010c1c] font-bold py-4 rounded-xl hover:bg-[#d48e10] transition-all hover:scale-[1.02] active:scale-[0.98] text-base shadow-lg"
                   >
                     Get My Instant Estimate
                   </button>
@@ -355,24 +355,24 @@ export default function EstimateForm() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-display text-[#0B1E3D] text-3xl mb-2">
+                <h3 className="font-display text-[#010c1c] text-3xl mb-2">
                   REQUEST RECEIVED!
                 </h3>
                 <p className="text-gray-500 mb-2">
                   Thanks, {form.name}. We&apos;ll call{' '}
-                  <span className="font-semibold text-[#0B1E3D]">{form.phone}</span> shortly to confirm your pickup.
+                  <span className="font-semibold text-[#010c1c]">{form.phone}</span> shortly to confirm your pickup.
                 </p>
                 {loadSize && !hasCallForQuote && (
                   <div className="mt-4 bg-[#F5F7FA] rounded-xl p-4 border border-gray-100 inline-block">
                     <p className="text-xs text-gray-500 uppercase tracking-wide">Estimated Range</p>
-                    <p className="font-display text-[#0B1E3D] text-4xl mt-1">{priceRange}</p>
+                    <p className="font-display text-[#010c1c] text-4xl mt-1">{priceRange}</p>
                   </div>
                 )}
                 <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                   <a
                     href="tel:7864083783"
                     onClick={() => fireEvent('phone_call_click', { source: 'estimate_form', page_path: window.location.pathname })}
-                    className="inline-flex items-center justify-center gap-2 bg-[#0B1E3D] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#1a3560] transition-all"
+                    className="inline-flex items-center justify-center gap-2 bg-[#010c1c] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#0a1e3a] transition-all"
                   >
                     Call Us Now — 786-408-3783
                   </a>

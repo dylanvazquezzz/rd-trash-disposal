@@ -39,7 +39,7 @@ export default function Services() {
         'Full room gut-outs',
       ],
       cta: 'Get Demolition Quote',
-      accent: '#0B1E3D',
+      accent: '#010c1c',
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -56,7 +56,7 @@ export default function Services() {
           <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
             What We Do
           </p>
-          <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+          <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
             TWO SERVICES. ONE CALL.
           </h2>
           <p className="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
@@ -72,19 +72,19 @@ export default function Services() {
               className={`rounded-2xl border-2 overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${
                 idx === 0
                   ? 'border-[#F5A623]'
-                  : 'border-[#0B1E3D]'
+                  : 'border-[#010c1c]'
               }`}
             >
               {/* Card header */}
               <div
                 className={`px-4 py-4 md:px-8 md:py-6 ${
-                  idx === 0 ? 'bg-[#F5A623]' : 'bg-[#0B1E3D]'
+                  idx === 0 ? 'bg-[#F5A623]' : 'bg-[#010c1c]'
                 }`}
               >
                 <div
                   className={`w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3 ${
                     idx === 0
-                      ? 'bg-[#0B1E3D] text-[#F5A623]'
+                      ? 'bg-[#010c1c] text-[#F5A623]'
                       : 'bg-white/10 text-white'
                   }`}
                 >
@@ -92,14 +92,14 @@ export default function Services() {
                 </div>
                 <h3
                   className={`font-display text-2xl md:text-4xl ${
-                    idx === 0 ? 'text-[#0B1E3D]' : 'text-white'
+                    idx === 0 ? 'text-[#010c1c]' : 'text-white'
                   }`}
                 >
                   {service.title.toUpperCase()}
                 </h3>
                 <p
                   className={`text-xs md:text-sm font-semibold mt-1 ${
-                    idx === 0 ? 'text-[#0B1E3D]/70' : 'text-white/70'
+                    idx === 0 ? 'text-[#010c1c]/70' : 'text-white/70'
                   }`}
                 >
                   {service.subtitle}
@@ -128,8 +128,8 @@ export default function Services() {
                   href={idx === 0 ? '/estimate' : '/estimate?service=demolition'}
                   className={`inline-flex items-center gap-1.5 font-semibold text-xs md:text-sm px-3 py-2 md:px-6 md:py-3 rounded transition-all hover:scale-105 active:scale-95 ${
                     idx === 0
-                      ? 'bg-[#F5A623] text-[#0B1E3D] hover:bg-[#d48e10]'
-                      : 'bg-[#0B1E3D] text-white hover:bg-[#1a3560]'
+                      ? 'bg-[#F5A623] text-[#010c1c] hover:bg-[#d48e10]'
+                      : 'bg-[#010c1c] text-white hover:bg-[#0a1e3a]'
                   }`}
                 >
                   {service.cta}

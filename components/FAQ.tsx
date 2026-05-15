@@ -67,7 +67,7 @@ export default function FAQ() {
           <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">
             FAQ
           </p>
-          <h2 className="font-display text-[#0B1E3D] text-5xl sm:text-6xl">
+          <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
             COMMON QUESTIONS.
           </h2>
         </div>
@@ -80,7 +80,7 @@ export default function FAQ() {
                 className="w-full flex items-center justify-between py-5 text-left gap-4"
                 aria-expanded={open === idx}
               >
-                <span className="font-semibold text-[#0B1E3D] text-base leading-snug">
+                <span className="font-semibold text-[#010c1c] text-base leading-snug">
                   {faq.question}
                 </span>
                 <span className="flex-shrink-0">

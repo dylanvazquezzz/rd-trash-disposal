@@ -159,7 +159,7 @@ function EstimateForm() {
           {/* Header */}
           <div className="mb-10">
             <p className="text-[#F5A623] font-semibold text-sm uppercase tracking-widest mb-2">Free Quote</p>
-            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#0B1E3D] mb-4">
+            <h1 className="font-display text-4xl md:text-5xl font-bold text-[#010c1c] mb-4">
               Get Your Estimate
             </h1>
             <p className="text-gray-600 text-lg">
@@ -171,7 +171,7 @@ function EstimateForm() {
 
             {/* Name */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Your Name <span className="text-[#F5A623]">*</span>
               </label>
               <input
@@ -180,13 +180,13 @@ function EstimateForm() {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 placeholder="First and last name"
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
               />
             </div>
 
             {/* City or ZIP Code */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 City or ZIP Code <span className="text-[#F5A623]">*</span>
               </label>
               <input
@@ -195,13 +195,13 @@ function EstimateForm() {
                 value={form.city}
                 onChange={(e) => setForm({ ...form, city: e.target.value })}
                 placeholder="e.g. Miami or 33101"
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
               />
             </div>
 
             {/* Contact preference */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-3">
                 How should we send your quote? <span className="text-[#F5A623]">*</span>
               </label>
               <div className="flex gap-3 mb-4">
@@ -212,8 +212,8 @@ function EstimateForm() {
                     onClick={() => setForm({ ...form, contactPreference: pref, contactValue: '' })}
                     className={`flex-1 py-3 rounded font-semibold text-sm border-2 transition-all ${
                       form.contactPreference === pref
-                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                        ? 'bg-[#010c1c] border-[#010c1c] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#010c1c]'
                     }`}
                   >
                     {pref === 'text' ? 'Text Message' : 'Email'}
@@ -228,7 +228,7 @@ function EstimateForm() {
                   value={form.contactValue}
                   onChange={(e) => setForm({ ...form, contactValue: e.target.value })}
                   placeholder="(305) 000-0000"
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               ) : (
                 <input
@@ -237,14 +237,14 @@ function EstimateForm() {
                   value={form.contactValue}
                   onChange={(e) => setForm({ ...form, contactValue: e.target.value })}
                   placeholder="you@example.com"
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               )}
             </div>
 
             {/* Service type */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-3">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-3">
                 What service do you need? <span className="text-[#F5A623]">*</span>
               </label>
               <div className="flex gap-3">
@@ -258,8 +258,8 @@ function EstimateForm() {
                     onClick={() => setForm({ ...form, serviceType: value })}
                     className={`flex-1 py-3 rounded font-semibold text-sm border-2 transition-all ${
                       form.serviceType === value
-                        ? 'bg-[#0B1E3D] border-[#0B1E3D] text-white'
-                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#0B1E3D]'
+                        ? 'bg-[#010c1c] border-[#010c1c] text-white'
+                        : 'bg-white border-gray-300 text-gray-600 hover:border-[#010c1c]'
                     }`}
                   >
                     {label}
@@ -270,7 +270,7 @@ function EstimateForm() {
 
             {/* Description */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Description <span className="text-gray-400 font-normal">(optional)</span>
               </label>
               <textarea
@@ -278,14 +278,14 @@ function EstimateForm() {
                 onChange={(e) => setForm({ ...form, description: e.target.value })}
                 placeholder="Anything helpful — location, access, amount of items, etc."
                 rows={3}
-                className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white resize-none"
+                className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white resize-none"
               />
             </div>
 
             {/* Preferred date & time */}
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+                <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                   Preferred Date <span className="text-gray-400 font-normal">(optional)</span>
                 </label>
                 <input
@@ -293,17 +293,17 @@ function EstimateForm() {
                   value={form.preferredDate}
                   min={new Date().toISOString().split('T')[0]}
                   onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+                <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                   Preferred Time <span className="text-gray-400 font-normal">(optional)</span>
                 </label>
                 <select
                   value={form.preferredTime}
                   onChange={(e) => setForm({ ...form, preferredTime: e.target.value })}
-                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#0B1E3D] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
+                  className="w-full border border-gray-300 rounded px-4 py-3 text-[#010c1c] focus:outline-none focus:ring-2 focus:ring-[#F5A623] focus:border-transparent bg-white"
                 >
                   <option value="">Any time</option>
                   <option value="morning">Morning (7am – 12pm)</option>
@@ -315,7 +315,7 @@ function EstimateForm() {
 
             {/* Photo upload */}
             <div>
-              <label className="block text-sm font-semibold text-[#0B1E3D] mb-2">
+              <label className="block text-sm font-semibold text-[#010c1c] mb-2">
                 Photos <span className="text-gray-400 font-normal">(optional, up to {MAX_PHOTOS}, 40MB each)</span>
               </label>
 
@@ -327,7 +327,7 @@ function EstimateForm() {
                 className={`border-2 border-dashed rounded-lg p-8 text-center cursor-pointer transition-all ${
                   dragging
                     ? 'border-[#F5A623] bg-amber-50'
-                    : 'border-gray-300 hover:border-[#0B1E3D] bg-white'
+                    : 'border-gray-300 hover:border-[#010c1c] bg-white'
                 } ${photos.length >= MAX_PHOTOS ? 'opacity-50 pointer-events-none' : ''}`}
               >
                 <svg className="w-10 h-10 text-gray-400 mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -377,7 +377,7 @@ function EstimateForm() {
             <button
               type="submit"
               disabled={submitting}
-              className="w-full bg-[#F5A623] text-[#0B1E3D] font-bold text-lg py-4 rounded hover:bg-[#d48e10] transition-all hover:scale-[1.01] active:scale-[0.99] shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="w-full bg-[#F5A623] text-[#010c1c] font-bold text-lg py-4 rounded hover:bg-[#d48e10] transition-all hover:scale-[1.01] active:scale-[0.99] shadow-md disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
               {submitting ? 'Uploading...' : 'Send for Quote'}
             </button>
