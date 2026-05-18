@@ -10,9 +10,10 @@ const trackCall = () => {
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const pathname = usePathname()
   const isHome = pathname === '/'
-  const isCommercial = pathname.startsWith('/commercial')
+  const isCommercial = pathname.startsWith('/commercial') || pathname === '/dumpster-rental'
   const navHref = (anchor: string) => isHome ? anchor : `/${anchor}`
   const estimateHref = isCommercial ? '/commercial/estimate' : '/estimate'
 
@@ -21,7 +22,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center group md:-ml-8">
+          <a href={isCommercial ? '/commercial' : '/'} className="flex items-center group md:-ml-8">
             <img
               src="/logo-nav.png"
               alt="R&D Trash Disposal logo"
@@ -31,23 +32,85 @@ export default function Nav() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {['Services', 'How It Works', 'What We Take', 'Contact'].map(
-              (item) => (
+            {isCommercial ? (
+              <>
+                {/* Services dropdown */}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setDropdownOpen(true)}
+                  onMouseLeave={() => setDropdownOpen(false)}
+                >
+                  <button className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623] flex items-center gap-1">
+                    Services
+                    <svg className="w-3.5 h-3.5 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {dropdownOpen && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-52">
+                      <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+                        <a
+                          href="/commercial/junk-removal"
+                          className="block px-4 py-3 text-sm text-[#010c1c] hover:bg-gray-50 hover:text-[#F5A623] transition-colors"
+                        >
+                          Commercial Junk Removal
+                        </a>
+                        <a
+                          href="/dumpster-rental"
+                          className="block px-4 py-3 text-sm text-[#010c1c] hover:bg-gray-50 hover:text-[#F5A623] transition-colors border-t border-gray-50"
+                        >
+                          Dumpster Rental
+                        </a>
+                        <a
+                          href="/demolition/miami"
+                          className="block px-4 py-3 text-sm text-[#010c1c] hover:bg-gray-50 hover:text-[#F5A623] transition-colors border-t border-gray-50"
+                        >
+                          Demolition
+                        </a>
+                      </div>
+                    </div>
+                  )}
+                </div>
                 <a
-                  key={item}
-                  href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
+                  href="/commercial#how-it-works"
                   className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
                 >
-                  {item}
+                  How It Works
                 </a>
-              )
+                <a
+                  href="/commercial#reviews"
+                  className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
+                >
+                  Reviews
+                </a>
+                <a
+                  href="/about"
+                  className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
+                >
+                  About
+                </a>
+              </>
+            ) : (
+              <>
+                {['Services', 'How It Works', 'What We Take', 'Contact'].map(
+                  (item) => (
+                    <a
+                      key={item}
+                      href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
+                      className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
+                <a
+                  href="/about"
+                  className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
+                >
+                  About
+                </a>
+              </>
             )}
-            <a
-              href="/about"
-              className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
-            >
-              About
-            </a>
           </nav>
 
           {/* Phone + CTA */}
@@ -61,9 +124,9 @@ export default function Nav() {
             </a>
             <a
               href={estimateHref}
-              className="bg-[#F5A623] text-[#010c1c] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
+              className="bg-[#F5A623] text-[#010c1c] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-sm"
             >
-              Instant Estimate
+              Instant Quote
             </a>
           </div>
 
@@ -97,25 +160,75 @@ export default function Nav() {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="px-4 py-4 flex flex-col gap-4">
-            {['Services', 'How It Works', 'What We Take', 'Contact'].map(
-              (item) => (
+            {isCommercial ? (
+              <>
+                <p className="text-[#010c1c]/40 font-bold text-xs uppercase tracking-widest pt-1">Services</p>
                 <a
-                  key={item}
-                  href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
+                  href="/commercial/junk-removal"
+                  className="text-[#010c1c] font-medium text-base py-1 pl-3 border-b border-gray-50"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Commercial Junk Removal
+                </a>
+                <a
+                  href="/dumpster-rental"
+                  className="text-[#010c1c] font-medium text-base py-1 pl-3 border-b border-gray-50"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Dumpster Rental
+                </a>
+                <a
+                  href="/demolition/miami"
+                  className="text-[#010c1c] font-medium text-base py-1 pl-3 border-b border-gray-100"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Demolition
+                </a>
+                <a
+                  href="/commercial#how-it-works"
                   className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
                   onClick={() => setMenuOpen(false)}
                 >
-                  {item}
+                  How It Works
                 </a>
-              )
+                <a
+                  href="/commercial#reviews"
+                  className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Reviews
+                </a>
+                <a
+                  href="/about"
+                  className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  About
+                </a>
+              </>
+            ) : (
+              <>
+                {['Services', 'How It Works', 'What We Take', 'Contact'].map(
+                  (item) => (
+                    <a
+                      key={item}
+                      href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
+                      className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {item}
+                    </a>
+                  )
+                )}
+                <a
+                  href="/about"
+                  className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  About
+                </a>
+              </>
             )}
-            <a
-              href="/about"
-              className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </a>
             <div className="flex flex-col gap-2 pt-2">
               <a
                 href="tel:7864083783"
@@ -126,10 +239,10 @@ export default function Nav() {
               </a>
               <a
                 href={estimateHref}
-                className="mt-1 bg-[#F5A623] text-[#010c1c] font-semibold text-sm px-5 py-3 rounded text-center"
+                className="mt-1 bg-[#F5A623] text-[#010c1c] font-bold text-sm px-5 py-3 rounded-lg text-center hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-sm"
                 onClick={() => setMenuOpen(false)}
               >
-                Get Instant Estimate
+                Instant Quote
               </a>
             </div>
           </div>
