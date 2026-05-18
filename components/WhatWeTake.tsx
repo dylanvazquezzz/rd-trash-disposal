@@ -24,7 +24,7 @@ const categories = [
   {
     category: 'Construction',
     icon: '🏗',
-    items: ['Drywall & plaster', 'Flooring & tile', 'Lumber & wood', 'Concrete (small loads)', 'Roofing debris', 'Demo materials'],
+    items: ['Drywall & plaster', 'Flooring & tile', 'Lumber & wood', 'Concrete', 'Roofing debris', 'Demo materials'],
   },
   {
     category: 'Miscellaneous',
