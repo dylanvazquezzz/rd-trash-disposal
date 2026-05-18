@@ -3,8 +3,7 @@ export default function Services() {
     {
       title: 'Junk Removal',
       subtitle: 'Any item. Any load. Gone same day.',
-      description:
-        'We haul everything — furniture, appliances, mattresses, electronics, yard waste, construction debris, and more. You point, we load. No item too big, no load too heavy.',
+      description: 'We haul everything — furniture, appliances, mattresses, electronics, yard waste, construction debris, and more. You point, we load. No item too big, no load too heavy.',
       items: [
         'Furniture & sofas',
         'Appliances (all types)',
@@ -16,7 +15,13 @@ export default function Services() {
         'Hot tubs & sheds',
       ],
       cta: 'Get Junk Removal Quote',
-      accent: '#F5A623',
+      href: '/estimate',
+      headerBg: 'bg-[#F5A623]',
+      border: 'border-[#F5A623]',
+      iconBg: 'bg-[#010c1c] text-[#F5A623]',
+      titleColor: 'text-[#010c1c]',
+      subtitleColor: 'text-[#010c1c]/70',
+      ctaClass: 'bg-[#F5A623] text-[#010c1c] hover:bg-[#d48e10]',
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -26,8 +31,7 @@ export default function Services() {
     {
       title: 'Demolition Services',
       subtitle: 'Small-scale demolition done right.',
-      description:
-        'Need a kitchen gutted? Bathroom torn down? Old deck removed? We handle small interior and exterior demolition jobs — clean, fast, and fully hauled away when we&apos;re done.',
+      description: "Need a kitchen gutted? Bathroom torn down? Old deck removed? We handle small interior and exterior demolition jobs — clean, fast, and fully hauled away when we're done.",
       items: [
         'Kitchen demolition',
         'Bathroom teardown',
@@ -39,10 +43,44 @@ export default function Services() {
         'Full room gut-outs',
       ],
       cta: 'Get Demolition Quote',
-      accent: '#010c1c',
+      href: '/estimate?service=demolition',
+      headerBg: 'bg-[#010c1c]',
+      border: 'border-[#010c1c]',
+      iconBg: 'bg-white/10 text-white',
+      titleColor: 'text-white',
+      subtitleColor: 'text-white/70',
+      ctaClass: 'bg-[#010c1c] text-white hover:bg-[#0a1e3a]',
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        </svg>
+      ),
+    },
+    {
+      title: 'Commercial Services',
+      subtitle: 'Junk removal, dumpster rental & demo.',
+      description: 'Licensed and insured for South Florida businesses. Commercial junk removal, roll-off dumpster rental (30 & 40 cu yd), and demolition. COI and invoicing available on every job.',
+      items: [
+        'Commercial junk removal',
+        'Roll-off dumpster rental',
+        'Office & warehouse cleanouts',
+        'Construction debris haul-away',
+        'Property management service',
+        'Scrap metal & demo debris',
+        'COI available',
+        'Invoicing on every job',
+      ],
+      cta: 'See Commercial Services',
+      href: '/commercial',
+      headerBg: 'bg-[#1a3a5c]',
+      border: 'border-[#1a3a5c]',
+      iconBg: 'bg-[#F5A623]/20 text-[#F5A623]',
+      titleColor: 'text-white',
+      subtitleColor: 'text-white/70',
+      ctaClass: 'bg-[#1a3a5c] text-white hover:bg-[#0f2540]',
+      icon: (
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16M3 21h18M9 7h1m-1 4h1m4-4h1m-1 4h1M5 21V9a2 2 0 012-2h10a2 2 0 012 2v12" />
         </svg>
       ),
     },
@@ -57,65 +95,41 @@ export default function Services() {
             What We Do
           </p>
           <h2 className="font-display text-[#010c1c] text-5xl sm:text-6xl">
-            TWO SERVICES. ONE CALL.
+            THREE SERVICES. ONE CALL.
           </h2>
           <p className="mt-4 text-gray-500 text-lg max-w-xl mx-auto">
-            Whether you need a single item hauled or a full room demolished and cleared, R&D has you covered.
+            Whether you need a single item hauled, a full room demolished, or a commercial job managed end to end — R&D has you covered.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-2 gap-4 md:gap-8">
-          {services.map((service, idx) => (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+          {services.map((service) => (
             <div
               key={service.title}
-              className={`rounded-2xl border-2 overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${
-                idx === 0
-                  ? 'border-[#F5A623]'
-                  : 'border-[#010c1c]'
-              }`}
+              className={`rounded-2xl border-2 overflow-hidden shadow-lg hover:shadow-xl transition-shadow ${service.border}`}
             >
               {/* Card header */}
-              <div
-                className={`px-4 py-4 md:px-8 md:py-6 ${
-                  idx === 0 ? 'bg-[#F5A623]' : 'bg-[#010c1c]'
-                }`}
-              >
-                <div
-                  className={`w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3 ${
-                    idx === 0
-                      ? 'bg-[#010c1c] text-[#F5A623]'
-                      : 'bg-white/10 text-white'
-                  }`}
-                >
+              <div className={`px-4 py-4 md:px-8 md:py-6 ${service.headerBg}`}>
+                <div className={`w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center mb-3 ${service.iconBg}`}>
                   {service.icon}
                 </div>
-                <h3
-                  className={`font-display text-2xl md:text-4xl ${
-                    idx === 0 ? 'text-[#010c1c]' : 'text-white'
-                  }`}
-                >
+                <h3 className={`font-display text-2xl md:text-3xl ${service.titleColor}`}>
                   {service.title.toUpperCase()}
                 </h3>
-                <p
-                  className={`text-xs md:text-sm font-semibold mt-1 ${
-                    idx === 0 ? 'text-[#010c1c]/70' : 'text-white/70'
-                  }`}
-                >
+                <p className={`text-xs md:text-sm font-semibold mt-1 ${service.subtitleColor}`}>
                   {service.subtitle}
                 </p>
               </div>
 
               {/* Card body */}
               <div className="px-4 py-4 md:px-8 md:py-6 bg-white">
-                <p className="text-gray-600 leading-relaxed mb-4 text-xs md:text-base">
-                  {idx === 0
-                    ? 'We haul everything — furniture, appliances, mattresses, electronics, yard waste, construction debris, and more. You point, we load. No item too big, no load too heavy.'
-                    : 'Need a kitchen gutted? Bathroom torn down? Old deck removed? We handle small interior and exterior demolition jobs — clean, fast, and fully hauled away when we\'re done.'}
+                <p className="text-gray-600 leading-relaxed mb-4 text-xs md:text-sm">
+                  {service.description}
                 </p>
 
                 {/* Item list */}
-                <ul className="grid grid-cols-1 gap-1.5 mb-5 md:grid-cols-2 md:gap-2 md:mb-8">
+                <ul className="grid grid-cols-1 gap-1.5 mb-5 md:gap-2 md:mb-8">
                   {service.items.map((item) => (
                     <li key={item} className="flex items-center gap-1.5 text-xs md:text-sm text-gray-700">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#F5A623] flex-shrink-0" />
@@ -125,12 +139,8 @@ export default function Services() {
                 </ul>
 
                 <a
-                  href={idx === 0 ? '/estimate' : '/estimate?service=demolition'}
-                  className={`inline-flex items-center gap-1.5 font-semibold text-xs md:text-sm px-3 py-2 md:px-6 md:py-3 rounded transition-all hover:scale-105 active:scale-95 ${
-                    idx === 0
-                      ? 'bg-[#F5A623] text-[#010c1c] hover:bg-[#d48e10]'
-                      : 'bg-[#010c1c] text-white hover:bg-[#0a1e3a]'
-                  }`}
+                  href={service.href}
+                  className={`inline-flex items-center gap-1.5 font-semibold text-xs md:text-sm px-3 py-2 md:px-6 md:py-3 rounded transition-all hover:scale-105 active:scale-95 ${service.ctaClass}`}
                 >
                   {service.cta}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
