@@ -6,6 +6,7 @@ import HowItWorks from '@/components/HowItWorks'
 import WhatWeTake from '@/components/WhatWeTake'
 import EstimateForm from '@/components/EstimateForm'
 import SocialProof from '@/components/SocialProof'
+import Reviews from '@/components/Reviews'
 import FAQ from '@/components/FAQ'
 import ServiceAreas from '@/components/ServiceAreas'
 import Footer from '@/components/Footer'
@@ -31,33 +32,44 @@ const localBusinessSchema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: 5,
-    reviewCount: 3,
+    reviewCount: 5,
     bestRating: 5,
   },
   review: [
     {
       '@type': 'Review',
-      author: { '@type': 'Person', name: 'Carlos M.' },
+      author: { '@type': 'Person', name: 'Ryan Gallor' },
       reviewBody:
-        'Called at 9am and they were at my house by noon. Took a couch, two mattresses, and a ton of yard waste. Guys were professional and the price was fair.',
+        'Had them take care of old and damaged furniture and they did an amazing job. Great customer service and professionalism. Highly reccomend if you need any trash removal they are efficient and effective.',
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      locationCreated: { '@type': 'Place', name: 'Hialeah, FL' },
     },
     {
       '@type': 'Review',
-      author: { '@type': 'Person', name: 'Jennifer R.' },
+      author: { '@type': 'Person', name: 'Alice Fields' },
       reviewBody:
-        'We needed a kitchen gutted before our contractor showed up. R&D came in, demo\'d everything, and hauled it all out in one day. Saved us a ton of time.',
+        'I had an amazing experience with these two guys and their junk removal service! They showed up in a big truck, were extremely professional, hardworking, and friendly from start to finish. They worked quickly, handled everything with care, and made the whole process completely stress-free.',
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      locationCreated: { '@type': 'Place', name: 'Kendall, FL' },
     },
     {
       '@type': 'Review',
-      author: { '@type': 'Person', name: 'Mike T.' },
+      author: { '@type': 'Person', name: 'Michelle' },
       reviewBody:
-        'Did a full house cleanout for my mom\'s estate. They were respectful, fast, and came back a second time when there was more than expected. Would hire again.',
+        'I cannot say enough good things about R & D Trash Disposal! They answered the phone immediately, showed up quickly, and got everything taken care of efficiently and professionally. Highly recommend them to anyone needing junk removal or trash disposal services.',
       reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
-      locationCreated: { '@type': 'Place', name: 'Hollywood, FL' },
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Amelia Navarro' },
+      reviewBody:
+        'I was in the middle of moving and my backyard was a complete disaster. I hired this company to help me out and i was honestly so surprised of how good and quick they did it. They\'re so affordable too i would definitely recommend.',
+      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Rusty Vazquez' },
+      reviewBody:
+        'These two young men did an absolutely outstanding job with the trash pickup! From start to finish, they were hardworking, respectful, and incredibly dependable. They showed up on time, came ready to work, and handled everything quickly and efficiently without cutting corners.',
+      reviewRating: { '@type': 'Rating', ratingValue: 5, bestRating: 5 },
     },
   ],
 }
@@ -77,6 +89,7 @@ export default function Home() {
         <HowItWorks />
         <WhatWeTake />
         <SocialProof />
+        <Reviews />
         <FAQ />
         <ServiceAreas />
         <EstimateForm />
