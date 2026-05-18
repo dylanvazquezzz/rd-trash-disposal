@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PhoneLink from '@/components/PhoneLink'
@@ -90,40 +91,97 @@ const breadcrumbSchema = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
-    { '@type': 'ListItem', position: 2, name: 'Commercial Junk Removal', item: `${siteUrl}/commercial/junk-removal` },
+    { '@type': 'ListItem', position: 2, name: 'Commercial Services', item: `${siteUrl}/commercial` },
+    { '@type': 'ListItem', position: 3, name: 'Commercial Junk Removal', item: `${siteUrl}/commercial/junk-removal` },
   ],
 }
 
 export default function CommercialJunkRemovalPage() {
   return (
     <>
+      <style>{`
+        @keyframes slideUp {
+          from { transform: translateY(110%); }
+          to   { transform: translateY(0); }
+        }
+        @keyframes drawLine {
+          from { transform: scaleX(0); }
+          to   { transform: scaleX(1); }
+        }
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+        .cjr-word-mask { overflow: hidden; display: inline-block; }
+        .cjr-word-inner {
+          display: inline-block;
+          animation: slideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .cjr-w1 { animation-delay: 0.05s; }
+        .cjr-w2 { animation-delay: 0.2s; }
+        .cjr-w3 { animation-delay: 0.35s; }
+        .cjr-accent-line {
+          transform-origin: left;
+          animation: drawLine 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both;
+        }
+        .cjr-fade { animation: fadeUp 0.6s ease 0.85s both; }
+      `}</style>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
       <main>
         {/* Hero */}
-        <section className="bg-[#010c1c] pt-32 pb-24 px-4">
+        <section className="relative pt-32 pb-24 px-4 overflow-hidden">
+          <Image
+            src="/truck-branded.jpg"
+            alt="R&D Trash Disposal commercial fleet"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+          <div className="absolute inset-0 bg-[#010c1c]/80" />
+          <div className="relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-3">
+            <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-6 cjr-fade" style={{ animationDelay: '0.05s' }}>
               South Florida Commercial Service
             </p>
-            <h1 className="font-display text-white text-6xl sm:text-7xl lg:text-9xl leading-none mb-6">
-              COMMERCIAL JUNK REMOVAL
+
+            {/* Animated H1 */}
+            <h1 className="font-display text-white leading-none mb-1" style={{ fontSize: 'clamp(2.5rem, 8vw, 6.5rem)' }}>
+              <span className="cjr-word-mask block">
+                <span className="cjr-word-inner cjr-w1">COMMERCIAL</span>
+              </span>
             </h1>
-            <p className="text-white/70 text-xl max-w-2xl mx-auto mb-4">
-              Licensed, insured, and equipped for commercial jobs across Miami-Dade and Broward County.
-              Office cleanouts, construction debris, warehouse haul-away — invoicing and COI available on every job.
+            <h1 className="font-display text-white leading-none mb-1" style={{ fontSize: 'clamp(2rem, 6vw, 5rem)' }}>
+              <span className="cjr-word-mask block">
+                <span className="cjr-word-inner cjr-w2">JUNK REMOVAL</span>
+              </span>
+            </h1>
+            <h1 className="font-display leading-none mb-6" style={{ fontSize: 'clamp(1.5rem, 4vw, 3.5rem)', color: '#F5A623' }}>
+              <span className="cjr-word-mask block">
+                <span className="cjr-word-inner cjr-w3">Miami-Dade &amp; Broward County</span>
+              </span>
+            </h1>
+
+            {/* Amber underline */}
+            <div className="flex justify-center mb-8">
+              <div className="cjr-accent-line h-1 rounded-full bg-[#F5A623]" style={{ width: '180px' }} />
+            </div>
+
+            <p className="cjr-fade text-white/70 text-xl max-w-2xl mx-auto mb-4">
+              Licensed and insured commercial hauling for South Florida&apos;s construction, property management, and business sectors. Certificate of insurance available. Invoicing standard on every job.
             </p>
-            <p className="text-white/40 text-sm mb-10">
-              F350 hydraulic truck. Built for bulk. Serving South Florida businesses since day one.
+            <p className="cjr-fade text-white/40 text-sm mb-10" style={{ animationDelay: '1s' }}>
+              Serving Miami-Dade and Broward County.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <div className="cjr-fade flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '1s' }}>
               <PhoneLink
                 phone={phone}
                 display={phoneFormatted}
                 source="commercial_main_hero"
-                className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold px-8 py-4 rounded-lg text-lg hover:bg-amber-400 transition-all hover:scale-105"
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#010c1c] font-bold px-8 py-4 rounded-lg text-lg hover:bg-gray-100 transition-all hover:scale-105"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -132,11 +190,12 @@ export default function CommercialJunkRemovalPage() {
               </PhoneLink>
               <a
                 href="/commercial/estimate"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-[#010c1c] transition-all"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:border-white/70 transition-all"
               >
                 Request Commercial Quote
               </a>
             </div>
+          </div>
           </div>
         </section>
 
@@ -148,7 +207,7 @@ export default function CommercialJunkRemovalPage() {
                 'Licensed & Insured',
                 'Invoicing Available',
                 'COI on Request',
-                'Same-Day Service',
+                'Volume Pricing',
               ].map((item) => (
                 <p key={item} className="font-display text-[#010c1c] text-lg tracking-wide">
                   {item.toUpperCase()}
@@ -170,16 +229,75 @@ export default function CommercialJunkRemovalPage() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { title: 'General Contractors', desc: 'Job site debris haul-away, concrete and tile removal, post-renovation cleanup. We work around your crew.' },
-                { title: 'Property Managers', desc: 'HOAs, commercial buildings, multi-unit complexes. Recurring cleanout service with invoicing on every job.' },
-                { title: 'Office Managers', desc: 'Relocations, full office cleanouts, furniture and equipment removal. Minimal disruption to your building.' },
-                { title: 'Restaurant & Hospitality', desc: 'Kitchen equipment removal, full restaurant cleanouts, hotel room turnovers, hospitality haul-outs.' },
-                { title: 'Warehouse Operators', desc: 'Bulk haul-away, equipment disposal, full warehouse clears. Our hydraulic truck handles large volume loads.' },
-                { title: 'Industrial & Trade', desc: 'Scrap metal, concrete debris, drywall, lumber — we handle the material that comes off a real job site.' },
+                {
+                  title: 'General Contractors',
+                  desc: 'Job site debris management, post-construction cleanup, and material haul-away. We work around active crews and project timelines.',
+                },
+                {
+                  title: 'Property Management Groups',
+                  desc: 'Recurring cleanout service for commercial portfolios. COI available for any building. Invoicing on every job.',
+                },
+                {
+                  title: 'Corporate Facilities',
+                  desc: 'Office relocations, full floor cleanouts, equipment disposal. Minimal disruption to tenants and operations.',
+                },
+                {
+                  title: 'Restaurant & Hospitality Groups',
+                  desc: 'Kitchen equipment removal, full restaurant and hotel cleanouts. Large-volume, fast turnaround.',
+                },
+                {
+                  title: 'Warehouse & Logistics',
+                  desc: 'Bulk haul-away for warehouse clearances, equipment disposal, and inventory turnover. F350 hydraulic truck, 25-ft trailer, roll-off dumpster, and bobcat handle high volume.',
+                },
+                {
+                  title: 'Industrial & Trade',
+                  desc: 'Scrap metal, concrete, drywall, tile, and lumber from active job sites and industrial facilities.',
+                },
               ].map((item) => (
                 <div key={item.title} className="bg-[#F5F7FA] rounded-2xl p-6 border border-gray-100">
                   <h3 className="font-display text-[#010c1c] text-2xl mb-2">{item.title.toUpperCase()}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Scale & Capability */}
+        <section className="py-20 bg-[#010c1c]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-14">
+              <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-2">Our Capability</p>
+              <h2 className="font-display text-white text-5xl sm:text-6xl mb-4">EQUIPPED FOR ANY JOB SIZE.</h2>
+            </div>
+
+            {/* 3-stat strip */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-b border-white/10 pb-10 mb-10">
+              {[
+                { stat: 'Full Commercial Fleet', sub: 'F350, trailer, dumpster & bobcat' },
+                { stat: 'COI Available', sub: 'For any building or contractor requirement' },
+                { stat: 'Same Day / Next Day', sub: 'Scheduling across South Florida' },
+              ].map((item) => (
+                <div key={item.stat} className="text-center">
+                  <p className="font-display text-white text-3xl sm:text-4xl mb-2">{item.stat.toUpperCase()}</p>
+                  <p className="text-white/50 text-sm">{item.sub}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* 2-column bullet list */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                'Single-trip bulk haul via F350 hydraulic truck, 25-ft trailer, roll-off dumpster, and bobcat',
+                'Proper invoicing on every commercial job',
+                'Certificate of insurance provided on request',
+                'Scheduling around building access and project timelines',
+                'Recurring service agreements for ongoing contracts',
+                'Direct contact — no call center, no franchise layer',
+              ].map((point) => (
+                <div key={point} className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#F5A623] flex-shrink-0 mt-2" />
+                  <p className="text-white/70 text-sm leading-relaxed">{point}</p>
                 </div>
               ))}
             </div>
@@ -220,7 +338,7 @@ export default function CommercialJunkRemovalPage() {
                   {[
                     { heading: 'Invoiced every time', body: 'Every commercial job comes with a proper invoice. Your accounting team will know exactly what they paid for.' },
                     { heading: 'COI available', body: 'We carry liability insurance and can provide a certificate of insurance for any building, contractor, or property that requires it.' },
-                    { heading: 'F350 hydraulic truck', body: 'Built for volume. One trip handles what would take a residential hauler three. Less time on your job site.' },
+                    { heading: 'F350 hydraulic truck, 25-ft trailer, roll-off dumpster, and bobcat', body: 'Built for volume. One trip handles what would take a residential hauler three. Less time on your job site.' },
                     { heading: 'We work around you', body: 'Early morning, after hours, before tenants arrive — tell us when the building is accessible and we schedule around it.' },
                   ].map((item) => (
                     <div key={item.heading} className="flex gap-4">
@@ -241,7 +359,7 @@ export default function CommercialJunkRemovalPage() {
                 </p>
                 <a
                   href="/commercial/estimate"
-                  className="block w-full bg-[#F5A623] text-[#010c1c] font-bold px-6 py-4 rounded-lg hover:bg-amber-400 transition-all hover:scale-105 mb-4"
+                  className="bg-white text-[#010c1c] font-bold px-6 py-4 rounded-lg block w-full text-center hover:bg-gray-100 transition-all mb-4"
                 >
                   Request Commercial Quote
                 </a>
@@ -249,7 +367,7 @@ export default function CommercialJunkRemovalPage() {
                   phone={phone}
                   display={`Call ${phoneFormatted}`}
                   source="commercial_main_why"
-                  className="block w-full border-2 border-white text-white font-semibold px-6 py-4 rounded-lg hover:bg-white hover:text-[#010c1c] transition-all"
+                  className="border-2 border-white/30 text-white font-semibold px-6 py-4 rounded-lg block w-full text-center hover:border-white/60 transition-all"
                 />
               </div>
             </div>
@@ -290,13 +408,13 @@ export default function CommercialJunkRemovalPage() {
                 phone={phone}
                 display={phoneFormatted}
                 source="commercial_main_cta"
-                className="inline-flex items-center justify-center gap-2 bg-[#F5A623] text-[#010c1c] font-bold px-8 py-4 rounded-lg hover:bg-amber-400 transition-all hover:scale-105"
+                className="bg-white text-[#010c1c] font-bold px-8 py-4 rounded-lg inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition-all hover:scale-105"
               >
                 Call {phoneFormatted}
               </PhoneLink>
               <a
                 href="/commercial/estimate"
-                className="inline-flex items-center justify-center border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#010c1c] transition-all"
+                className="border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-lg inline-flex items-center justify-center hover:border-white/70 transition-all"
               >
                 Request Commercial Quote
               </a>

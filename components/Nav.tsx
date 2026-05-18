@@ -32,15 +32,24 @@ export default function Nav() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             {['Services', 'How It Works', 'What We Take', 'Contact'].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
-                  className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
-                >
-                  {item}
-                </a>
-              )
+              (item) => {
+                const anchor = `#${item.toLowerCase().replace(/ /g, '-')}`
+                const href =
+                  item === 'How It Works'
+                    ? `/commercial#how-it-works`
+                    : item === 'Reviews'
+                    ? `/commercial#reviews`
+                    : navHref(anchor)
+                return (
+                  <a
+                    key={item}
+                    href={href}
+                    className="text-sm font-medium text-[#010c1c] transition-colors hover:text-[#F5A623]"
+                  >
+                    {item}
+                  </a>
+                )
+              }
             )}
             <a
               href="/about"
@@ -61,9 +70,9 @@ export default function Nav() {
             </a>
             <a
               href={estimateHref}
-              className="bg-[#F5A623] text-[#010c1c] font-semibold text-sm px-5 py-2.5 rounded hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-md"
+              className="bg-[#F5A623] text-[#010c1c] font-bold text-sm px-5 py-2.5 rounded-lg hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-sm"
             >
-              Instant Estimate
+              Instant Quote
             </a>
           </div>
 
@@ -98,16 +107,25 @@ export default function Nav() {
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="px-4 py-4 flex flex-col gap-4">
             {['Services', 'How It Works', 'What We Take', 'Contact'].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={navHref(`#${item.toLowerCase().replace(/ /g, '-')}`)}
-                  className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item}
-                </a>
-              )
+              (item) => {
+                const anchor = `#${item.toLowerCase().replace(/ /g, '-')}`
+                const href =
+                  item === 'How It Works'
+                    ? `/commercial#how-it-works`
+                    : item === 'Reviews'
+                    ? `/commercial#reviews`
+                    : navHref(anchor)
+                return (
+                  <a
+                    key={item}
+                    href={href}
+                    className="text-[#010c1c] font-medium text-base py-1 border-b border-gray-100"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item}
+                  </a>
+                )
+              }
             )}
             <a
               href="/about"
@@ -126,10 +144,10 @@ export default function Nav() {
               </a>
               <a
                 href={estimateHref}
-                className="mt-1 bg-[#F5A623] text-[#010c1c] font-semibold text-sm px-5 py-3 rounded text-center"
+                className="mt-1 bg-[#F5A623] text-[#010c1c] font-bold text-sm px-5 py-3 rounded-lg text-center hover:bg-[#d48e10] transition-all hover:scale-105 active:scale-95 shadow-sm"
                 onClick={() => setMenuOpen(false)}
               >
-                Get Instant Estimate
+                Instant Quote
               </a>
             </div>
           </div>
