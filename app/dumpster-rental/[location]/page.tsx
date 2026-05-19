@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PhoneLink from '@/components/PhoneLink'
+import QuoteLink from '@/components/QuoteLink'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rdtrash.org'
 
@@ -344,12 +345,14 @@ export default function DumpsterLocationPage({
                 </svg>
                 Call {data.phoneFormatted}
               </PhoneLink>
-              <a
-                href="/commercial/estimate"
+              <QuoteLink
+                location={data.name}
+                serviceType="dumpster_rental"
+                source="dumpster_location_hero"
                 className="inline-flex items-center justify-center border-2 border-white/40 text-white font-semibold px-8 py-4 rounded-lg text-lg hover:border-white/70 transition-all"
               >
                 Get a Container Quote
-              </a>
+              </QuoteLink>
             </div>
           </div>
         </section>
@@ -561,12 +564,14 @@ export default function DumpsterLocationPage({
                 <p className="text-white/60 text-sm mb-8">
                   Tell us your {data.displayName} job site address, container size, and project timeline. We&apos;ll get back with availability and pricing.
                 </p>
-                <a
-                  href="/commercial/estimate"
+                <QuoteLink
+                  location={data.name}
+                  serviceType="dumpster_rental"
+                  source="dumpster_location_why"
                   className="block w-full bg-white text-[#010c1c] font-bold px-6 py-4 rounded-lg text-center hover:bg-gray-100 transition-all mb-4"
                 >
                   Request a Quote
-                </a>
+                </QuoteLink>
                 <PhoneLink
                   phone={data.phone}
                   display={`Call ${data.phoneFormatted}`}
@@ -598,12 +603,14 @@ export default function DumpsterLocationPage({
                 </svg>
                 Call {data.phoneFormatted}
               </PhoneLink>
-              <a
-                href="/commercial/estimate"
+              <QuoteLink
+                location={data.name}
+                serviceType="dumpster_rental"
+                source="dumpster_location_final_cta"
                 className="inline-flex items-center justify-center border-2 border-[#010c1c]/20 text-[#010c1c] font-semibold px-8 py-4 rounded-lg hover:border-[#010c1c]/40 transition-all"
               >
                 Request a Container Quote
-              </a>
+              </QuoteLink>
             </div>
           </div>
         </section>

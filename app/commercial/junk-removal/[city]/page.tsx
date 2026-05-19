@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import PhoneLink from '@/components/PhoneLink'
+import QuoteLink from '@/components/QuoteLink'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://rdtrash.org'
 
@@ -430,12 +431,14 @@ export default function CommercialCityPage({
                 </svg>
                 Call {data.phoneFormatted}
               </PhoneLink>
-              <a
-                href="/commercial/estimate"
+              <QuoteLink
+                location={data.name}
+                serviceType="commercial_junk_removal"
+                source="commercial_city_hero"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-[#010c1c] transition-all"
               >
                 Request Commercial Quote
-              </a>
+              </QuoteLink>
             </div>
           </div>
         </section>
@@ -579,12 +582,14 @@ export default function CommercialCityPage({
               >
                 Call {data.phoneFormatted}
               </PhoneLink>
-              <a
-                href="/commercial/estimate"
+              <QuoteLink
+                location={data.name}
+                serviceType="commercial_junk_removal"
+                source="commercial_city_cta"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-[#010c1c] transition-all"
               >
                 Request Commercial Quote
-              </a>
+              </QuoteLink>
             </div>
           </div>
         </section>
