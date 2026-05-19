@@ -286,7 +286,7 @@ export default function CommercialHubPage() {
                 'Licensed & Insured',
                 'Certificate of Insurance',
                 'Invoicing on Every Job',
-                'F350 Hydraulic Fleet',
+                'Trucks, Bobcats & Dumpsters',
               ].map((item) => (
                 <p key={item} className="font-display text-[#010c1c] text-lg tracking-wide">
                   {item.toUpperCase()}
