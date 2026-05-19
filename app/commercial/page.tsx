@@ -226,8 +226,20 @@ export default function CommercialHubPage() {
       <Nav />
       <main>
         {/* Hero */}
-        <section className="bg-[#010c1c] pt-36 pb-28 px-4 overflow-hidden">
-          <div className="max-w-5xl mx-auto text-center">
+        <section className="relative pt-36 pb-28 px-4 overflow-hidden">
+          {/* Background image with dark navy overlay — same pattern as homepage */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/commercial-hero.jpg"
+              alt="R&D dumpster on commercial job site"
+              fill
+              className="object-cover object-center"
+              priority
+              quality={90}
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#000810]/90 via-[#010c1c]/85 to-[#010c1c]/75" />
+          </div>
+          <div className="relative z-10 max-w-5xl mx-auto text-center">
             <p className="text-[#F5A623] font-bold text-sm uppercase tracking-widest mb-6 sub-fade" style={{ animationDelay: '0.05s' }}>
               South Florida Commercial Services
             </p>
